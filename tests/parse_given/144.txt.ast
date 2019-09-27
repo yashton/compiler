@@ -1,0 +1,17 @@
+(program
+ (def (oops) (suite (raise (indexed Exception (called)))))
+ (def
+  (doomed)
+  (suite
+   (try
+    (suite (expr (indexed oops (called))))
+    (((except IndexError)
+      (suite (expr (indexed print (called "caught an index error!")))))
+     ((except Exception data)
+      (suite (expr (indexed print (called "caught error:" MyError data))))))
+    (suite (expr (indexed print (called "no error caught..."))))
+    #f)))
+ (cond
+  ((comparison __name__ ("==" "__main__"))
+   (suite (expr (indexed doomed (called)))))))
+

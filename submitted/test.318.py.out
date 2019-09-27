@@ -1,0 +1,3 @@
+(LIT "")
+(ERROR "Illegal character '"testing
+a"""' on line 1)

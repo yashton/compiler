@@ -1,0 +1,7 @@
+def doomed():
+    try:
+        print('try...\n')
+    except:
+        print('caught an index error!')
+
+doomed()

@@ -1,0 +1,8 @@
+(KEYWORD if)
+(ID "x")
+(PUNCT "<")
+(LIT 3)
+(ERROR "Illegal character '\ 
+   and x > 5
+  return 1
+' on line 1)

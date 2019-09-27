@@ -1,0 +1,260 @@
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env*: (rv14 rv15)
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; regular: rv14
+; env: (rv14 rv15)
+; regular: rv15
+; env: (rv14 rv15)
+; env*: (rv16 rv14 rv15)
+; env: (rv16 rv14 rv15)
+; env: (rv16 rv14 rv15)
+; env*: (t14 rv16 rv14 rv15 k17)
+; env: (t14 rv16 rv14 rv15 k17)
+; env: (t14 rv16 rv14 rv15 k17)
+; regular: t14
+; env: (t14 rv16 rv14 rv15 k17)
+; env: (t14 rv16 rv14 rv15 k17)
+; regular: k17
+; env: (t14 rv16 rv14 rv15 k17)
+; regular: t14
+; env: (t14 rv16 rv14 rv15 k17)
+; env: (t14 rv16 rv14 rv15 k17)
+; regular: k17
+; env: (t14 rv16 rv14 rv15 k17)
+; env: (rv16 rv14 rv15)
+; env: (rv16 rv14 rv15)
+; env*: (rv16 rv14 rv15 rv18)
+; env: (rv16 rv14 rv15 rv18)
+; env: (rv16 rv14 rv15 rv18)
+; env*: (rv16 rv14 rv15 t15 k19 rv18)
+; env: (rv16 rv14 rv15 t15 k19 rv18)
+; env: (rv16 rv14 rv15 t15 k19 rv18)
+; regular: t15
+; env: (rv16 rv14 rv15 t15 k19 rv18)
+; env: (rv16 rv14 rv15 t15 k19 rv18)
+; regular: k19
+; env: (rv16 rv14 rv15 t15 k19 rv18)
+; regular: t15
+; env: (rv16 rv14 rv15 t15 k19 rv18)
+; env: (rv16 rv14 rv15 t15 k19 rv18)
+; regular: k19
+; env: (rv16 rv14 rv15 t15 k19 rv18)
+; env: (rv16 rv14 rv15 rv18)
+; env: (rv16 rv14 rv15 rv18)
+; env*: (rv16 rv14 rv15 rv18 rv20)
+; env: (rv16 rv14 rv15 rv18 rv20)
+; env: (rv16 rv14 rv15 rv18 rv20)
+; env: (rv16 rv14 rv15 rv18 rv20)
+; regular: rv18
+; env: (rv16 rv14 rv15 rv18 rv20)
+; regular: rv20
+; env: (rv16 rv14 rv15 rv18 rv20)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20)
+; env*: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; env: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; env: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; regular: t16
+; env: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; env: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; regular: k22
+; env: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; regular: t16
+; env: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; env: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; regular: k22
+; env: (rv16 rv14 rv15 rv18 t16 k22 rv21 rv20)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv23)
+; regular: rv23
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv23)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; regular: t17
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; regular: k25
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; regular: t17
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; regular: k25
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 t17 k25 rv24 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv26)
+; regular: rv26
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv26)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv27 rv26)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; regular: k28
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; regular: k28
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 k28 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv27 rv26)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; regular: k30
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; regular: k30
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k30)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv31)
+; regular: rv29
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv31)
+; regular: rv31
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv31)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; regular: k33
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; regular: k33
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 k33 rv32 rv31)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv34)
+; regular: rv34
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv34)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv35 rv34)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; regular: k36
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; regular: k36
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 k36 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv35 rv34)
+; env*: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv37 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv37 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv37 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv37 rv35 rv34)
+; regular: rv37
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv37 rv35 rv34)
+; env: (rv16 rv14 rv15 rv18 rv21 rv20 rv24 rv23 rv29 rv27 rv26 rv32 rv31 rv37 rv35 rv34)
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ ((cps <)
+  2
+  3
+  (lambda (rv14)
+    ((cps <)
+     3
+     2
+     (lambda (rv15)
+       ((cps py-print)
+        rv14
+        rv15
+        (lambda (rv16)
+          ((lambda (t14 k17) (if t14 (k17 t14) (k17 3)))
+           2
+           (lambda (rv18)
+             ((lambda (t15 k19) (if t15 (k19 t15) (k19 2)))
+              3
+              (lambda (rv20)
+                ((cps py-print)
+                 rv18
+                 rv20
+                 (lambda (rv21)
+                   ((lambda (t16 k22) (if t16 (k22 t16) (k22 3)))
+                    (py-list*)
+                    (lambda (rv23)
+                      ((cps py-print)
+                       rv23
+                       (lambda (rv24)
+                         ((lambda (t17 k25) (if t17 (k25 t17) (k25 (dict))))
+                          (py-list*)
+                          (lambda (rv26)
+                            ((cps py-print)
+                             rv26
+                             (lambda (rv27)
+                               ((lambda (k28) (if 2 (k28 3) (k28 #f)))
+                                (lambda (rv29)
+                                  ((lambda (k30) (if 3 (k30 2) (k30 #f)))
+                                   (lambda (rv31)
+                                     ((cps py-print)
+                                      rv29
+                                      rv31
+                                      (lambda (rv32)
+                                        ((lambda (k33)
+                                           (if (py-list*)
+                                             (k33 (dict))
+                                             (k33 #f)))
+                                         (lambda (rv34)
+                                           ((cps py-print)
+                                            rv34
+                                            (lambda (rv35)
+                                              ((lambda (k36)
+                                                 (if 3
+                                                   (k36 (py-list*))
+                                                   (k36 #f)))
+                                               (lambda (rv37)
+                                                 ((cps py-print)
+                                                  rv37
+                                                  $halt))))))))))))))))))))))))))))))))))

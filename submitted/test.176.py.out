@@ -1,0 +1,4 @@
+(ID "x")
+(PUNCT "=")
+(LIT "\")
+(ERROR "Illegal character '\"\"\"\"\""' on line 1)

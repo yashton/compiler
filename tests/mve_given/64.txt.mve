@@ -1,0 +1,25 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$a (void))
+ ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+  (lambda (break k14)
+    ((lambda (loop k15)
+       (set-then!
+        loop
+        (make-cell loop)
+        (set-cell!
+         loop
+         (lambda (k16)
+           (if #t
+             ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+              (lambda (continue k17)
+                ((lambda (k18) (set-then! g$a 1 (k18 (void)))) k17))
+              (lambda (rv19) ((get-cell loop) k16)))
+             (k16 (void))))
+         ((get-cell loop) (lambda (rv20) (k15 (void)))))))
+     (void)
+     k14))
+  $halt))

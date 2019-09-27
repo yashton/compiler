@@ -1,0 +1,10 @@
+(program
+ (define a (void))
+ (set-global! a (py-list* 0 1 2 3))
+ (let ((b15 (get-global a)))
+   (let ((i14 1))
+     (cond
+      ((tuple? b15) (tuple-set! b15 i14 30))
+      ((py-list? b15) (py-list-set! b15 i14 30))
+      ((dict? b15) (dict-set! b15 i14 30)))))
+ (py-print (get-global a)))

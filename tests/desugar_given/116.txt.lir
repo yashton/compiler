@@ -1,0 +1,68 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$b (void))
+ (define g$a (void))
+ (begin
+   (set! g$a (py-list* 1 2 3))
+   (set! g$b (py-list* 1 2 3))
+   ((lambda (b15)
+      (begin
+        ((lambda (i14)
+           (begin
+             (if (tuple? b15)
+               (tuple-set!
+                b15
+                i14
+                ((lambda (e17)
+                   (begin
+                     ((lambda (i16)
+                        (begin
+                          (if (py-list? e17)
+                            (py-list-ref e17 i16)
+                            (if (tuple? e17)
+                              (tuple-ref e17 i16)
+                              (if (dict? e17)
+                                (dict-ref e17 i16)
+                                (error "cannot index object"))))))
+                      4)))
+                 g$a))
+               (if (py-list? b15)
+                 (py-list-set!
+                  b15
+                  i14
+                  ((lambda (e19)
+                     (begin
+                       ((lambda (i18)
+                          (begin
+                            (if (py-list? e19)
+                              (py-list-ref e19 i18)
+                              (if (tuple? e19)
+                                (tuple-ref e19 i18)
+                                (if (dict? e19)
+                                  (dict-ref e19 i18)
+                                  (error "cannot index object"))))))
+                        4)))
+                   g$a))
+                 (if (dict? b15)
+                   (dict-set!
+                    b15
+                    i14
+                    ((lambda (e21)
+                       (begin
+                         ((lambda (i20)
+                            (begin
+                              (if (py-list? e21)
+                                (py-list-ref e21 i20)
+                                (if (tuple? e21)
+                                  (tuple-ref e21 i20)
+                                  (if (dict? e21)
+                                    (dict-ref e21 i20)
+                                    (error "cannot index object"))))))
+                          4)))
+                     g$a))
+                   (void))))))
+         1)))
+    g$a)))

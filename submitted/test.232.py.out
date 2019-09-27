@@ -1,0 +1,4 @@
+(ID "a")
+(PUNCT "=")
+(ERROR "Illegal character '\   
+ b' on line 2)

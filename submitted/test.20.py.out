@@ -1,0 +1,6 @@
+(PUNCT "(")
+(KEYWORD if)
+(ID "string")
+(PUNCT "==")
+(ERROR "Illegal character '"can I do
+this?")' on line 1)

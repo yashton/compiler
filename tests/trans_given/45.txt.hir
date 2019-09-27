@@ -1,0 +1,12 @@
+(program
+ (define sum (void))
+ (set-global!
+  sum
+  (lambda (n)
+    (call/ec
+     (lambda (return)
+       (let ((result (void)) (i (void)))
+         (set! result 0)
+         (set! i 1)
+         (while (<= i n) (let () (set! result (+ result i)) (set! i (+ i 1))))
+         (return result)))))))

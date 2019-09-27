@@ -1,0 +1,277 @@
+; mutable: g$called
+; mutable: called
+; mutable: func
+; mutable: g$outfunc
+; mutable: g$outfunc2
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14)
+; env: (k14)
+; env: (k14)
+; env*: (f k14 cc)
+; env: (f k14 cc)
+; env: (f k14 cc)
+; regular: f
+; env: (f k14 cc)
+; env*: (f k x k14 cc)
+; env: (f k x k14 cc)
+; env: (f k x k14 cc)
+; regular: cc
+; env: (f k x k14 cc)
+; regular: x
+; env: (f k14 cc)
+; regular: cc
+; env: (k14)
+; env*: (k14 k15 return)
+; env: (k14 k15 return)
+; env: (k14 k15 return)
+; env*: (func called k14 return k15 k16)
+; env: (func called k14 return k15 k16)
+; env: (func called k14 return k15 k16)
+; env: (func called k14 return k15 k16)
+; env: (func called k14 return k15 k16)
+; env*: (func called k14 k17 return k15 k16)
+; env: (func called k14 k17 return k15 k16)
+; env: (func called k14 k17 return k15 k16)
+; env*: (f func called cc k14 k17 return k15 k16)
+; env: (f func called cc k14 k17 return k15 k16)
+; env: (f func called cc k14 k17 return k15 k16)
+; regular: f
+; env: (f func called cc k14 k17 return k15 k16)
+; env*: (f k func called x cc k14 k17 return k15 k16)
+; env: (f k func called x cc k14 k17 return k15 k16)
+; env: (f k func called x cc k14 k17 return k15 k16)
+; regular: cc
+; env: (f k func called x cc k14 k17 return k15 k16)
+; regular: x
+; env: (f func called cc k14 k17 return k15 k16)
+; regular: cc
+; env: (func called k14 k17 return k15 k16)
+; env*: (func called k14 return k17 k15 k16 k18)
+; env: (func called k14 return k17 k15 k16 k18)
+; env: (func called k14 return k17 k15 k16 k18)
+; env*: (func called k14 return k17 k15 k16 k19 k18)
+; env: (func called k14 return k17 k15 k16 k19 k18)
+; env: (func called k14 return k17 k15 k16 k19 k18)
+; env: (func called k14 return k17 k15 k16 k19 k18)
+; mutable: called
+; env: (func called k14 return k17 k15 k16 k19 k18)
+; env: (func called k14 return k17 k15 k16 k19 k18)
+; env*: (func called k14 return k17 k15 k16 rv20 k19 k18)
+; env: (func called k14 return k17 k15 k16 rv20 k19 k18)
+; env: (func called k14 return k17 k15 k16 rv20 k19 k18)
+; regular: rv20
+; env: (func called k14 return k17 k15 k16 rv20 k19 k18)
+; env: (func called k14 return k17 k15 k16 rv20 k19 k18)
+; regular: k19
+; env: (func called k14 return k17 k15 k16 rv20 k19 k18)
+; env: (func called k14 return k17 k15 k16 k18)
+; regular: k18
+; env: (func called k14 k17 return k15 k16)
+; regular: k17
+; env: (func called k14 return k15 k16)
+; env: (func called k14 return k15 k16)
+; mutable: func
+; env: (func called k14 return k15 k16)
+; env*: (func called k14 return k15 k16 rv21)
+; env: (func called k14 return k15 k16 rv21)
+; env: (func called k14 return k15 k16 rv21)
+; mutable: func
+; env: (func called k14 return k15 k16 rv21)
+; env*: (func called k14 return k15 k16 rv21 rv22)
+; env: (func called k14 return k15 k16 rv21 rv22)
+; env: (func called k14 return k15 k16 rv21 rv22)
+; env: (func called k14 return k15 k16 rv21 rv22)
+; mutable: called
+; env: (func called k14 return k15 k16 rv21 rv22)
+; regular: k16
+; env: (k14 k15 return)
+; env: (k14 k15 return)
+; env: (k14 k15 return)
+; regular: k15
+; env: (k14)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k23)
+; env: (k23)
+; env: (k23)
+; env*: (f cc k23)
+; env: (f cc k23)
+; env: (f cc k23)
+; regular: f
+; env: (f cc k23)
+; env*: (f k x cc k23)
+; env: (f k x cc k23)
+; env: (f k x cc k23)
+; regular: cc
+; env: (f k x cc k23)
+; regular: x
+; env: (f cc k23)
+; regular: cc
+; env: (k23)
+; env*: (return k23 k24)
+; env: (return k23 k24)
+; env: (return k23 k24)
+; env*: (func return k25 k23 k24)
+; env: (func return k25 k23 k24)
+; env: (func return k25 k23 k24)
+; env*: (func return k25 k23 k24 k26)
+; env: (func return k25 k23 k24 k26)
+; env: (func return k25 k23 k24 k26)
+; env*: (f func cc return k25 k23 k24 k26)
+; env: (f func cc return k25 k23 k24 k26)
+; env: (f func cc return k25 k23 k24 k26)
+; regular: f
+; env: (f func cc return k25 k23 k24 k26)
+; env*: (f k func x cc return k25 k23 k24 k26)
+; env: (f k func x cc return k25 k23 k24 k26)
+; env: (f k func x cc return k25 k23 k24 k26)
+; regular: cc
+; env: (f k func x cc return k25 k23 k24 k26)
+; regular: x
+; env: (f func cc return k25 k23 k24 k26)
+; regular: cc
+; env: (func return k25 k23 k24 k26)
+; env*: (func return k25 k23 k24 k27 k26)
+; env: (func return k25 k23 k24 k27 k26)
+; env: (func return k25 k23 k24 k27 k26)
+; env*: (func return k25 k23 k24 k28 k27 k26)
+; env: (func return k25 k23 k24 k28 k27 k26)
+; env: (func return k25 k23 k24 k28 k27 k26)
+; env: (func return k25 k23 k24 k28 k27 k26)
+; env: (func return k25 k23 k24 k28 k27 k26)
+; global: g$called
+; env: (func return k25 k23 k24 k28 k27 k26)
+; env: (func return k25 k23 k24 k28 k27 k26)
+; env*: (func return k25 k23 k24 rv29 k28 k27 k26)
+; env: (func return k25 k23 k24 rv29 k28 k27 k26)
+; env: (func return k25 k23 k24 rv29 k28 k27 k26)
+; regular: rv29
+; env: (func return k25 k23 k24 rv29 k28 k27 k26)
+; env: (func return k25 k23 k24 rv29 k28 k27 k26)
+; regular: k28
+; env: (func return k25 k23 k24 rv29 k28 k27 k26)
+; env: (func return k25 k23 k24 k27 k26)
+; regular: k27
+; env: (func return k25 k23 k24 k26)
+; regular: k26
+; env: (func return k25 k23 k24)
+; env: (func return k25 k23 k24)
+; mutable: func
+; env: (func return k25 k23 k24)
+; env*: (func return k25 k23 k24 rv30)
+; env: (func return k25 k23 k24 rv30)
+; env: (func return k25 k23 k24 rv30)
+; mutable: func
+; env: (func return k25 k23 k24 rv30)
+; regular: k25
+; env: (return k23 k24)
+; env: (return k23 k24)
+; regular: k24
+; env: (k23)
+; regular: k23
+; env: ()
+; env: ()
+; env: ()
+; global: g$outfunc
+; env: ()
+; env*: (rv31)
+; env: (rv31)
+; env: (rv31)
+; env: (rv31)
+; global: g$outfunc2
+; env: (rv31)
+; env*: (rv31 rv32)
+; env: (rv31 rv32)
+; env: (rv31 rv32)
+; env: (rv31 rv32)
+; env: (rv31 rv32)
+; global: g$called
+; env: (rv31 rv32)
+; env: (rv31 rv32)
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$outfunc2 (void))
+ (define g$called (void))
+ (define g$outfunc (void))
+ (set-then!
+  g$outfunc
+  (lambda (k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (called func k16)
+          (set-then!
+           called
+           (make-cell called)
+           (set-then!
+            func
+            (make-cell func)
+            (set-cell!
+             called
+             0
+             (set-cell!
+              func
+              (lambda (k17)
+                ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                 (lambda (return k18)
+                   ((lambda (k19)
+                      ((cps +)
+                       (get-cell called)
+                       1
+                       (lambda (rv20) (set-cell! called rv20 (k19 (void))))))
+                    k18))
+                 k17))
+              ((get-cell func)
+               (lambda (rv21)
+                 ((get-cell func)
+                  (lambda (rv22)
+                    ((cps py-print) (get-cell called) k16))))))))))
+        (void)
+        (void)
+        k15))
+     k14))
+  (set-then!
+   g$called
+   0
+   (set-then!
+    g$outfunc2
+    (lambda (k23)
+      ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+       (lambda (return k24)
+         ((lambda (func k25)
+            (set-then!
+             func
+             (make-cell func)
+             (set-cell!
+              func
+              (lambda (k26)
+                ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                 (lambda (return k27)
+                   ((lambda (k28)
+                      ((cps +)
+                       g$called
+                       1
+                       (lambda (rv29) (set-then! g$called rv29 (k28 (void))))))
+                    k27))
+                 k26))
+              ((get-cell func) (lambda (rv30) ((get-cell func) k25))))))
+          (void)
+          k24))
+       k23))
+    (g$outfunc
+     (lambda (rv31)
+       (g$outfunc2 (lambda (rv32) ((cps py-print) g$called $halt)))))))))

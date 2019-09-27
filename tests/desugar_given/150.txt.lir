@@ -1,0 +1,349 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$result (void))
+ (define g$unsort (void))
+ (define g$BubbleSort (void))
+ (begin
+   (set! g$BubbleSort
+     (lambda (lst)
+       (call/ec
+        (lambda (return)
+          ((lambda (passesLeft i)
+             (begin
+               (set! lst (g$list lst))
+               (call/ec
+                (lambda (break)
+                  ((lambda ($seq14 $loop15)
+                     (begin
+                       (begin
+                         (if (set? $seq14)
+                           (for-set $seq14 $loop15)
+                           (if (tuple? $seq14)
+                             (for-tuple $seq14 $loop15)
+                             (if (py-list? $seq14)
+                               (for-py-list $seq14 $loop15)
+                               (if (dict? $seq14)
+                                 (for-dict $seq14 $loop15)
+                                 (void)))))
+                         (void))))
+                   (g$range (- (g$len lst) 1) 0 (- 1))
+                   (lambda (i14)
+                     (call/ec
+                      (lambda (continue)
+                        (begin
+                          (set! passesLeft i14)
+                          ((lambda ()
+                             (begin
+                               (call/ec
+                                (lambda (break)
+                                  ((lambda ($seq16 $loop17)
+                                     (begin
+                                       (begin
+                                         (if (set? $seq16)
+                                           (for-set $seq16 $loop17)
+                                           (if (tuple? $seq16)
+                                             (for-tuple $seq16 $loop17)
+                                             (if (py-list? $seq16)
+                                               (for-py-list $seq16 $loop17)
+                                               (if (dict? $seq16)
+                                                 (for-dict $seq16 $loop17)
+                                                 (void)))))
+                                         (void))))
+                                   (g$range passesLeft)
+                                   (lambda (i15)
+                                     (call/ec
+                                      (lambda (continue)
+                                        (begin
+                                          (set! i i15)
+                                          ((lambda ()
+                                             (begin
+                                               (if (<
+                                                    ((lambda (e17)
+                                                       (begin
+                                                         ((lambda (i16)
+                                                            (begin
+                                                              (if (py-list?
+                                                                   e17)
+                                                                (py-list-ref
+                                                                 e17
+                                                                 i16)
+                                                                (if (tuple?
+                                                                     e17)
+                                                                  (tuple-ref
+                                                                   e17
+                                                                   i16)
+                                                                  (if (dict?
+                                                                       e17)
+                                                                    (dict-ref
+                                                                     e17
+                                                                     i16)
+                                                                    (error
+                                                                     "cannot index object"))))))
+                                                          i)))
+                                                     lst)
+                                                    ((lambda (e19)
+                                                       (begin
+                                                         ((lambda (i18)
+                                                            (begin
+                                                              (if (py-list?
+                                                                   e19)
+                                                                (py-list-ref
+                                                                 e19
+                                                                 i18)
+                                                                (if (tuple?
+                                                                     e19)
+                                                                  (tuple-ref
+                                                                   e19
+                                                                   i18)
+                                                                  (if (dict?
+                                                                       e19)
+                                                                    (dict-ref
+                                                                     e19
+                                                                     i18)
+                                                                    (error
+                                                                     "cannot index object"))))))
+                                                          (+ i 1))))
+                                                     lst))
+                                                 ((lambda ()
+                                                    (begin
+                                                      ((lambda (t20)
+                                                         (begin
+                                                           ((lambda (b26)
+                                                              (begin
+                                                                ((lambda (i25)
+                                                                   (begin
+                                                                     (if (tuple?
+                                                                          b26)
+                                                                       (tuple-set!
+                                                                        b26
+                                                                        i25
+                                                                        ((lambda (e28)
+                                                                           (begin
+                                                                             ((lambda (i27)
+                                                                                (begin
+                                                                                  (if (py-list?
+                                                                                       e28)
+                                                                                    (py-list-ref
+                                                                                     e28
+                                                                                     i27)
+                                                                                    (if (tuple?
+                                                                                         e28)
+                                                                                      (tuple-ref
+                                                                                       e28
+                                                                                       i27)
+                                                                                      (if (dict?
+                                                                                           e28)
+                                                                                        (dict-ref
+                                                                                         e28
+                                                                                         i27)
+                                                                                        (error
+                                                                                         "cannot index object"))))))
+                                                                              0)))
+                                                                         t20))
+                                                                       (if (py-list?
+                                                                            b26)
+                                                                         (py-list-set!
+                                                                          b26
+                                                                          i25
+                                                                          ((lambda (e30)
+                                                                             (begin
+                                                                               ((lambda (i29)
+                                                                                  (begin
+                                                                                    (if (py-list?
+                                                                                         e30)
+                                                                                      (py-list-ref
+                                                                                       e30
+                                                                                       i29)
+                                                                                      (if (tuple?
+                                                                                           e30)
+                                                                                        (tuple-ref
+                                                                                         e30
+                                                                                         i29)
+                                                                                        (if (dict?
+                                                                                             e30)
+                                                                                          (dict-ref
+                                                                                           e30
+                                                                                           i29)
+                                                                                          (error
+                                                                                           "cannot index object"))))))
+                                                                                0)))
+                                                                           t20))
+                                                                         (if (dict?
+                                                                              b26)
+                                                                           (dict-set!
+                                                                            b26
+                                                                            i25
+                                                                            ((lambda (e32)
+                                                                               (begin
+                                                                                 ((lambda (i31)
+                                                                                    (begin
+                                                                                      (if (py-list?
+                                                                                           e32)
+                                                                                        (py-list-ref
+                                                                                         e32
+                                                                                         i31)
+                                                                                        (if (tuple?
+                                                                                             e32)
+                                                                                          (tuple-ref
+                                                                                           e32
+                                                                                           i31)
+                                                                                          (if (dict?
+                                                                                               e32)
+                                                                                            (dict-ref
+                                                                                             e32
+                                                                                             i31)
+                                                                                            (error
+                                                                                             "cannot index object"))))))
+                                                                                  0)))
+                                                                             t20))
+                                                                           (void))))))
+                                                                 i)))
+                                                            lst)
+                                                           ((lambda (b34)
+                                                              (begin
+                                                                ((lambda (i33)
+                                                                   (begin
+                                                                     (if (tuple?
+                                                                          b34)
+                                                                       (tuple-set!
+                                                                        b34
+                                                                        i33
+                                                                        ((lambda (e36)
+                                                                           (begin
+                                                                             ((lambda (i35)
+                                                                                (begin
+                                                                                  (if (py-list?
+                                                                                       e36)
+                                                                                    (py-list-ref
+                                                                                     e36
+                                                                                     i35)
+                                                                                    (if (tuple?
+                                                                                         e36)
+                                                                                      (tuple-ref
+                                                                                       e36
+                                                                                       i35)
+                                                                                      (if (dict?
+                                                                                           e36)
+                                                                                        (dict-ref
+                                                                                         e36
+                                                                                         i35)
+                                                                                        (error
+                                                                                         "cannot index object"))))))
+                                                                              1)))
+                                                                         t20))
+                                                                       (if (py-list?
+                                                                            b34)
+                                                                         (py-list-set!
+                                                                          b34
+                                                                          i33
+                                                                          ((lambda (e38)
+                                                                             (begin
+                                                                               ((lambda (i37)
+                                                                                  (begin
+                                                                                    (if (py-list?
+                                                                                         e38)
+                                                                                      (py-list-ref
+                                                                                       e38
+                                                                                       i37)
+                                                                                      (if (tuple?
+                                                                                           e38)
+                                                                                        (tuple-ref
+                                                                                         e38
+                                                                                         i37)
+                                                                                        (if (dict?
+                                                                                             e38)
+                                                                                          (dict-ref
+                                                                                           e38
+                                                                                           i37)
+                                                                                          (error
+                                                                                           "cannot index object"))))))
+                                                                                1)))
+                                                                           t20))
+                                                                         (if (dict?
+                                                                              b34)
+                                                                           (dict-set!
+                                                                            b34
+                                                                            i33
+                                                                            ((lambda (e40)
+                                                                               (begin
+                                                                                 ((lambda (i39)
+                                                                                    (begin
+                                                                                      (if (py-list?
+                                                                                           e40)
+                                                                                        (py-list-ref
+                                                                                         e40
+                                                                                         i39)
+                                                                                        (if (tuple?
+                                                                                             e40)
+                                                                                          (tuple-ref
+                                                                                           e40
+                                                                                           i39)
+                                                                                          (if (dict?
+                                                                                               e40)
+                                                                                            (dict-ref
+                                                                                             e40
+                                                                                             i39)
+                                                                                            (error
+                                                                                             "cannot index object"))))))
+                                                                                  1)))
+                                                                             t20))
+                                                                           (void))))))
+                                                                 (+ i 1))))
+                                                            lst)))
+                                                       (tuple
+                                                        ((lambda (e22)
+                                                           (begin
+                                                             ((lambda (i21)
+                                                                (begin
+                                                                  (if (py-list?
+                                                                       e22)
+                                                                    (py-list-ref
+                                                                     e22
+                                                                     i21)
+                                                                    (if (tuple?
+                                                                         e22)
+                                                                      (tuple-ref
+                                                                       e22
+                                                                       i21)
+                                                                      (if (dict?
+                                                                           e22)
+                                                                        (dict-ref
+                                                                         e22
+                                                                         i21)
+                                                                        (error
+                                                                         "cannot index object"))))))
+                                                              (+ i 1))))
+                                                         lst)
+                                                        ((lambda (e24)
+                                                           (begin
+                                                             ((lambda (i23)
+                                                                (begin
+                                                                  (if (py-list?
+                                                                       e24)
+                                                                    (py-list-ref
+                                                                     e24
+                                                                     i23)
+                                                                    (if (tuple?
+                                                                         e24)
+                                                                      (tuple-ref
+                                                                       e24
+                                                                       i23)
+                                                                      (if (dict?
+                                                                           e24)
+                                                                        (dict-ref
+                                                                         e24
+                                                                         i23)
+                                                                        (error
+                                                                         "cannot index object"))))))
+                                                              i)))
+                                                         lst))))))
+                                                 (void))))))))))))))))))))))
+               (return lst)))
+           (void)
+           (void))))))
+   (set! g$unsort (py-list* 30 2 1 4 5 20 3 11 9 31 100 31 3 4 9 10))
+   (set! g$result (g$BubbleSort g$unsort))
+   (py-print g$result)))

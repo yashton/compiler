@@ -1,0 +1,94 @@
+
+<program> ::= (program <def>* <exp>)
+
+<def> ::= (define <var> (void>))
+       |  (define-env <name> (<field-name>*))           // added by closure conversion
+       |  (define-label <name> (lambda (<var*) <cexp>)) // added by lambda-lifting
+
+
+<aexp> ::= (void)
+        |  <var>
+        |  <number>
+        |  <string>
+        |  (lambda (<var>*) <cexp>) // removed by lambda-lifting
+        |  None
+        |  Ellipsis
+        |  $halt
+        |  #t
+        |  #f
+
+        |  (set <aexp>*)
+        |  (dict (<aexp> <aexp>)*)
+        |  (tuple <aexp>*)
+        |  (py-list* <aexp>*)
+
+        // added by mutable variable elimination:
+
+        |  (make-cell <aexp>)
+        |  (get-cell <aexp>)
+
+        // added by closure conversion:
+         
+        |  (make-closure <aexp> <aexp>)
+        |  (make-env <name> (<name> <exp>)*)
+        |  (env-ref <name> <aexp> <field-name>)
+
+        // added by lambda-lifting:
+
+        |  (label <name>)
+
+
+<cexp> ::= (error <aexp>)
+        |  (if <aexp> <cexp> <cexp>)
+        |  (set-then! <var> <aexp> <cexp>)
+        
+        |  (<aexp> <aexp>*)
+        |  ((cps <triop>) <aexp> <aexp> <aexp> <aexp>)
+        |  ((cps <binop>) <aexp> <aexp> <aexp>)
+        |  ((cps <unop>)  <aexp> <aexp>)
+        |  (<lib-fun> <aexp>*)
+
+        // added by mutable variable elimination:
+
+        |  (set-cell! <aexp> <aexp> <cexp>)
+
+        // added by closure conversion:
+
+        |  (app* <aexp> <aexp>*)
+
+ 
+
+<lib-fun> ::= for-set-k | for-py-list-k | for-tuple-k | for-dict-k
+
+<triop> ::= py-list-set! 
+         |  dict-set!
+         |  tuple-set! // Always produces error         
+
+<binop> ::= < | > | equal? | >= | <= | not-equal? | in? | not-in? | eq? | not-eq?
+         |  << | >>
+         |  + | - 
+         |  * | / | quotient | modulo
+         |  expt
+         |  assert2
+         |  bitwise-and | bitwise-or | bitwise-xor 
+         |  py-list-ref 
+         |  py-list-remove!
+         |  tuple-ref
+         |  dict-ref
+         |  dict-remove!
+
+<unop> ::= bitwise-not | + | -
+        |  integer?
+        |  string?
+        |  tuple?
+        |  dict?
+        |  py-list?
+        |  set?
+        |  assert1
+        |  py-print
+        |  not
+
+   
+
+
+

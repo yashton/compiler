@@ -1,0 +1,10 @@
+(program
+ (= (fred) (dict ("mike" 456) ("bill" 399) ("sarah" 521)))
+ (= (test) (list "mike" "sarah" "bill"))
+ (for
+  t
+  test
+  (suite
+   (expr (indexed print (called t)))
+   (expr (indexed print (called (indexed fred (subscript t))))))))
+

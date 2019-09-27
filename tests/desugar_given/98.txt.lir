@@ -1,0 +1,9 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$a (void))
+ (define g$b (void))
+ (define g$c (void))
+ (begin (set! g$a 1) (set! g$b 2) (set! g$c 3)))

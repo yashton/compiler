@@ -1,0 +1,37 @@
+(program
+ (define outfunc2 (void))
+ (define called (void))
+ (define outfunc (void))
+ (set-global!
+  outfunc
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ((called (void)) (func (void)))
+         (set! called 0)
+         (set! func
+           (lambda ()
+             (call/ec
+              (lambda (return) (let () (void) (set! called (+ called 1)))))))
+         (func)
+         (func)
+         (py-print called))))))
+ (set-global! called 0)
+ (set-global!
+  outfunc2
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ((func (void)))
+         (set! func
+           (lambda ()
+             (call/ec
+              (lambda (return)
+                (let ()
+                  (void)
+                  (set-global! called (+ (get-global called) 1)))))))
+         (func)
+         (func))))))
+ ((get-global outfunc))
+ ((get-global outfunc2))
+ (py-print (get-global called)))

@@ -1,0 +1,62 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$geometricSeriesSum (void))
+ (begin
+   (set! g$geometricSeriesSum
+     (lambda (x n)
+       (call/ec
+        (lambda (return)
+          ((lambda (sum i prod j)
+             (begin
+               (set! sum 0)
+               (set! i 0)
+               (call/ec
+                (lambda (break)
+                  ((lambda (loop)
+                     (begin
+                       (set! loop
+                         (lambda ()
+                           (if (<= i n)
+                             (begin
+                               (call/ec
+                                (lambda (continue)
+                                  ((lambda ()
+                                     (begin
+                                       (set! prod 1)
+                                       (set! j 0)
+                                       (call/ec
+                                        (lambda (break)
+                                          ((lambda (loop)
+                                             (begin
+                                               (set! loop
+                                                 (lambda ()
+                                                   (if (< j i)
+                                                     (begin
+                                                       (call/ec
+                                                        (lambda (continue)
+                                                          ((lambda ()
+                                                             (begin
+                                                               (set! prod
+                                                                 (* prod x))
+                                                               (set! j
+                                                                 (+ j 1)))))))
+                                                       (loop))
+                                                     (void))))
+                                               (loop)
+                                               (void)))
+                                           (void))))
+                                       (set! sum (+ sum prod))
+                                       (set! i (+ i 1)))))))
+                               (loop))
+                             (void))))
+                       (loop)
+                       (void)))
+                   (void))))
+               (return sum)))
+           (void)
+           (void)
+           (void)
+           (void))))))))

@@ -1,0 +1,11 @@
+(program
+ (define sum (void))
+ (define i (void))
+ (set-global! sum 0)
+ (for-each
+  i14
+  (py-list* 1 2 3 4 5 6 7 8 9 10)
+  (begin
+    (set-global! i i14)
+    (let () (set-global! sum (+ (get-global sum) (get-global sum))))))
+ (py-print (get-global sum)))

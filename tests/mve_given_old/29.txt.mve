@@ -1,0 +1,69 @@
+; mutable: g$s
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; global: get-field
+; env: ()
+; env: ()
+; global: g$a
+; env: ()
+; env: ()
+; global: f
+; env: ()
+; env*: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env: (rv14)
+; global: get-field
+; env: (rv14)
+; env: (rv14)
+; global: g$b
+; env: (rv14)
+; env: (rv14)
+; global: fg
+; env: (rv14)
+; env*: (rv14 rv15)
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; regular: rv15
+; env: (rv14 rv15)
+; env*: (rv14 rv16 rv15)
+; env: (rv14 rv16 rv15)
+; env: (rv14 rv16 rv15)
+; env: (rv14 rv16 rv15)
+; env: (rv14 rv16 rv15)
+; env: (rv14 rv16 rv15)
+; env*: (rv14 rv17 rv16 rv15)
+; env: (rv14 rv17 rv16 rv15)
+; env: (rv14 rv17 rv16 rv15)
+; regular: rv17
+; env: (rv14 rv17 rv16 rv15)
+; env: (rv14 rv17 rv16 rv15)
+; env: (rv14 rv17 rv16 rv15)
+; global: $halt
+; env: (rv14 rv17 rv16 rv15)
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$s (void))
+ (get-field
+  g$a
+  f
+  (lambda (rv14)
+    (get-field
+     g$b
+     fg
+     (lambda (rv15)
+       (rv15
+        (lambda (rv16)
+          ((cps +)
+           1
+           0+2.0i
+           (lambda (rv17) (set-then! g$s rv17 ($halt (void))))))))))))

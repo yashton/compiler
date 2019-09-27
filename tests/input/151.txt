@@ -1,0 +1,17 @@
+try:
+      fsock = open("/notthere")      
+except IOError:
+      try:
+          a = 1/0
+      except ZeroDivisionError as e:
+          try:
+              print("zero division %s",e)
+          except Error:
+              print("error!!")
+          else:  
+              print("else...1")                                 
+      else:
+          print("else...2")
+finally:
+      print("else...3")
+

@@ -1,0 +1,20 @@
+(program
+ (def
+  (outfunc)
+  (suite
+   (= (called) 0)
+   (def (func) (suite (nonlocal called) ("+=" (called) 1)))
+   (expr (indexed func (called)))
+   (expr (indexed func (called)))
+   (expr (indexed print (called called)))))
+ (= (called) 0)
+ (def
+  (outfunc2)
+  (suite
+   (def (func) (suite (global called) ("+=" (called) 1)))
+   (expr (indexed func (called)))
+   (expr (indexed func (called)))))
+ (expr (indexed outfunc (called)))
+ (expr (indexed outfunc2 (called)))
+ (expr (indexed print (called called))))
+

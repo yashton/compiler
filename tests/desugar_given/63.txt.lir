@@ -1,0 +1,6 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (begin (if (> 1 0) ((lambda () (begin 1))) ((lambda () (begin 2))))))

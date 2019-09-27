@@ -1,0 +1,9 @@
+(PUNCT "(")
+(ID "N")
+(PUNCT "=")
+(NEWLINE)
+(INDENT)
+(LIT 5)
+(ERROR "Illegal character '"
+
+ A=6' on line 2)

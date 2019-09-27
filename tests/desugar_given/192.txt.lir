@@ -1,0 +1,33 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$x (void))
+ (define g$sum (void))
+ (begin
+   (set! g$x 0)
+   (set! g$sum 0)
+   (call/ec
+    (lambda (break)
+      ((lambda (loop)
+         (begin
+           (set! loop
+             (lambda ()
+               (if (<= g$x 20)
+                 (begin
+                   (call/ec
+                    (lambda (continue)
+                      ((lambda ()
+                         (begin
+                           (if (equal? (modulo g$x 2) 0)
+                             ((lambda () (begin (set! g$sum (+ g$sum g$x)))))
+                             ((lambda ()
+                                (begin (set! g$x (+ g$x 1)) (break)))))
+                           (set! g$x (+ g$x 1)))))))
+                   (loop))
+                 (void))))
+           (loop)
+           ((lambda () (begin (py-print "didn't run\n"))))))
+       (void))))
+   (py-print g$sum)))

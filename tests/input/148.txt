@@ -1,0 +1,27 @@
+def outfunc():
+  called = 0
+
+  def func():
+      nonlocal called  
+      called += 1 
+
+  func()
+  func()
+  print(called)
+
+
+called = 0
+
+def outfunc2():
+
+  def func():
+      global called  
+      called += 1 
+
+  func()
+  func()
+
+outfunc()
+outfunc2()
+print(called)
+

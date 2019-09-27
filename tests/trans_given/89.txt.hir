@@ -1,0 +1,3 @@
+(program
+ (define str (void))
+ (set-global! str "long \"\"\" string' with quote char\"\"\""))

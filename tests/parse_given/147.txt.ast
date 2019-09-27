@@ -1,0 +1,10 @@
+(program
+ (= (dict) (dict ("Name" "Zara") ("Age" 7) ("Class" "First")))
+ (for
+  x
+  (indexed dict (dot items) (called))
+  (suite (expr (indexed print (called x)))))
+ (del (indexed dict (subscript "Name")))
+ (expr (indexed dict (dot clear) (called)))
+ (del dict))
+

@@ -1,0 +1,5 @@
+(LIT "")
+(ERROR "Illegal character '" 
+foo
+bar
+' on line 1)

@@ -1,0 +1,7 @@
+(ID "s")
+(PUNCT "=")
+(ERROR "Illegal character '"foo\
+\\ \n\'\""
+s2 = "hello"
+s3 = "blah
+' on line 1)

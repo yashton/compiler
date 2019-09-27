@@ -1,0 +1,6 @@
+(ID "fact")
+(PUNCT "(")
+(LIT 2)
+(PUNCT ")")
+(NEWLINE)
+(ENDMARKER)

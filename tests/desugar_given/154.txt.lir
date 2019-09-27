@@ -1,0 +1,49 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$length (void))
+ (define g$shape (void))
+ (define g$width (void))
+ (begin
+   (set! g$shape (g$int (g$input g$menu)))
+   (call/ec
+    (lambda (break)
+      ((lambda (loop)
+         (begin
+           (set! loop
+             (lambda ()
+               (if (not-equal? g$shape 4)
+                 (begin
+                   (call/ec
+                    (lambda (continue)
+                      ((lambda ()
+                         (begin
+                           (if (equal? g$shape 1)
+                             ((lambda ()
+                                (begin
+                                  (set! g$length
+                                    (g$float (g$input "Length: ")))
+                                  (py-print
+                                   "Area of square = "
+                                   (expt g$length 2)))))
+                             (if (equal? g$shape 2)
+                               ((lambda ()
+                                  (begin
+                                    (set! g$length
+                                      (g$float (g$input "Length: ")))
+                                    (set! g$width
+                                      (g$float (g$input "Width: ")))
+                                    (py-print
+                                     "Area of rectangle = "
+                                     (* g$length g$width)))))
+                               ((lambda ()
+                                  (begin
+                                    (py-print
+                                     " Not a valid shape. try again")))))))))))
+                   (loop))
+                 (void))))
+           (loop)
+           (void)))
+       (void))))))

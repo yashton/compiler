@@ -1,0 +1,15 @@
+(program
+ (define x (void))
+ (define sum (void))
+ (set-global! x 0)
+ (set-global! sum 0)
+ (while
+  (<= (get-global x) 20)
+  (let ()
+    (cond
+     ((equal? (modulo (get-global x) 2) 0)
+      (let () (set-global! sum (+ (get-global sum) (get-global x)))))
+     (else (let () (set-global! x (+ (get-global x) 1)) (break))))
+    (set-global! x (+ (get-global x) 1)))
+  (let () (py-print "didn't run\n")))
+ (py-print (get-global sum)))

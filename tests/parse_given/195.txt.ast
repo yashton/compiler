@@ -1,0 +1,49 @@
+(program
+ (def
+  (partition l start end)
+  (suite
+   (= (pivot) (indexed l (subscript end)))
+   (= (bottom) (arith start ("-" 1)))
+   (= (top) end)
+   (= (done) False)
+   (while
+    (not done)
+    (suite
+     (while
+      (not done)
+      (suite
+       (= (bottom) (arith bottom ("+" 1)))
+       (cond ((comparison bottom ("==" top)) (suite (= (done) 1) (break))))
+       (cond
+        ((comparison (indexed l (subscript bottom)) (">" pivot))
+         (suite
+          (= ((indexed l (subscript top))) (indexed l (subscript bottom)))
+          (break))))))
+     (while
+      (not done)
+      (suite
+       (= (top) (arith top ("-" 1)))
+       (cond ((comparison top ("==" bottom)) (suite (= (done) True) (break))))
+       (cond
+        ((comparison (indexed l (subscript top)) ("<" pivot))
+         (suite
+          (= ((indexed l (subscript bottom))) (indexed l (subscript top)))
+          (break))))))))
+   (= ((indexed l (subscript top))) pivot)
+   (return top)))
+ (def
+  (quicksort l start end)
+  (suite
+   (cond
+    ((comparison start ("<" end))
+     (suite
+      (= (split) (indexed partition (called l start end)))
+      (expr (indexed quicksort (called l start (arith split ("-" 1)))))
+      (expr (indexed quicksort (called l (arith split ("+" 1)) end)))))
+    (else (suite (return))))))
+ (= (start) 0)
+ (= (end) 8)
+ (= (li) (list 4 3 2 10 1 9 7 2 11))
+ (expr (indexed quicksort (called li start end)))
+ (for i li (suite (expr (indexed print (called i))))))
+

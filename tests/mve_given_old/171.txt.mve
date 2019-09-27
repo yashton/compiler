@@ -1,0 +1,78 @@
+; mutable: a
+; mutable: g$f
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 b a)
+; env: (k14 b a)
+; env: (k14 b a)
+; env*: (f k14 b a cc)
+; env: (f k14 b a cc)
+; env: (f k14 b a cc)
+; regular: f
+; env: (f k14 b a cc)
+; env*: (f k k14 b a x cc)
+; env: (f k k14 b a x cc)
+; env: (f k k14 b a x cc)
+; regular: cc
+; env: (f k k14 b a x cc)
+; regular: x
+; env: (f k14 b a cc)
+; regular: cc
+; env: (k14 b a)
+; env*: (k14 b a return k15)
+; env: (k14 b a return k15)
+; env: (k14 b a return k15)
+; env*: (k14 b a return k15 k16)
+; env: (k14 b a return k15 k16)
+; env: (k14 b a return k15 k16)
+; env: (k14 b a return k15 k16)
+; mutable: a
+; env: (k14 b a return k15 k16)
+; env*: (k14 b a return k15 rv17 k16)
+; env: (k14 b a return k15 rv17 k16)
+; env: (k14 b a return k15 rv17 k16)
+; env: (k14 b a return k15 rv17 k16)
+; env: (k14 b a return k15 rv17 k16)
+; env: (k14 b a return k15 rv17 k16)
+; mutable: a
+; env: (k14 b a return k15 rv17 k16)
+; regular: k16
+; env: (k14 b a return k15)
+; regular: k15
+; env: (k14 b a)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; global: g$f
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$f (void))
+ (set-then!
+  g$f
+  (lambda (a b k14)
+    (set-then!
+     a
+     (make-cell a)
+     ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+      (lambda (return k15)
+        ((lambda (k16)
+           ((cps py-print)
+            (get-cell a)
+            (lambda (rv17) (set-cell! a 3 ((cps py-print) (get-cell a) k16)))))
+         k15))
+      k14)))
+  (g$f 1 2 $halt)))

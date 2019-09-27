@@ -1,0 +1,8 @@
+(program
+ (=
+  (a)
+  (tuple
+   (bitwise-xor 1 2 3 4 5)
+   (bitwise-and 1 2 3 4 5)
+   (bitwise-or 1 2 3 4 5))))
+

@@ -1,0 +1,9 @@
+dict = {'Name': 'Zara', 'Age': 7, 'Class': 'First'};
+
+for x in dict.items():
+  print(x)
+
+del dict['Name']; 
+dict.clear();     
+del dict ;
+

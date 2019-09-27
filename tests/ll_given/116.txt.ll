@@ -1,0 +1,316 @@
+(program
+ (define-label
+  $lambda38
+  (lambda ($env rv21)
+    (if rv21
+      ((cps dict-ref)
+       (env-ref $env_t38 $env e17)
+       (env-ref $env_t38 $env i16)
+       (env-ref $env_t38 $env k18))
+      (error "cannot index object" (env-ref $env_t38 $env k18)))))
+ (define-label
+  $lambda39
+  (lambda ($env rv20)
+    (if rv20
+      ((cps tuple-ref)
+       (env-ref $env_t38 $env e17)
+       (env-ref $env_t38 $env i16)
+       (env-ref $env_t38 $env k18))
+      ((cps dict?)
+       (env-ref $env_t38 $env e17)
+       (make-closure
+        (lambda-label $lambda38)
+        (make-env
+         $env_t38
+         (e17 (env-ref $env_t38 $env e17))
+         (i16 (env-ref $env_t38 $env i16))
+         (k18 (env-ref $env_t38 $env k18))))))))
+ (define-label
+  $lambda40
+  (lambda ($env rv19)
+    (if rv19
+      ((cps py-list-ref)
+       (env-ref $env_t38 $env e17)
+       (env-ref $env_t38 $env i16)
+       (env-ref $env_t38 $env k18))
+      ((cps tuple?)
+       (env-ref $env_t38 $env e17)
+       (make-closure
+        (lambda-label $lambda39)
+        (make-env
+         $env_t38
+         (e17 (env-ref $env_t38 $env e17))
+         (i16 (env-ref $env_t38 $env i16))
+         (k18 (env-ref $env_t38 $env k18))))))))
+ (define-label
+  $lambda41
+  (lambda ($env i16 k18)
+    ((cps py-list?)
+     (env-ref $env_t39 $env e17)
+     (make-closure
+      (lambda-label $lambda40)
+      (make-env
+       $env_t38
+       (e17 (env-ref $env_t39 $env e17))
+       (i16 i16)
+       (k18 k18))))))
+ (define-label
+  $lambda42
+  (lambda ($env e17 k17)
+    (app*
+     (make-closure (lambda-label $lambda41) (make-env $env_t39 (e17 e17)))
+     4
+     k17)))
+ (define-label
+  $lambda43
+  (lambda ($env rv22)
+    ((cps tuple-set!)
+     (env-ref $env_t41 $env b15)
+     (env-ref $env_t41 $env i14)
+     rv22
+     (env-ref $env_t41 $env k15))))
+ (define-label
+  $lambda44
+  (lambda ($env rv28)
+    (if rv28
+      ((cps dict-ref)
+       (env-ref $env_t42 $env e19)
+       (env-ref $env_t42 $env i18)
+       (env-ref $env_t42 $env k25))
+      (error "cannot index object" (env-ref $env_t42 $env k25)))))
+ (define-label
+  $lambda45
+  (lambda ($env rv27)
+    (if rv27
+      ((cps tuple-ref)
+       (env-ref $env_t42 $env e19)
+       (env-ref $env_t42 $env i18)
+       (env-ref $env_t42 $env k25))
+      ((cps dict?)
+       (env-ref $env_t42 $env e19)
+       (make-closure
+        (lambda-label $lambda44)
+        (make-env
+         $env_t42
+         (e19 (env-ref $env_t42 $env e19))
+         (i18 (env-ref $env_t42 $env i18))
+         (k25 (env-ref $env_t42 $env k25))))))))
+ (define-label
+  $lambda46
+  (lambda ($env rv26)
+    (if rv26
+      ((cps py-list-ref)
+       (env-ref $env_t42 $env e19)
+       (env-ref $env_t42 $env i18)
+       (env-ref $env_t42 $env k25))
+      ((cps tuple?)
+       (env-ref $env_t42 $env e19)
+       (make-closure
+        (lambda-label $lambda45)
+        (make-env
+         $env_t42
+         (e19 (env-ref $env_t42 $env e19))
+         (i18 (env-ref $env_t42 $env i18))
+         (k25 (env-ref $env_t42 $env k25))))))))
+ (define-label
+  $lambda47
+  (lambda ($env i18 k25)
+    ((cps py-list?)
+     (env-ref $env_t43 $env e19)
+     (make-closure
+      (lambda-label $lambda46)
+      (make-env
+       $env_t42
+       (e19 (env-ref $env_t43 $env e19))
+       (i18 i18)
+       (k25 k25))))))
+ (define-label
+  $lambda48
+  (lambda ($env e19 k24)
+    (app*
+     (make-closure (lambda-label $lambda47) (make-env $env_t43 (e19 e19)))
+     4
+     k24)))
+ (define-label
+  $lambda49
+  (lambda ($env rv29)
+    ((cps py-list-set!)
+     (env-ref $env_t41 $env b15)
+     (env-ref $env_t41 $env i14)
+     rv29
+     (env-ref $env_t41 $env k15))))
+ (define-label
+  $lambda50
+  (lambda ($env rv35)
+    (if rv35
+      ((cps dict-ref)
+       (env-ref $env_t44 $env e21)
+       (env-ref $env_t44 $env i20)
+       (env-ref $env_t44 $env k32))
+      (error "cannot index object" (env-ref $env_t44 $env k32)))))
+ (define-label
+  $lambda51
+  (lambda ($env rv34)
+    (if rv34
+      ((cps tuple-ref)
+       (env-ref $env_t44 $env e21)
+       (env-ref $env_t44 $env i20)
+       (env-ref $env_t44 $env k32))
+      ((cps dict?)
+       (env-ref $env_t44 $env e21)
+       (make-closure
+        (lambda-label $lambda50)
+        (make-env
+         $env_t44
+         (e21 (env-ref $env_t44 $env e21))
+         (i20 (env-ref $env_t44 $env i20))
+         (k32 (env-ref $env_t44 $env k32))))))))
+ (define-label
+  $lambda52
+  (lambda ($env rv33)
+    (if rv33
+      ((cps py-list-ref)
+       (env-ref $env_t44 $env e21)
+       (env-ref $env_t44 $env i20)
+       (env-ref $env_t44 $env k32))
+      ((cps tuple?)
+       (env-ref $env_t44 $env e21)
+       (make-closure
+        (lambda-label $lambda51)
+        (make-env
+         $env_t44
+         (e21 (env-ref $env_t44 $env e21))
+         (i20 (env-ref $env_t44 $env i20))
+         (k32 (env-ref $env_t44 $env k32))))))))
+ (define-label
+  $lambda53
+  (lambda ($env i20 k32)
+    ((cps py-list?)
+     (env-ref $env_t45 $env e21)
+     (make-closure
+      (lambda-label $lambda52)
+      (make-env
+       $env_t44
+       (e21 (env-ref $env_t45 $env e21))
+       (i20 i20)
+       (k32 k32))))))
+ (define-label
+  $lambda54
+  (lambda ($env e21 k31)
+    (app*
+     (make-closure (lambda-label $lambda53) (make-env $env_t45 (e21 e21)))
+     4
+     k31)))
+ (define-label
+  $lambda55
+  (lambda ($env rv36)
+    ((cps dict-set!)
+     (env-ref $env_t41 $env b15)
+     (env-ref $env_t41 $env i14)
+     rv36
+     (env-ref $env_t41 $env k15))))
+ (define-label
+  $lambda56
+  (lambda ($env rv30)
+    (if rv30
+      (app*
+       (make-closure (lambda-label $lambda54) (make-env $env_t40))
+       g$a
+       (make-closure
+        (lambda-label $lambda55)
+        (make-env
+         $env_t41
+         (b15 (env-ref $env_t41 $env b15))
+         (i14 (env-ref $env_t41 $env i14))
+         (k15 (env-ref $env_t41 $env k15)))))
+      (app* (env-ref $env_t41 $env k15) (void)))))
+ (define-label
+  $lambda57
+  (lambda ($env rv23)
+    (if rv23
+      (app*
+       (make-closure (lambda-label $lambda48) (make-env $env_t40))
+       g$a
+       (make-closure
+        (lambda-label $lambda49)
+        (make-env
+         $env_t41
+         (b15 (env-ref $env_t41 $env b15))
+         (i14 (env-ref $env_t41 $env i14))
+         (k15 (env-ref $env_t41 $env k15)))))
+      ((cps dict?)
+       (env-ref $env_t41 $env b15)
+       (make-closure
+        (lambda-label $lambda56)
+        (make-env
+         $env_t41
+         (b15 (env-ref $env_t41 $env b15))
+         (i14 (env-ref $env_t41 $env i14))
+         (k15 (env-ref $env_t41 $env k15))))))))
+ (define-label
+  $lambda58
+  (lambda ($env rv16)
+    (if rv16
+      (app*
+       (make-closure (lambda-label $lambda42) (make-env $env_t40))
+       g$a
+       (make-closure
+        (lambda-label $lambda43)
+        (make-env
+         $env_t41
+         (b15 (env-ref $env_t41 $env b15))
+         (i14 (env-ref $env_t41 $env i14))
+         (k15 (env-ref $env_t41 $env k15)))))
+      ((cps py-list?)
+       (env-ref $env_t41 $env b15)
+       (make-closure
+        (lambda-label $lambda57)
+        (make-env
+         $env_t41
+         (b15 (env-ref $env_t41 $env b15))
+         (i14 (env-ref $env_t41 $env i14))
+         (k15 (env-ref $env_t41 $env k15))))))))
+ (define-label
+  $lambda59
+  (lambda ($env i14 k15)
+    ((cps tuple?)
+     (env-ref $env_t46 $env b15)
+     (make-closure
+      (lambda-label $lambda58)
+      (make-env
+       $env_t41
+       (b15 (env-ref $env_t46 $env b15))
+       (i14 i14)
+       (k15 k15))))))
+ (define-label
+  $lambda60
+  (lambda ($env b15 k14)
+    (app*
+     (make-closure (lambda-label $lambda59) (make-env $env_t46 (b15 b15)))
+     1
+     k14)))
+ (define-env $env_t40 ())
+ (define-env $env_t41 (b15 i14 k15))
+ (define-env $env_t44 (e21 i20 k32))
+ (define-env $env_t45 (e21))
+ (define-env $env_t46 (b15))
+ (define-env $env_t42 (e19 i18 k25))
+ (define-env $env_t43 (e19))
+ (define-env $env_t38 (e17 i16 k18))
+ (define-env $env_t39 (e17))
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$b (void))
+ (define g$a (void))
+ (set-then!
+  g$a
+  (py-list* 1 2 3)
+  (set-then!
+   g$b
+   (py-list* 1 2 3)
+   (app*
+    (make-closure (lambda-label $lambda60) (make-env $env_t40))
+    g$a
+    $halt))))

@@ -1,0 +1,268 @@
+; mutable: $current-handler
+; mutable: g$doomed
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14)
+; env: (k14)
+; env: (k14)
+; env*: (f k14 cc)
+; env: (f k14 cc)
+; env: (f k14 cc)
+; regular: f
+; env: (f k14 cc)
+; env*: (f k k14 cc x)
+; env: (f k k14 cc x)
+; env: (f k k14 cc x)
+; regular: cc
+; env: (f k k14 cc x)
+; regular: x
+; env: (f k14 cc)
+; regular: cc
+; env: (k14)
+; env*: (k14 k15 return)
+; env: (k14 k15 return)
+; env: (k14 k15 return)
+; env*: (k14 k16 k15 return)
+; env: (k14 k16 k15 return)
+; env: (k14 k16 k15 return)
+; env*: (k14 k16 k15 return $old-handler k17)
+; env: (k14 k16 k15 return $old-handler k17)
+; env: (k14 k16 k15 return $old-handler k17)
+; env*: (k14 k16 k15 return $old-return k18 $old-handler k17)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17)
+; env*: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-continue k19)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-continue k19)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-continue k19)
+; env*: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env*: (f cc k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env: (f cc k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env: (f cc k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; regular: f
+; env: (f cc k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env*: (f k cc k14 x return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env: (f k cc k14 x return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env: (f k cc k14 x return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; regular: cc
+; env: (f k cc k14 x return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; regular: x
+; env: (f cc k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; regular: cc
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25)
+; regular: $old-handler
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 ex k26 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 ex k26 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 ex k26 k25)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k27 ex k26 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k27 ex k26 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k27 ex k26 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k27 ex k26 k25)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k27 ex k26 k25)
+; regular: k27
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 ex k26 k25)
+; regular: k26
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25)
+; regular: $ex14
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25 rv28)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25 rv28)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25 rv28)
+; regular: $ec15
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25 rv28)
+; regular: rv28
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ex14 $ec15 k24 k23 k25 rv28)
+; regular: k25
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 k30)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 k30)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 k30)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 k30)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 k30)
+; regular: k30
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv31)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv31)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv31)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv rv31 k29)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv rv31 k29)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv rv31 k29)
+; regular: $old-handler
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv rv31 k29)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv rv31 k29)
+; regular: k29
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv rv31 k29)
+; regular: rv
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv31)
+; regular: rv31
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 $ec15 k24 k23 rv31)
+; regular: k24
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 break continue k22 k21 k23)
+; regular: k23
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21 k32)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21 k32)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21 k32)
+; regular: $old-handler
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21 k32)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21 k32)
+; regular: $old-break
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21 k32)
+; regular: k32
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 continue k22 k21)
+; regular: k22
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21)
+; env*: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21 k33)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21 k33)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21 k33)
+; regular: $old-handler
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21 k33)
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21 k33)
+; regular: $old-continue
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21 k33)
+; regular: k33
+; env: (k14 return k15 k16 $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 k21)
+; regular: k21
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19)
+; env*: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 rv k34)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 rv k34)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 rv k34)
+; regular: $old-handler
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 rv k34)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 rv k34)
+; regular: return
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 rv k34)
+; regular: rv
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19 rv k34)
+; regular: k34
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-break k20 $old-continue k19)
+; regular: k20
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-continue k19)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-continue k19)
+; global: break
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17 $old-continue k19)
+; regular: k19
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17)
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17)
+; global: continue
+; env: (k14 k16 k15 return $old-return k18 $old-handler k17)
+; regular: k18
+; env: (k14 k16 k15 return $old-handler k17)
+; regular: return
+; env: (k14 k16 k15 return $old-handler k17)
+; regular: k17
+; env: (k14 k16 k15 return)
+; env: (k14 k16 k15 return)
+; global: $current-handler
+; env: (k14 k16 k15 return)
+; regular: k16
+; env: (k14 k15 return)
+; regular: k15
+; env: (k14)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; global: g$doomed
+; env: ()
+; env: ()
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$doomed (void))
+ (set-then!
+  g$doomed
+  (lambda (k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (k16)
+          ((lambda ($old-handler k17)
+             ((lambda ($old-return k18)
+                ((lambda ($old-continue k19)
+                   ((lambda ($old-break k20)
+                      ((lambda (return k21)
+                         ((lambda (continue k22)
+                            ((lambda (break k23)
+                               ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                                (lambda ($ec15 k24)
+                                  (set-then!
+                                   $current-handler
+                                   (lambda ($ex14 k25)
+                                     (set-then!
+                                      $current-handler
+                                      $old-handler
+                                      ((lambda (ex k26)
+                                         ((lambda (k27)
+                                            ((cps py-print)
+                                             "caught an index error!"
+                                             k27))
+                                          k26))
+                                       $ex14
+                                       (lambda (rv28) ($ec15 rv28 k25)))))
+                                   ((lambda (k30)
+                                      ((cps py-print) "try...\n" k30))
+                                    (lambda (rv31)
+                                      ((lambda (rv k29)
+                                         (set-then!
+                                          $current-handler
+                                          $old-handler
+                                          (k29 rv)))
+                                       rv31
+                                       k24)))))
+                                k23))
+                             (lambda (k32)
+                               (set-then!
+                                $current-handler
+                                $old-handler
+                                ($old-break k32)))
+                             k22))
+                          (lambda (k33)
+                            (set-then!
+                             $current-handler
+                             $old-handler
+                             ($old-continue k33)))
+                          k21))
+                       (lambda (rv k34)
+                         (set-then!
+                          $current-handler
+                          $old-handler
+                          (return rv k34)))
+                       k20))
+                    break
+                    k19))
+                 continue
+                 k18))
+              return
+              k17))
+           $current-handler
+           k16))
+        k15))
+     k14))
+  (g$doomed $halt)))

@@ -1,0 +1,12 @@
+mkdir $(SUBMIT_DIR);
+cp Makefile readme  $(SUBMIT_DIR)/;
+cp -r tests $(SUBMIT_DIR)/;
+cp pylex.py $(SUBMIT_DIR)/;
+mkdir $(SUBMIT_DIR)/ply;
+cp ply/*.py $(SUBMIT_DIR)/ply/;
+cp derivative-parsers.rkt pyparse.rkt python-ast.grm.sx $(SUBMIT_DIR)/;
+cp pytrans.rkt $(SUBMIT_DIR)/;
+cp pydesugar.rkt $(SUBMIT_DIR)/;
+cd pycps.rkt $(SUBMIT_DIR)/;
+tar -czf compiler.tar.gz $(SUBMIT_DIR)/;
+rm -r $(SUBMIT_DIR);

@@ -1,0 +1,43 @@
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (rv14)
+; env: (rv14)
+; env: (rv14)
+; regular: rv14
+; env: (rv14)
+; env: (rv14)
+; env*: (rv14 k15)
+; env: (rv14 k15)
+; env: (rv14 k15)
+; regular: k15
+; env: (rv14 k15)
+; env: (rv14)
+; env: (rv14)
+; global: $halt
+; env: (rv14)
+; env: (rv14)
+; env*: (rv14 k16)
+; env: (rv14 k16)
+; env: (rv14 k16)
+; regular: k16
+; env: (rv14 k16)
+; env: (rv14)
+; env: (rv14)
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ ((cps >)
+  1
+  0
+  (lambda (rv14)
+    (if rv14 ((lambda (k15) (k15 1)) $halt) ((lambda (k16) (k16 2)) $halt)))))

@@ -1,0 +1,19 @@
+(program
+ (define geometricSeriesSum (void))
+ (set-global!
+  geometricSeriesSum
+  (lambda (x n)
+    (call/ec
+     (lambda (return)
+       (let ((sum (void)) (i (void)) (prod (void)) (j (void)))
+         (set! sum 0)
+         (set! i 0)
+         (while
+          (<= i n)
+          (let ()
+            (set! prod 1)
+            (set! j 0)
+            (while (< j i) (let () (set! prod (* prod x)) (set! j (+ j 1))))
+            (set! sum (+ sum prod))
+            (set! i (+ i 1))))
+         (return sum)))))))

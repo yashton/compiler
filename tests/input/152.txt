@@ -1,0 +1,22 @@
+HOST = "http://matt.might.net/apps/pyparse/pyparse.php"
+
+def get_result_from_server(file_contents):
+        params = {}
+        params['file'] = file_contents
+        params['lex'] = 1
+        params = urllib.urlencode(params)
+
+        result = urllib.urlopen(HOST, params);
+        return result
+
+def print_result(sin):
+        code = sin.read()
+        sys.stdout.write(get_result_from_server(code).read());
+
+def main(argv):
+        print_result(argv)
+
+
+if __name__ == "__main__":
+        main(sys.stdin)
+

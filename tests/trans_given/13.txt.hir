@@ -1,0 +1,15 @@
+(program
+ (define fact (void))
+ (define s (void))
+ (set-global!
+  fact
+  (lambda (x)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond
+          ((equal? x (- 1)) (let () (return 0+1.0i)))
+          ((equal? x 0) (let () (return 1)))
+          (else (let () (return (* x ((get-global fact) (- x 1))))))))))))
+ (set-global! s "foo\\ \n'\"")
+ ((get-global fact) 20))

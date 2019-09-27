@@ -1,0 +1,403 @@
+; mutable: g$b
+; mutable: g$a
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 b15)
+; env: (k14 b15)
+; env: (k14 b15)
+; env*: (b15 k14 k15 i14)
+; env: (b15 k14 k15 i14)
+; env: (b15 k14 k15 i14)
+; env: (b15 k14 k15 i14)
+; regular: b15
+; env: (b15 k14 k15 i14)
+; env*: (b15 k14 rv16 k15 i14)
+; env: (b15 k14 rv16 k15 i14)
+; env: (b15 k14 rv16 k15 i14)
+; regular: rv16
+; env: (b15 k14 rv16 k15 i14)
+; env: (b15 k14 rv16 k15 i14)
+; env*: (b15 k14 e17 rv16 k15 i14 k17)
+; env: (b15 k14 e17 rv16 k15 i14 k17)
+; env: (b15 k14 e17 rv16 k15 i14 k17)
+; env*: (b15 k14 e17 rv16 k15 i14 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 i16 k18 k17)
+; regular: e17
+; env: (b15 k14 e17 rv16 k15 i14 i16 k18 k17)
+; env*: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; regular: rv19
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; regular: e17
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; regular: i16
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; regular: k18
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; regular: e17
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17)
+; env*: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; regular: rv20
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; regular: e17
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; regular: i16
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; regular: k18
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; regular: e17
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv20)
+; env*: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; regular: rv21
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; regular: e17
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; regular: i16
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; regular: k18
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; env: (b15 k14 e17 rv16 k15 i14 rv19 i16 k18 k17 rv21 rv20)
+; regular: k18
+; env: (b15 k14 e17 rv16 k15 i14 k17)
+; env: (b15 k14 e17 rv16 k15 i14 k17)
+; regular: k17
+; env: (b15 k14 rv16 k15 i14)
+; env: (b15 k14 rv16 k15 i14)
+; global: g$a
+; env: (b15 k14 rv16 k15 i14)
+; env*: (b15 k14 rv16 k15 i14 rv22)
+; env: (b15 k14 rv16 k15 i14 rv22)
+; env: (b15 k14 rv16 k15 i14 rv22)
+; env: (b15 k14 rv16 k15 i14 rv22)
+; regular: b15
+; env: (b15 k14 rv16 k15 i14 rv22)
+; regular: i14
+; env: (b15 k14 rv16 k15 i14 rv22)
+; regular: rv22
+; env: (b15 k14 rv16 k15 i14 rv22)
+; regular: k15
+; env: (b15 k14 rv16 k15 i14)
+; env: (b15 k14 rv16 k15 i14)
+; env: (b15 k14 rv16 k15 i14)
+; regular: b15
+; env: (b15 k14 rv16 k15 i14)
+; env*: (b15 k14 rv16 k15 i14 rv23)
+; env: (b15 k14 rv16 k15 i14 rv23)
+; env: (b15 k14 rv16 k15 i14 rv23)
+; regular: rv23
+; env: (b15 k14 rv16 k15 i14 rv23)
+; env: (b15 k14 rv16 k15 i14 rv23)
+; env*: (b15 k14 rv16 k15 i14 rv23 e19 k24)
+; env: (b15 k14 rv16 k15 i14 rv23 e19 k24)
+; env: (b15 k14 rv16 k15 i14 rv23 e19 k24)
+; env*: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24)
+; regular: e19
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24)
+; env*: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; regular: rv26
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; regular: e19
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; regular: i18
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; regular: k25
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; regular: e19
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv26)
+; env*: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; regular: rv27
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; regular: e19
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; regular: i18
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; regular: k25
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; regular: e19
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv27 rv26)
+; env*: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; regular: rv28
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; regular: e19
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; regular: i18
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; regular: k25
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; env: (b15 k14 rv16 k15 i14 rv23 i18 k25 e19 k24 rv28 rv27 rv26)
+; regular: k25
+; env: (b15 k14 rv16 k15 i14 rv23 e19 k24)
+; env: (b15 k14 rv16 k15 i14 rv23 e19 k24)
+; regular: k24
+; env: (b15 k14 rv16 k15 i14 rv23)
+; env: (b15 k14 rv16 k15 i14 rv23)
+; global: g$a
+; env: (b15 k14 rv16 k15 i14 rv23)
+; env*: (b15 k14 rv16 k15 i14 rv23 rv29)
+; env: (b15 k14 rv16 k15 i14 rv23 rv29)
+; env: (b15 k14 rv16 k15 i14 rv23 rv29)
+; env: (b15 k14 rv16 k15 i14 rv23 rv29)
+; regular: b15
+; env: (b15 k14 rv16 k15 i14 rv23 rv29)
+; regular: i14
+; env: (b15 k14 rv16 k15 i14 rv23 rv29)
+; regular: rv29
+; env: (b15 k14 rv16 k15 i14 rv23 rv29)
+; regular: k15
+; env: (b15 k14 rv16 k15 i14 rv23)
+; env: (b15 k14 rv16 k15 i14 rv23)
+; env: (b15 k14 rv16 k15 i14 rv23)
+; regular: b15
+; env: (b15 k14 rv16 k15 i14 rv23)
+; env*: (b15 k14 rv16 k15 i14 rv23 rv30)
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; regular: rv30
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; env*: (b15 k14 rv16 k15 i14 rv23 e21 k31 rv30)
+; env: (b15 k14 rv16 k15 i14 rv23 e21 k31 rv30)
+; env: (b15 k14 rv16 k15 i14 rv23 e21 k31 rv30)
+; env*: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 k32)
+; regular: e21
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 k32)
+; env*: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; regular: rv33
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; regular: e21
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; regular: i20
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; regular: k32
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; regular: e21
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv33 k32)
+; env*: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; regular: rv34
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; regular: e21
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; regular: i20
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; regular: k32
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; regular: e21
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv34 rv33 k32)
+; env*: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; regular: rv35
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; regular: e21
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; regular: i20
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; regular: k32
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; env: (b15 k14 rv16 k15 i14 rv23 i20 e21 k31 rv30 rv35 rv34 rv33 k32)
+; regular: k32
+; env: (b15 k14 rv16 k15 i14 rv23 e21 k31 rv30)
+; env: (b15 k14 rv16 k15 i14 rv23 e21 k31 rv30)
+; regular: k31
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; global: g$a
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; env*: (b15 k14 rv16 k15 i14 rv23 rv30 rv36)
+; env: (b15 k14 rv16 k15 i14 rv23 rv30 rv36)
+; env: (b15 k14 rv16 k15 i14 rv23 rv30 rv36)
+; env: (b15 k14 rv16 k15 i14 rv23 rv30 rv36)
+; regular: b15
+; env: (b15 k14 rv16 k15 i14 rv23 rv30 rv36)
+; regular: i14
+; env: (b15 k14 rv16 k15 i14 rv23 rv30 rv36)
+; regular: rv36
+; env: (b15 k14 rv16 k15 i14 rv23 rv30 rv36)
+; regular: k15
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; regular: k15
+; env: (b15 k14 rv16 k15 i14 rv23 rv30)
+; env: (k14 b15)
+; env: (k14 b15)
+; regular: k14
+; env: ()
+; env: ()
+; global: g$a
+; env: ()
+; env: ()
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$b (void))
+ (define g$a (void))
+ (set-then!
+  g$a
+  (py-list* 1 2 3)
+  (set-then!
+   g$b
+   (py-list* 1 2 3)
+   ((lambda (b15 k14)
+      ((lambda (i14 k15)
+         ((cps tuple?)
+          b15
+          (lambda (rv16)
+            (if rv16
+              ((lambda (e17 k17)
+                 ((lambda (i16 k18)
+                    ((cps py-list?)
+                     e17
+                     (lambda (rv19)
+                       (if rv19
+                         ((cps py-list-ref) e17 i16 k18)
+                         ((cps tuple?)
+                          e17
+                          (lambda (rv20)
+                            (if rv20
+                              ((cps tuple-ref) e17 i16 k18)
+                              ((cps dict?)
+                               e17
+                               (lambda (rv21)
+                                 (if rv21
+                                   ((cps dict-ref) e17 i16 k18)
+                                   (error "cannot index object" k18)))))))))))
+                  4
+                  k17))
+               g$a
+               (lambda (rv22) ((cps tuple-set!) b15 i14 rv22 k15)))
+              ((cps py-list?)
+               b15
+               (lambda (rv23)
+                 (if rv23
+                   ((lambda (e19 k24)
+                      ((lambda (i18 k25)
+                         ((cps py-list?)
+                          e19
+                          (lambda (rv26)
+                            (if rv26
+                              ((cps py-list-ref) e19 i18 k25)
+                              ((cps tuple?)
+                               e19
+                               (lambda (rv27)
+                                 (if rv27
+                                   ((cps tuple-ref) e19 i18 k25)
+                                   ((cps dict?)
+                                    e19
+                                    (lambda (rv28)
+                                      (if rv28
+                                        ((cps dict-ref) e19 i18 k25)
+                                        (error
+                                         "cannot index object"
+                                         k25)))))))))))
+                       4
+                       k24))
+                    g$a
+                    (lambda (rv29) ((cps py-list-set!) b15 i14 rv29 k15)))
+                   ((cps dict?)
+                    b15
+                    (lambda (rv30)
+                      (if rv30
+                        ((lambda (e21 k31)
+                           ((lambda (i20 k32)
+                              ((cps py-list?)
+                               e21
+                               (lambda (rv33)
+                                 (if rv33
+                                   ((cps py-list-ref) e21 i20 k32)
+                                   ((cps tuple?)
+                                    e21
+                                    (lambda (rv34)
+                                      (if rv34
+                                        ((cps tuple-ref) e21 i20 k32)
+                                        ((cps dict?)
+                                         e21
+                                         (lambda (rv35)
+                                           (if rv35
+                                             ((cps dict-ref) e21 i20 k32)
+                                             (error
+                                              "cannot index object"
+                                              k32)))))))))))
+                            4
+                            k31))
+                         g$a
+                         (lambda (rv36) ((cps dict-set!) b15 i14 rv36 k15)))
+                        (k15 (void))))))))))))
+       1
+       k14))
+    g$a
+    $halt))))

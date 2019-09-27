@@ -1,0 +1,15 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (begin
+   (py-print (< 2 3) (< 3 2))
+   (py-print
+    ((lambda (t14) (begin (if t14 t14 3))) 2)
+    ((lambda (t15) (begin (if t15 t15 2))) 3))
+   (py-print ((lambda (t16) (begin (if t16 t16 3))) (py-list*)))
+   (py-print ((lambda (t17) (begin (if t17 t17 (dict)))) (py-list*)))
+   (py-print (if 2 3 #f) (if 3 2 #f))
+   (py-print (if (py-list*) (dict) #f))
+   (py-print (if 3 (py-list*) #f))))

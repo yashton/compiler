@@ -1,0 +1,6 @@
+(program
+ (define s (void))
+ (set-global! s "\n")
+ (set-global! s "\n")
+ (set-global! s "\n")
+ (set-global! s "\n"))

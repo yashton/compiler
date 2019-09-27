@@ -1,0 +1,1 @@
+(program (define s (void)) (set-global! s "he said it is \"ok \t \n \" "))

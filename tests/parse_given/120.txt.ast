@@ -1,0 +1,4 @@
+(program
+ (def (f x) (return x))
+ (expr (indexed print (called (indexed f (called 3))))))
+

@@ -1,0 +1,8 @@
+(ID "x")
+(PUNCT "=")
+(LIT 1)
+(NEWLINE)
+(LIT "")
+(ERROR "Illegal character '"  this is a 
+triple quoted string
+' on line 2)

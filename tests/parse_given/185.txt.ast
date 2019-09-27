@@ -1,0 +1,12 @@
+(program
+ (def
+  (doomed)
+  (suite
+   (try
+    (suite (expr (indexed print (called "try...\n"))))
+    (((except)
+      (suite (expr (indexed print (called "caught an index error!"))))))
+    #f
+    #f)))
+ (expr (indexed doomed (called))))
+

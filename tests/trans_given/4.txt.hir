@@ -1,0 +1,17 @@
+(program
+ (define month (void))
+ (set-global!
+  month
+  (py-list*
+   "Januari"
+   "Februari"
+   "Maart"
+   "April"
+   "Mei"
+   "Juni"
+   "Juli"
+   "Augustus"
+   "September"
+   "Oktober"
+   "November"
+   "December")))

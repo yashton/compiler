@@ -1,0 +1,8 @@
+(LIT "")
+(LIT "long string")
+(KEYWORD with)
+(ID "quote")
+(ID "char")
+(LIT "")
+(ERROR "Illegal character '"
+' on line 1)

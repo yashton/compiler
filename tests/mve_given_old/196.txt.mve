@@ -1,0 +1,388 @@
+; mutable: h
+; mutable: x
+; mutable: g$g
+; mutable: g$f
+; mutable: g
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14)
+; env: (k14)
+; env: (k14)
+; env*: (f k14 cc)
+; env: (f k14 cc)
+; env: (f k14 cc)
+; regular: f
+; env: (f k14 cc)
+; env*: (f k x k14 cc)
+; env: (f k x k14 cc)
+; env: (f k x k14 cc)
+; regular: cc
+; env: (f k x k14 cc)
+; mutable: x
+; env: (f k14 cc)
+; regular: cc
+; env: (k14)
+; env*: (k14 return k15)
+; env: (k14 return k15)
+; env: (k14 return k15)
+; env*: (x h return k14 k15 k16)
+; env: (x h return k14 k15 k16)
+; env: (x h return k14 k15 k16)
+; env*: (x h return k14 k17 k15 k16)
+; env: (x h return k14 k17 k15 k16)
+; env: (x h return k14 k17 k15 k16)
+; env: (x h return k14 k17 k15 k16)
+; env: (x h return k14 k17 k15 k16)
+; env*: (x h return k14 k35 k17 k15 k16)
+; env: (x h return k14 k35 k17 k15 k16)
+; env: (x h return k14 k35 k17 k15 k16)
+; regular: k35
+; env: (x h return k14 k35 k17 k15 k16)
+; env: (x h return k14 k17 k15 k16)
+; regular: k17
+; env: (x h return k14 k17 k15 k16)
+; env: (x h return k14 k17 k15 k16)
+; regular: k17
+; env: (x h return k14 k17 k15 k16)
+; env: (x h return k14 k15 k16)
+; env*: (x h return k14 k15 k16 rv18)
+; env: (x h return k14 k15 k16 rv18)
+; env: (x h return k14 k15 k16 rv18)
+; env*: (f x h cc return k14 k15 k16 rv18)
+; env: (f x h cc return k14 k15 k16 rv18)
+; env: (f x h cc return k14 k15 k16 rv18)
+; regular: f
+; env: (f x h cc return k14 k15 k16 rv18)
+; env*: (f k x h cc return k14 k15 k16 rv18)
+; env: (f k x h cc return k14 k15 k16 rv18)
+; env: (f k x h cc return k14 k15 k16 rv18)
+; regular: cc
+; env: (f k x h cc return k14 k15 k16 rv18)
+; mutable: x
+; env: (f x h cc return k14 k15 k16 rv18)
+; regular: cc
+; env: (x h return k14 k15 k16 rv18)
+; env*: (x h return k14 k15 k16 break k19 rv18)
+; env: (x h return k14 k15 k16 break k19 rv18)
+; env: (x h return k14 k15 k16 break k19 rv18)
+; env*: (x h return k14 k15 k16 $seq14 break k19 rv18 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 $loop15 k20)
+; env*: (x h return k14 k15 k16 $seq14 break k19 rv18 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 k21 $loop15 k20)
+; regular: $seq14
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 k21 $loop15 k20)
+; env*: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; regular: rv23
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; global: for-set-k
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; regular: $seq14
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; regular: $loop15
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; regular: k21
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; regular: $seq14
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20)
+; env*: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; regular: rv24
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; global: for-tuple-k
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; regular: $seq14
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; regular: $loop15
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; regular: k21
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; regular: $seq14
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv24)
+; env*: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; regular: rv25
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; global: for-py-list-k
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; regular: $seq14
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; regular: $loop15
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; regular: k21
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; regular: $seq14
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24)
+; env*: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; regular: rv26
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; global: for-dict-k
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; regular: $seq14
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; regular: $loop15
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; regular: k21
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; regular: k21
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 rv23 k21 $loop15 k20 rv25 rv24 rv26)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 $loop15 k20)
+; env*: (x h return k14 k15 k16 $seq14 break k19 rv18 $loop15 k20 rv22)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 $loop15 k20 rv22)
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 $loop15 k20 rv22)
+; regular: k20
+; env: (x h return k14 k15 k16 $seq14 break k19 rv18 $loop15 k20 rv22)
+; env: (x h return k14 k15 k16 break k19 rv18)
+; env: (x h return k14 k15 k16 break k19 rv18)
+; env: (x h return k14 k15 k16 break k19 rv18)
+; env: (x h return k14 k15 k16 break k19 rv18)
+; env: (x h return k14 k15 k16 break k19 rv18)
+; env*: (x h return k14 k15 k16 break k19 rv18 i14 k27)
+; env: (x h return k14 k15 k16 break k19 rv18 i14 k27)
+; env: (x h return k14 k15 k16 break k19 rv18 i14 k27)
+; env*: (f x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; env: (f x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; env: (f x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; regular: f
+; env: (f x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; env*: (f k x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; env: (f k x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; env: (f k x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; regular: cc
+; env: (f k x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; mutable: x
+; env: (f x h cc return k14 k15 k16 break k19 rv18 i14 k27)
+; regular: cc
+; env: (x h return k14 k15 k16 break k19 rv18 i14 k27)
+; env*: (x h return k14 k15 k16 break k19 rv18 continue k28 i14 k27)
+; env: (x h return k14 k15 k16 break k19 rv18 continue k28 i14 k27)
+; env: (x h return k14 k15 k16 break k19 rv18 continue k28 i14 k27)
+; regular: i14
+; env: (x h return k14 k15 k16 break k19 rv18 continue k28 i14 k27)
+; env: (x h return k14 k15 k16 break k19 rv18 continue k28 i14 k27)
+; regular: k28
+; env: (x h return k14 k15 k16 break k19 rv18 continue k28 i14 k27)
+; env: (x h return k14 k15 k16 break k19 rv18 i14 k27)
+; regular: k27
+; env: (x h return k14 k15 k16 break k19 rv18)
+; regular: k19
+; env: (x h return k14 k15 k16 rv18)
+; env*: (x h return k14 k15 k16 rv18 rv29)
+; env: (x h return k14 k15 k16 rv18 rv29)
+; env: (x h return k14 k15 k16 rv18 rv29)
+; env: (x h return k14 k15 k16 rv18 rv29)
+; env: (x h return k14 k15 k16 rv18 rv29)
+; env*: (x h return k14 k15 k16 rv18 k30 rv29)
+; env: (x h return k14 k15 k16 rv18 k30 rv29)
+; env: (x h return k14 k15 k16 rv18 k30 rv29)
+; env*: (f x h cc return k14 k15 k16 rv18 k30 rv29)
+; env: (f x h cc return k14 k15 k16 rv18 k30 rv29)
+; env: (f x h cc return k14 k15 k16 rv18 k30 rv29)
+; regular: f
+; env: (f x h cc return k14 k15 k16 rv18 k30 rv29)
+; env*: (f k x h cc return k14 k15 k16 rv18 k30 rv29)
+; env: (f k x h cc return k14 k15 k16 rv18 k30 rv29)
+; env: (f k x h cc return k14 k15 k16 rv18 k30 rv29)
+; regular: cc
+; env: (f k x h cc return k14 k15 k16 rv18 k30 rv29)
+; mutable: x
+; env: (f x h cc return k14 k15 k16 rv18 k30 rv29)
+; regular: cc
+; env: (x h return k14 k15 k16 rv18 k30 rv29)
+; env*: (x h return k14 k15 k16 rv18 k31 k30 rv29)
+; env: (x h return k14 k15 k16 rv18 k31 k30 rv29)
+; env: (x h return k14 k15 k16 rv18 k31 k30 rv29)
+; env*: (x h g return k14 k15 k16 rv18 k32 k31 k30 rv29)
+; env: (x h g return k14 k15 k16 rv18 k32 k31 k30 rv29)
+; env: (x h g return k14 k15 k16 rv18 k32 k31 k30 rv29)
+; mutable: x
+; env: (x h g return k14 k15 k16 rv18 k32 k31 k30 rv29)
+; env: (x h g return k14 k15 k16 rv18 k32 k31 k30 rv29)
+; env: (x h g return k14 k15 k16 rv18 k32 k31 k30 rv29)
+; mutable: g
+; env: (x h g return k14 k15 k16 rv18 k32 k31 k30 rv29)
+; regular: k32
+; env: (x h return k14 k15 k16 rv18 k31 k30 rv29)
+; env: (x h return k14 k15 k16 rv18 k31 k30 rv29)
+; regular: k31
+; env: (x h return k14 k15 k16 rv18 k30 rv29)
+; regular: k30
+; env: (x h return k14 k15 k16 rv18 rv29)
+; env: (x h return k14 k15 k16 rv18 rv29)
+; mutable: h
+; env: (x h return k14 k15 k16 rv18 rv29)
+; env*: (x h return k14 k15 k16 rv18 rv29 rv33)
+; env: (x h return k14 k15 k16 rv18 rv29 rv33)
+; env: (x h return k14 k15 k16 rv18 rv29 rv33)
+; env: (x h return k14 k15 k16 rv18 rv29 rv33)
+; env: (x h return k14 k15 k16 rv18 rv29 rv33)
+; global: g$g
+; env: (x h return k14 k15 k16 rv18 rv29 rv33)
+; env*: (x h return k14 k15 k16 rv18 rv29 rv34 rv33)
+; env: (x h return k14 k15 k16 rv18 rv29 rv34 rv33)
+; env: (x h return k14 k15 k16 rv18 rv29 rv34 rv33)
+; regular: return
+; env: (x h return k14 k15 k16 rv18 rv29 rv34 rv33)
+; env: (x h return k14 k15 k16 rv18 rv29 rv34 rv33)
+; global: g$g
+; env: (x h return k14 k15 k16 rv18 rv29 rv34 rv33)
+; regular: k16
+; env: (k14 return k15)
+; env: (k14 return k15)
+; env: (k14 return k15)
+; regular: k15
+; env: (k14)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; global: g$f
+; env: ()
+; env*: (rv36)
+; env: (rv36)
+; env: (rv36)
+; env: (rv36)
+; regular: rv36
+; env: (rv36)
+; env*: (rv36 rv37)
+; env: (rv36 rv37)
+; env: (rv36 rv37)
+; env: (rv36 rv37)
+; env: (rv36 rv37)
+; global: g$g
+; env: (rv36 rv37)
+; env: (rv36 rv37)
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$f (void))
+ (define g$g (void))
+ (set-then!
+  g$g
+  200
+  (set-then!
+   g$f
+   (lambda (k14)
+     ((lambda (f cc)
+        (f (lambda (x k) (set-then! x (make-cell x) (cc (get-cell x)))) cc))
+      (lambda (return k15)
+        ((lambda (h x k16)
+           (set-then!
+            h
+            (make-cell h)
+            (set-then!
+             x
+             (make-cell x)
+             ((lambda (k17)
+                (if #f ((lambda (k35) (k35 (void))) k17) (k17 (void))))
+              (lambda (rv18)
+                ((lambda (f cc)
+                   (f
+                    (lambda (x k)
+                      (set-then! x (make-cell x) (cc (get-cell x))))
+                    cc))
+                 (lambda (break k19)
+                   ((lambda ($seq14 $loop15 k20)
+                      ((lambda (k21)
+                         ((cps set?)
+                          $seq14
+                          (lambda (rv23)
+                            (if rv23
+                              (for-set-k $seq14 $loop15 k21)
+                              ((cps tuple?)
+                               $seq14
+                               (lambda (rv24)
+                                 (if rv24
+                                   (for-tuple-k $seq14 $loop15 k21)
+                                   ((cps py-list?)
+                                    $seq14
+                                    (lambda (rv25)
+                                      (if rv25
+                                        (for-py-list-k $seq14 $loop15 k21)
+                                        ((cps dict?)
+                                         $seq14
+                                         (lambda (rv26)
+                                           (if rv26
+                                             (for-dict-k $seq14 $loop15 k21)
+                                             (k21 (void)))))))))))))))
+                       (lambda (rv22) (k20 (void)))))
+                    (py-list* 1 2 3)
+                    (lambda (i14 k27)
+                      ((lambda (f cc)
+                         (f
+                          (lambda (x k)
+                            (set-then! x (make-cell x) (cc (get-cell x))))
+                          cc))
+                       (lambda (continue k28) (set-then! g$g i14 (k28 (void))))
+                       k27))
+                    k19))
+                 (lambda (rv29)
+                   (set-cell!
+                    x
+                    314
+                    (set-cell!
+                     h
+                     (lambda (k30)
+                       ((lambda (f cc)
+                          (f
+                           (lambda (x k)
+                             (set-then! x (make-cell x) (cc (get-cell x))))
+                           cc))
+                        (lambda (return k31)
+                          ((lambda (g k32)
+                             (set-then!
+                              g
+                              (make-cell g)
+                              (set-cell!
+                               g
+                               (get-cell x)
+                               ((cps py-print) (get-cell g) k32))))
+                           (void)
+                           k31))
+                        k30))
+                     ((get-cell h)
+                      (lambda (rv33)
+                        ((cps py-print)
+                         g$g
+                         (lambda (rv34) (return g$g k16))))))))))))))
+         (void)
+         (void)
+         k15))
+      k14))
+   (g$f
+    (lambda (rv36)
+      ((cps py-print) rv36 (lambda (rv37) ((cps py-print) g$g $halt))))))))

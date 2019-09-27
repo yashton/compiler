@@ -1,0 +1,161 @@
+(program
+ (define quicksort (void))
+ (define partition (void))
+ (define start (void))
+ (define end (void))
+ (define i (void))
+ (define li (void))
+ (set-global!
+  partition
+  (lambda (l start end)
+    (call/ec
+     (lambda (return)
+       (let ((pivot (void)) (bottom (void)) (top (void)) (done (void)))
+         (set! pivot
+           (let ((e15 l))
+             (let ((i14 end))
+               (cond
+                ((py-list? e15) (py-list-ref e15 i14))
+                ((tuple? e15) (tuple-ref e15 i14))
+                ((dict? e15) (dict-ref e15 i14))
+                (else (error "cannot index object"))))))
+         (set! bottom (- start 1))
+         (set! top end)
+         (set! done #f)
+         (while
+          (not done)
+          (let ()
+            (while
+             (not done)
+             (let ()
+               (set! bottom (+ bottom 1))
+               (cond ((equal? bottom top) (let () (set! done 1) (break))))
+               (cond
+                ((>
+                  (let ((e17 l))
+                    (let ((i16 bottom))
+                      (cond
+                       ((py-list? e17) (py-list-ref e17 i16))
+                       ((tuple? e17) (tuple-ref e17 i16))
+                       ((dict? e17) (dict-ref e17 i16))
+                       (else (error "cannot index object")))))
+                  pivot)
+                 (let ()
+                   (let ((b19 l))
+                     (let ((i18 top))
+                       (cond
+                        ((tuple? b19)
+                         (tuple-set!
+                          b19
+                          i18
+                          (let ((e21 l))
+                            (let ((i20 bottom))
+                              (cond
+                               ((py-list? e21) (py-list-ref e21 i20))
+                               ((tuple? e21) (tuple-ref e21 i20))
+                               ((dict? e21) (dict-ref e21 i20))
+                               (else (error "cannot index object")))))))
+                        ((py-list? b19)
+                         (py-list-set!
+                          b19
+                          i18
+                          (let ((e23 l))
+                            (let ((i22 bottom))
+                              (cond
+                               ((py-list? e23) (py-list-ref e23 i22))
+                               ((tuple? e23) (tuple-ref e23 i22))
+                               ((dict? e23) (dict-ref e23 i22))
+                               (else (error "cannot index object")))))))
+                        ((dict? b19)
+                         (dict-set!
+                          b19
+                          i18
+                          (let ((e25 l))
+                            (let ((i24 bottom))
+                              (cond
+                               ((py-list? e25) (py-list-ref e25 i24))
+                               ((tuple? e25) (tuple-ref e25 i24))
+                               ((dict? e25) (dict-ref e25 i24))
+                               (else (error "cannot index object"))))))))))
+                   (break))))))
+            (while
+             (not done)
+             (let ()
+               (set! top (- top 1))
+               (cond ((equal? top bottom) (let () (set! done #t) (break))))
+               (cond
+                ((<
+                  (let ((e27 l))
+                    (let ((i26 top))
+                      (cond
+                       ((py-list? e27) (py-list-ref e27 i26))
+                       ((tuple? e27) (tuple-ref e27 i26))
+                       ((dict? e27) (dict-ref e27 i26))
+                       (else (error "cannot index object")))))
+                  pivot)
+                 (let ()
+                   (let ((b29 l))
+                     (let ((i28 bottom))
+                       (cond
+                        ((tuple? b29)
+                         (tuple-set!
+                          b29
+                          i28
+                          (let ((e31 l))
+                            (let ((i30 top))
+                              (cond
+                               ((py-list? e31) (py-list-ref e31 i30))
+                               ((tuple? e31) (tuple-ref e31 i30))
+                               ((dict? e31) (dict-ref e31 i30))
+                               (else (error "cannot index object")))))))
+                        ((py-list? b29)
+                         (py-list-set!
+                          b29
+                          i28
+                          (let ((e33 l))
+                            (let ((i32 top))
+                              (cond
+                               ((py-list? e33) (py-list-ref e33 i32))
+                               ((tuple? e33) (tuple-ref e33 i32))
+                               ((dict? e33) (dict-ref e33 i32))
+                               (else (error "cannot index object")))))))
+                        ((dict? b29)
+                         (dict-set!
+                          b29
+                          i28
+                          (let ((e35 l))
+                            (let ((i34 top))
+                              (cond
+                               ((py-list? e35) (py-list-ref e35 i34))
+                               ((tuple? e35) (tuple-ref e35 i34))
+                               ((dict? e35) (dict-ref e35 i34))
+                               (else (error "cannot index object"))))))))))
+                   (break))))))))
+         (let ((b37 l))
+           (let ((i36 top))
+             (cond
+              ((tuple? b37) (tuple-set! b37 i36 pivot))
+              ((py-list? b37) (py-list-set! b37 i36 pivot))
+              ((dict? b37) (dict-set! b37 i36 pivot)))))
+         (return top))))))
+ (set-global!
+  quicksort
+  (lambda (l start end)
+    (call/ec
+     (lambda (return)
+       (let ((split (void)))
+         (cond
+          ((< start end)
+           (let ()
+             (set! split ((get-global partition) l start end))
+             ((get-global quicksort) l start (- split 1))
+             ((get-global quicksort) l (+ split 1) end)))
+          (else (let () (return (void))))))))))
+ (set-global! start 0)
+ (set-global! end 8)
+ (set-global! li (py-list* 4 3 2 10 1 9 7 2 11))
+ ((get-global quicksort) (get-global li) (get-global start) (get-global end))
+ (for-each
+  i38
+  (get-global li)
+  (begin (set-global! i i38) (let () (py-print (get-global i))))))

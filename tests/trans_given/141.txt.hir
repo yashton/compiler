@@ -1,0 +1,48 @@
+(program
+ (define fib (void))
+ (define cache (void))
+ (set-global! cache (dict (0 0) (1 1)))
+ (set-global!
+  fib
+  (lambda (n)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond
+          ((in? n (get-global cache))
+           (let ()
+             (return
+              (let ((e15 (get-global cache)))
+                (let ((i14 n))
+                  (cond
+                   ((py-list? e15) (py-list-ref e15 i14))
+                   ((tuple? e15) (tuple-ref e15 i14))
+                   ((dict? e15) (dict-ref e15 i14))
+                   (else (error "cannot index object")))))))))
+         (let ((b17 (get-global cache)))
+           (let ((i16 n))
+             (cond
+              ((tuple? b17)
+               (tuple-set!
+                b17
+                i16
+                (+ ((get-global fib) (- n 1)) ((get-global fib) (- n 2)))))
+              ((py-list? b17)
+               (py-list-set!
+                b17
+                i16
+                (+ ((get-global fib) (- n 1)) ((get-global fib) (- n 2)))))
+              ((dict? b17)
+               (dict-set!
+                b17
+                i16
+                (+ ((get-global fib) (- n 1)) ((get-global fib) (- n 2))))))))
+         (return
+          (let ((e19 (get-global cache)))
+            (let ((i18 n))
+              (cond
+               ((py-list? e19) (py-list-ref e19 i18))
+               ((tuple? e19) (tuple-ref e19 i18))
+               ((dict? e19) (dict-ref e19 i18))
+               (else (error "cannot index object")))))))))))
+ (py-print ((get-global fib) 25)))

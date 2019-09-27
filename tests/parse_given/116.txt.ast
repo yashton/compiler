@@ -1,0 +1,5 @@
+(program
+ (= (a) (list 1 2 3))
+ (= (b) (list 1 2 3))
+ (= ((indexed a (subscript 1))) (indexed a (subscript 4))))
+

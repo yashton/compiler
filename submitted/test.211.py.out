@@ -1,0 +1,6 @@
+(ID "x")
+(PUNCT "=")
+(LIT 1)
+(NEWLINE)
+(ERROR "Illegal character '"foo bar'
+x = 2' on line 2)

@@ -1,0 +1,35 @@
+(program
+ (define pair_13 (void))
+ (set-global!
+  pair_13
+  (lambda (nums)
+    (call/ec
+     (lambda (return)
+       (let ((i (void)))
+         (for-each
+          i14
+          ((get-global range) (- ((get-global len) nums) 1))
+          (begin
+            (set! i i14)
+            (let ()
+              (cond
+               ((and (equal?
+                      (let ((e16 nums))
+                        (let ((i15 i))
+                          (cond
+                           ((py-list? e16) (py-list-ref e16 i15))
+                           ((tuple? e16) (tuple-ref e16 i15))
+                           ((dict? e16) (dict-ref e16 i15))
+                           (else (error "cannot index object")))))
+                      13)
+                     (equal?
+                      (let ((e18 nums))
+                        (let ((i17 (+ i 1)))
+                          (cond
+                           ((py-list? e18) (py-list-ref e18 i17))
+                           ((tuple? e18) (tuple-ref e18 i17))
+                           ((dict? e18) (dict-ref e18 i17))
+                           (else (error "cannot index object")))))
+                      13))
+                (let () (return #t)))))))
+         (return #f)))))))

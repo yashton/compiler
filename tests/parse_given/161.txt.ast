@@ -1,0 +1,11 @@
+(program
+ (= (x) 20)
+ (expr (indexed print (called x)))
+ (while
+  (comparison x (">" 0))
+  (suite
+   (expr (indexed print (called x)))
+   (= (x) (arith x ("-" 1)))
+   (expr (indexed print (called x))))
+  (suite (expr (indexed print (called "didn't run\n"))))))
+

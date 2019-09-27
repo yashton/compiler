@@ -1,0 +1,25 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$x (void))
+ (begin
+   (set! g$x 20)
+   (call/ec
+    (lambda (break)
+      ((lambda (loop)
+         (begin
+           (set! loop
+             (lambda ()
+               (if (> g$x 0)
+                 (begin
+                   (call/ec
+                    (lambda (continue)
+                      ((lambda ()
+                         (begin (set! g$x (- g$x 1)) (py-print g$x))))))
+                   (loop))
+                 (void))))
+           (loop)
+           ((lambda () (begin (py-print "didn't run\n"))))))
+       (void))))))

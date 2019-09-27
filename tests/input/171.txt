@@ -1,0 +1,6 @@
+def f(a,b):
+  print(a)
+  a = 3
+  print(a)
+
+f(1,2)

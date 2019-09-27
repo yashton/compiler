@@ -1,0 +1,5 @@
+(ID "s")
+(PUNCT "=")
+(ERROR "Illegal character '"abc
+def"
+' on line 1)

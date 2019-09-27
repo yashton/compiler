@@ -1,0 +1,13 @@
+(program
+ (define a (void))
+ (define b (void))
+ (define c (void))
+ (define d (void))
+ (define g (void))
+ (define f (void))
+ (set-global! a (+ 1 1))
+ (set-global! b (modulo 2 3))
+ (set-global! c (bitwise-xor 1 1))
+ (set-global! d (- 1 1))
+ (set-global! f (* 1 1))
+ (set-global! g (/ 1 1)))

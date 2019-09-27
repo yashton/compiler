@@ -1,0 +1,7 @@
+(PUNCT "[")
+(ID "x")
+(PUNCT "=")
+(NEWLINE)
+(LIT 5)
+(PUNCT "]")
+(ENDMARKER)

@@ -1,0 +1,590 @@
+; mutable: g$fib
+; mutable: g$cache
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 n)
+; env: (k14 n)
+; env: (k14 n)
+; env*: (f n k14 cc)
+; env: (f n k14 cc)
+; env: (f n k14 cc)
+; regular: f
+; env: (f n k14 cc)
+; env*: (f k n k14 x cc)
+; env: (f k n k14 x cc)
+; env: (f k n k14 x cc)
+; regular: cc
+; env: (f k n k14 x cc)
+; regular: x
+; env: (f n k14 cc)
+; regular: cc
+; env: (k14 n)
+; env*: (n k14 k15 return)
+; env: (n k14 k15 return)
+; env: (n k14 k15 return)
+; env*: (n k14 k15 return k16)
+; env: (n k14 k15 return k16)
+; env: (n k14 k15 return k16)
+; env*: (n k14 k15 return k17 k16)
+; env: (n k14 k15 return k17 k16)
+; env: (n k14 k15 return k17 k16)
+; env: (n k14 k15 return k17 k16)
+; regular: n
+; env: (n k14 k15 return k17 k16)
+; env: (n k14 k15 return k17 k16)
+; global: g$cache
+; env: (n k14 k15 return k17 k16)
+; env*: (n k14 k15 return rv46 k17 k16)
+; env: (n k14 k15 return rv46 k17 k16)
+; env: (n k14 k15 return rv46 k17 k16)
+; regular: rv46
+; env: (n k14 k15 return rv46 k17 k16)
+; env: (n k14 k15 return rv46 k17 k16)
+; env*: (n k14 k15 return k47 rv46 k17 k16)
+; env: (n k14 k15 return k47 rv46 k17 k16)
+; env: (n k14 k15 return k47 rv46 k17 k16)
+; env*: (n k14 k15 return k47 rv46 k17 k16 e15 k48)
+; env: (n k14 k15 return k47 rv46 k17 k16 e15 k48)
+; env: (n k14 k15 return k47 rv46 k17 k16 e15 k48)
+; env*: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48)
+; regular: e15
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48)
+; env*: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; regular: rv50
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; regular: e15
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; regular: i14
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; regular: k49
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; regular: e15
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv50)
+; env*: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; regular: rv51
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; regular: e15
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; regular: i14
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; regular: k49
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; regular: e15
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv51 rv50)
+; env*: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; regular: rv52
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; regular: e15
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; regular: i14
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; regular: k49
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; env: (n k14 k15 return k47 rv46 k17 k16 i14 k49 e15 k48 rv52 rv51 rv50)
+; regular: k49
+; env: (n k14 k15 return k47 rv46 k17 k16 e15 k48)
+; regular: n
+; env: (n k14 k15 return k47 rv46 k17 k16 e15 k48)
+; regular: k48
+; env: (n k14 k15 return k47 rv46 k17 k16)
+; env: (n k14 k15 return k47 rv46 k17 k16)
+; global: g$cache
+; env: (n k14 k15 return k47 rv46 k17 k16)
+; env*: (n k14 k15 return k47 rv46 k17 k16 rv53)
+; env: (n k14 k15 return k47 rv46 k17 k16 rv53)
+; env: (n k14 k15 return k47 rv46 k17 k16 rv53)
+; regular: return
+; env: (n k14 k15 return k47 rv46 k17 k16 rv53)
+; regular: rv53
+; env: (n k14 k15 return k47 rv46 k17 k16 rv53)
+; regular: k47
+; env: (n k14 k15 return rv46 k17 k16)
+; regular: k17
+; env: (n k14 k15 return rv46 k17 k16)
+; env: (n k14 k15 return rv46 k17 k16)
+; regular: k17
+; env: (n k14 k15 return rv46 k17 k16)
+; env: (n k14 k15 return k16)
+; env*: (n k14 k15 return k16 rv18)
+; env: (n k14 k15 return k16 rv18)
+; env: (n k14 k15 return k16 rv18)
+; env*: (n k14 k15 return k16 b17 k19 rv18)
+; env: (n k14 k15 return k16 b17 k19 rv18)
+; env: (n k14 k15 return k16 b17 k19 rv18)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 k20)
+; regular: b17
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 k20)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; regular: rv21
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; regular: n
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv22 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv22 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv22 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv22 rv21 k20)
+; global: g$fib
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv22 rv21 k20)
+; regular: rv22
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv22 rv21 k20)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20)
+; regular: n
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv24)
+; global: g$fib
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv24)
+; regular: rv24
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv24)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv25 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv25 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv25 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv25 rv24)
+; regular: rv23
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv25 rv24)
+; regular: rv25
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv25 rv24)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv26 rv25 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv26 rv25 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv26 rv25 rv24)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv26 rv25 rv24)
+; regular: b17
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv26 rv25 rv24)
+; regular: i16
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv26 rv25 rv24)
+; regular: rv26
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv23 rv22 rv21 k20 rv26 rv25 rv24)
+; regular: k20
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; regular: b17
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; regular: rv27
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; regular: n
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv28)
+; global: g$fib
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv28)
+; regular: rv28
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv28)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv29 rv28)
+; regular: n
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv29 rv28)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv30 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv30 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv30 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv30 rv29 rv28)
+; global: g$fib
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv30 rv29 rv28)
+; regular: rv30
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv30 rv29 rv28)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28)
+; regular: rv29
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28)
+; regular: rv31
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28 rv32)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28 rv32)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28 rv32)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28 rv32)
+; regular: b17
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28 rv32)
+; regular: i16
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28 rv32)
+; regular: rv32
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv31 rv30 rv29 rv28 rv32)
+; regular: k20
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; regular: b17
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; regular: rv33
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; regular: n
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv34 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv34 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv34 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv34 rv33)
+; global: g$fib
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv34 rv33)
+; regular: rv34
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv34 rv33)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33)
+; regular: n
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv36)
+; global: g$fib
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv36)
+; regular: rv36
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv36)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv37 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv37 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv37 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv37 rv36)
+; regular: rv35
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv37 rv36)
+; regular: rv37
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv37 rv36)
+; env*: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv38 rv37 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv38 rv37 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv38 rv37 rv36)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv38 rv37 rv36)
+; regular: b17
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv38 rv37 rv36)
+; regular: i16
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv38 rv37 rv36)
+; regular: rv38
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv35 rv34 rv33 rv38 rv37 rv36)
+; regular: k20
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; regular: k20
+; env: (n k14 k15 return k16 i16 b17 k19 rv18 rv21 k20 rv27 rv33)
+; env: (n k14 k15 return k16 b17 k19 rv18)
+; regular: n
+; env: (n k14 k15 return k16 b17 k19 rv18)
+; regular: k19
+; env: (n k14 k15 return k16 rv18)
+; env: (n k14 k15 return k16 rv18)
+; global: g$cache
+; env: (n k14 k15 return k16 rv18)
+; env*: (n k14 k15 return k16 rv18 rv39)
+; env: (n k14 k15 return k16 rv18 rv39)
+; env: (n k14 k15 return k16 rv18 rv39)
+; env*: (n k14 k15 return k16 rv18 rv39 e19 k40)
+; env: (n k14 k15 return k16 rv18 rv39 e19 k40)
+; env: (n k14 k15 return k16 rv18 rv39 e19 k40)
+; env*: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40)
+; regular: e19
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40)
+; env*: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; regular: rv42
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; regular: e19
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; regular: i18
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; regular: k41
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; regular: e19
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv42)
+; env*: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; regular: rv43
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; regular: e19
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; regular: i18
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; regular: k41
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; regular: e19
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv43 rv42)
+; env*: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; regular: rv44
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; regular: e19
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; regular: i18
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; regular: k41
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; env: (n k14 k15 return k16 rv18 rv39 i18 k41 e19 k40 rv44 rv43 rv42)
+; regular: k41
+; env: (n k14 k15 return k16 rv18 rv39 e19 k40)
+; regular: n
+; env: (n k14 k15 return k16 rv18 rv39 e19 k40)
+; regular: k40
+; env: (n k14 k15 return k16 rv18 rv39)
+; env: (n k14 k15 return k16 rv18 rv39)
+; global: g$cache
+; env: (n k14 k15 return k16 rv18 rv39)
+; env*: (n k14 k15 return k16 rv18 rv39 rv45)
+; env: (n k14 k15 return k16 rv18 rv39 rv45)
+; env: (n k14 k15 return k16 rv18 rv39 rv45)
+; regular: return
+; env: (n k14 k15 return k16 rv18 rv39 rv45)
+; regular: rv45
+; env: (n k14 k15 return k16 rv18 rv39 rv45)
+; regular: k16
+; env: (n k14 k15 return)
+; regular: k15
+; env: (k14 n)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; global: g$fib
+; env: ()
+; env: ()
+; env*: (rv54)
+; env: (rv54)
+; env: (rv54)
+; env: (rv54)
+; regular: rv54
+; env: (rv54)
+; env: (rv54)
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$fib (void))
+ (define g$cache (void))
+ (set-then!
+  g$cache
+  (dict (0 0) (1 1))
+  (set-then!
+   g$fib
+   (lambda (n k14)
+     ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+      (lambda (return k15)
+        ((lambda (k16)
+           ((lambda (k17)
+              ((cps in?)
+               n
+               g$cache
+               (lambda (rv46)
+                 (if rv46
+                   ((lambda (k47)
+                      ((lambda (e15 k48)
+                         ((lambda (i14 k49)
+                            ((cps py-list?)
+                             e15
+                             (lambda (rv50)
+                               (if rv50
+                                 ((cps py-list-ref) e15 i14 k49)
+                                 ((cps tuple?)
+                                  e15
+                                  (lambda (rv51)
+                                    (if rv51
+                                      ((cps tuple-ref) e15 i14 k49)
+                                      ((cps dict?)
+                                       e15
+                                       (lambda (rv52)
+                                         (if rv52
+                                           ((cps dict-ref) e15 i14 k49)
+                                           (error
+                                            "cannot index object"
+                                            k49)))))))))))
+                          n
+                          k48))
+                       g$cache
+                       (lambda (rv53) (return rv53 k47))))
+                    k17)
+                   (k17 (void))))))
+            (lambda (rv18)
+              ((lambda (b17 k19)
+                 ((lambda (i16 k20)
+                    ((cps tuple?)
+                     b17
+                     (lambda (rv21)
+                       (if rv21
+                         ((cps -)
+                          n
+                          1
+                          (lambda (rv22)
+                            (g$fib
+                             rv22
+                             (lambda (rv23)
+                               ((cps -)
+                                n
+                                2
+                                (lambda (rv24)
+                                  (g$fib
+                                   rv24
+                                   (lambda (rv25)
+                                     ((cps +)
+                                      rv23
+                                      rv25
+                                      (lambda (rv26)
+                                        ((cps tuple-set!)
+                                         b17
+                                         i16
+                                         rv26
+                                         k20)))))))))))
+                         ((cps py-list?)
+                          b17
+                          (lambda (rv27)
+                            (if rv27
+                              ((cps -)
+                               n
+                               1
+                               (lambda (rv28)
+                                 (g$fib
+                                  rv28
+                                  (lambda (rv29)
+                                    ((cps -)
+                                     n
+                                     2
+                                     (lambda (rv30)
+                                       (g$fib
+                                        rv30
+                                        (lambda (rv31)
+                                          ((cps +)
+                                           rv29
+                                           rv31
+                                           (lambda (rv32)
+                                             ((cps py-list-set!)
+                                              b17
+                                              i16
+                                              rv32
+                                              k20)))))))))))
+                              ((cps dict?)
+                               b17
+                               (lambda (rv33)
+                                 (if rv33
+                                   ((cps -)
+                                    n
+                                    1
+                                    (lambda (rv34)
+                                      (g$fib
+                                       rv34
+                                       (lambda (rv35)
+                                         ((cps -)
+                                          n
+                                          2
+                                          (lambda (rv36)
+                                            (g$fib
+                                             rv36
+                                             (lambda (rv37)
+                                               ((cps +)
+                                                rv35
+                                                rv37
+                                                (lambda (rv38)
+                                                  ((cps dict-set!)
+                                                   b17
+                                                   i16
+                                                   rv38
+                                                   k20)))))))))))
+                                   (k20 (void))))))))))))
+                  n
+                  k19))
+               g$cache
+               (lambda (rv39)
+                 ((lambda (e19 k40)
+                    ((lambda (i18 k41)
+                       ((cps py-list?)
+                        e19
+                        (lambda (rv42)
+                          (if rv42
+                            ((cps py-list-ref) e19 i18 k41)
+                            ((cps tuple?)
+                             e19
+                             (lambda (rv43)
+                               (if rv43
+                                 ((cps tuple-ref) e19 i18 k41)
+                                 ((cps dict?)
+                                  e19
+                                  (lambda (rv44)
+                                    (if rv44
+                                      ((cps dict-ref) e19 i18 k41)
+                                      (error
+                                       "cannot index object"
+                                       k41)))))))))))
+                     n
+                     k40))
+                  g$cache
+                  (lambda (rv45) (return rv45 k16))))))))
+         k15))
+      k14))
+   (g$fib 25 (lambda (rv54) ((cps py-print) rv54 $halt))))))

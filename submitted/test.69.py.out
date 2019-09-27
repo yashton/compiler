@@ -1,0 +1,2 @@
+(ERROR "Illegal character '"hello\ 
+world"' on line 1)

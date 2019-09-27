@@ -1,0 +1,16 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$a_bigger (void))
+ (begin
+   (set! g$a_bigger
+     (lambda (a b)
+       (call/ec
+        (lambda (return)
+          ((lambda ()
+             (begin
+               (if (if (> a b) (>= (- a b) 2) #f)
+                 ((lambda () (begin (return #t))))
+                 ((lambda () (begin (return #f))))))))))))))

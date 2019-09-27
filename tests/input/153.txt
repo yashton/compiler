@@ -1,0 +1,10 @@
+fred = { 'mike': 456, 'bill': 399, 'sarah': 521 }
+test = ["zingo","sarah","bill","wilma"]
+
+for t in test:
+    print(t)
+    if fred.has_key(t):
+        print('=>', fred[t])
+    else:
+        print('is not present.')
+

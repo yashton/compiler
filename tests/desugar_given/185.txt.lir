@@ -1,0 +1,71 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$doomed (void))
+ (begin
+   (set! g$doomed
+     (lambda ()
+       (call/ec
+        (lambda (return)
+          ((lambda ()
+             (begin
+               ((lambda ($old-handler)
+                  (begin
+                    ((lambda ($old-return)
+                       (begin
+                         ((lambda ($old-continue)
+                            (begin
+                              ((lambda ($old-break)
+                                 (begin
+                                   ((lambda (return)
+                                      (begin
+                                        ((lambda (continue)
+                                           (begin
+                                             ((lambda (break)
+                                                (begin
+                                                  (call/ec
+                                                   (lambda ($ec15)
+                                                     (begin
+                                                       (set! $current-handler
+                                                         (lambda ($ex14)
+                                                           (begin
+                                                             (set! $current-handler
+                                                               $old-handler)
+                                                             ($ec15
+                                                              ((lambda (ex)
+                                                                 ((lambda ()
+                                                                    (begin
+                                                                      (py-print
+                                                                       "caught an index error!")))))
+                                                               $ex14)))))
+                                                       ((lambda (rv)
+                                                          (begin
+                                                            (begin
+                                                              (set! $current-handler
+                                                                $old-handler)
+                                                              rv)))
+                                                        ((lambda ()
+                                                           (begin
+                                                             (py-print
+                                                              "try...\n"))))))))))
+                                              (lambda ()
+                                                (begin
+                                                  (set! $current-handler
+                                                    $old-handler)
+                                                  ($old-break))))))
+                                         (lambda ()
+                                           (begin
+                                             (set! $current-handler
+                                               $old-handler)
+                                             ($old-continue))))))
+                                    (lambda (rv)
+                                      (begin
+                                        (set! $current-handler $old-handler)
+                                        (return rv))))))
+                               break)))
+                          continue)))
+                     return)))
+                $current-handler))))))))
+   (g$doomed)))

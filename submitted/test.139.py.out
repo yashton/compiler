@@ -1,0 +1,4 @@
+(LIT "")
+(ERROR "Illegal character '"  this is a 
+triple quoted string
+' on line 1)

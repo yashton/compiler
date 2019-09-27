@@ -1,0 +1,7 @@
+print(range(7))
+
+(MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY) = range(7) 
+
+v = ('a', 'b', 'e') 
+(x, y, z) = v 
+

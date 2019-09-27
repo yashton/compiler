@@ -1,0 +1,2 @@
+(LIT r"hello\x42")
+(ENDMARKER)

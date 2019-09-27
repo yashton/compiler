@@ -1,0 +1,10 @@
+(program
+ (expr
+  (indexed
+   a
+   (subscript 1)
+   (subscript 2)
+   (subscript 3)
+   (subscript 4)
+   (subscript 5))))
+

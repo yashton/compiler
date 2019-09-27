@@ -1,0 +1,4 @@
+(program
+ (py-list* 42 3.14 "hello")
+ (tuple 100 200 300)
+ (dict ("x" 42) ("y" 3.14)))

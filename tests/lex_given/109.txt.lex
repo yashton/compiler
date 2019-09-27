@@ -1,0 +1,5 @@
+(ID "x")
+(PUNCT "+=")
+(LIT 20)
+(NEWLINE)
+(ENDMARKER)

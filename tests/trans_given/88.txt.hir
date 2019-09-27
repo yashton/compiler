@@ -1,0 +1,1 @@
+(program (define str (void)) (set-global! str "foo \\ tttt"))

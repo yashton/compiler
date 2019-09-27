@@ -1,0 +1,9 @@
+(program
+ (cond
+  ((and (let ((cv14 (get-global year))) (if (< 1900 cv14) (< cv14 2100) #f))
+        (let ((cv15 (get-global month))) (if (<= 1 cv15) (<= cv15 12) #f))
+        (let ((cv16 (get-global day))) (if (<= 1 cv16) (<= cv16 31) #f))
+        (let ((cv17 (get-global hour))) (if (<= 0 cv17) (< cv17 24) #f))
+        (let ((cv18 (get-global minute))) (if (<= 0 cv18) (< cv18 60) #f))
+        (let ((cv19 (get-global second))) (if (<= 0 cv19) (< cv19 60) #f)))
+   (let () (return 1)))))

@@ -1,0 +1,19 @@
+(program
+ (try
+  (suite (= (fsock) (indexed open (called "/notthere"))))
+  (((except IOError)
+    (suite
+     (try
+      (suite (= (a) (term 1 ("/" 0))))
+      (((except ZeroDivisionError e)
+        (suite
+         (try
+          (suite (expr (indexed print (called "zero division %s" e))))
+          (((except Error) (suite (expr (indexed print (called "error!!"))))))
+          (suite (expr (indexed print (called "else...1"))))
+          #f))))
+      (suite (expr (indexed print (called "else...2"))))
+      #f))))
+  #f
+  (suite (expr (indexed print (called "else...3"))))))
+

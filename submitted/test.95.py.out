@@ -1,0 +1,2 @@
+(LIT "foo \b \")
+(ERROR "Illegal character '\" "' on line 1)

@@ -1,0 +1,22 @@
+(program
+ (define f (void))
+ (define g (void))
+ (set-global! g 200)
+ (set-global!
+  f
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ((h (void)) (x (void)))
+         (cond (#f (let () (void))))
+         (for-each i14 (py-list* 1 2 3) (begin (set-global! g i14) (void)))
+         (set! x 314)
+         (set! h
+           (lambda ()
+             (call/ec
+              (lambda (return) (let ((g (void))) (set! g x) (py-print g))))))
+         (h)
+         (py-print (get-global g))
+         (return (get-global g)))))))
+ (py-print ((get-global f)))
+ (py-print (get-global g)))

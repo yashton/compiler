@@ -1,0 +1,176 @@
+; mutable: g$Fibonacci
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 n)
+; env: (k14 n)
+; env: (k14 n)
+; env*: (f n k14 cc)
+; env: (f n k14 cc)
+; env: (f n k14 cc)
+; regular: f
+; env: (f n k14 cc)
+; env*: (f k n k14 cc x)
+; env: (f k n k14 cc x)
+; env: (f k n k14 cc x)
+; regular: cc
+; env: (f k n k14 cc x)
+; regular: x
+; env: (f n k14 cc)
+; regular: cc
+; env: (k14 n)
+; env*: (n k14 k15 return)
+; env: (n k14 k15 return)
+; env: (n k14 k15 return)
+; env*: (n k14 k16 k15 return)
+; env: (n k14 k16 k15 return)
+; env: (n k14 k16 k15 return)
+; env: (n k14 k16 k15 return)
+; regular: n
+; env: (n k14 k16 k15 return)
+; env: (n k14 k16 k15 return)
+; env*: (n k14 k16 k15 return rv18)
+; env: (n k14 k16 k15 return rv18)
+; env: (n k14 k16 k15 return rv18)
+; env*: (n k14 k16 k15 return t14 k17 rv18)
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; regular: t14
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; regular: k17
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; regular: t14
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; regular: n
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; env: (n k14 k16 k15 return t14 k17 rv18)
+; regular: k17
+; env: (n k14 k16 k15 return rv18)
+; regular: rv18
+; env: (n k14 k16 k15 return rv18)
+; env*: (n k14 k16 k15 return rv19 rv18)
+; env: (n k14 k16 k15 return rv19 rv18)
+; env: (n k14 k16 k15 return rv19 rv18)
+; regular: rv19
+; env: (n k14 k16 k15 return rv19 rv18)
+; env: (n k14 k16 k15 return rv19 rv18)
+; env*: (n k14 k16 k15 return rv19 rv18 k20)
+; env: (n k14 k16 k15 return rv19 rv18 k20)
+; env: (n k14 k16 k15 return rv19 rv18 k20)
+; regular: return
+; env: (n k14 k16 k15 return rv19 rv18 k20)
+; regular: n
+; env: (n k14 k16 k15 return rv19 rv18 k20)
+; regular: k20
+; env: (n k14 k16 k15 return rv19 rv18)
+; regular: k16
+; env: (n k14 k16 k15 return rv19 rv18)
+; env: (n k14 k16 k15 return rv19 rv18)
+; env*: (n k14 k16 k15 return rv19 rv18 k21)
+; env: (n k14 k16 k15 return rv19 rv18 k21)
+; env: (n k14 k16 k15 return rv19 rv18 k21)
+; env: (n k14 k16 k15 return rv19 rv18 k21)
+; regular: n
+; env: (n k14 k16 k15 return rv19 rv18 k21)
+; env: (n k14 k16 k15 return rv19 rv18 k21)
+; env*: (n k14 k16 k15 return rv19 rv18 rv22 k21)
+; env: (n k14 k16 k15 return rv19 rv18 rv22 k21)
+; env: (n k14 k16 k15 return rv19 rv18 rv22 k21)
+; env: (n k14 k16 k15 return rv19 rv18 rv22 k21)
+; global: g$Fibonacci
+; env: (n k14 k16 k15 return rv19 rv18 rv22 k21)
+; regular: rv22
+; env: (n k14 k16 k15 return rv19 rv18 rv22 k21)
+; env*: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21)
+; regular: n
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21)
+; env*: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv24)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv24)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv24)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv24)
+; global: g$Fibonacci
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv24)
+; regular: rv24
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv24)
+; env*: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv25 rv24)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv25 rv24)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv25 rv24)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv25 rv24)
+; regular: rv23
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv25 rv24)
+; regular: rv25
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv25 rv24)
+; env*: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv26 rv25 rv24)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv26 rv25 rv24)
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv26 rv25 rv24)
+; regular: return
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv26 rv25 rv24)
+; regular: rv26
+; env: (n k14 k16 k15 return rv19 rv18 rv23 rv22 k21 rv26 rv25 rv24)
+; regular: k21
+; env: (n k14 k16 k15 return rv19 rv18)
+; regular: k16
+; env: (n k14 k15 return)
+; regular: k15
+; env: (k14 n)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; global: $halt
+; env: ()
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$Fibonacci (void))
+ (set-then!
+  g$Fibonacci
+  (lambda (n k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (k16)
+          ((cps equal?)
+           n
+           0
+           (lambda (rv18)
+             ((lambda (t14 k17) (if t14 (k17 t14) ((cps equal?) n 1 k17)))
+              rv18
+              (lambda (rv19)
+                (if rv19
+                  ((lambda (k20) (return n k20)) k16)
+                  ((lambda (k21)
+                     ((cps -)
+                      n
+                      1
+                      (lambda (rv22)
+                        (g$Fibonacci
+                         rv22
+                         (lambda (rv23)
+                           ((cps -)
+                            n
+                            2
+                            (lambda (rv24)
+                              (g$Fibonacci
+                               rv24
+                               (lambda (rv25)
+                                 ((cps +)
+                                  rv23
+                                  rv25
+                                  (lambda (rv26) (return rv26 k21))))))))))))
+                   k16)))))))
+        k15))
+     k14))
+  ($halt (void))))

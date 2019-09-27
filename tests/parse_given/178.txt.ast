@@ -1,0 +1,5 @@
+(program
+ (= (a) (list 0 1 2 3))
+ (= ((indexed a (subscript 2))) 30)
+ (expr (indexed print (called (indexed a (subscript 2))))))
+

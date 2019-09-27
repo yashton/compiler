@@ -1,0 +1,466 @@
+; mutable: $current-handler
+; mutable: g$main
+; mutable: g$dohanoi
+; mutable: g$moveit
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 to frm)
+; env: (k14 to frm)
+; env: (k14 to frm)
+; env*: (f cc k14 to frm)
+; env: (f cc k14 to frm)
+; env: (f cc k14 to frm)
+; regular: f
+; env: (f cc k14 to frm)
+; env*: (f k cc k14 to frm x)
+; env: (f k cc k14 to frm x)
+; env: (f k cc k14 to frm x)
+; regular: cc
+; env: (f k cc k14 to frm x)
+; regular: x
+; env: (f cc k14 to frm)
+; regular: cc
+; env: (k14 to frm)
+; env*: (k14 to frm return k15)
+; env: (k14 to frm return k15)
+; env: (k14 to frm return k15)
+; env*: (k14 to frm k16 return k15)
+; env: (k14 to frm k16 return k15)
+; env: (k14 to frm k16 return k15)
+; env: (k14 to frm k16 return k15)
+; regular: frm
+; env: (k14 to frm k16 return k15)
+; env*: (k14 to frm k16 return k15 rv17)
+; env: (k14 to frm k16 return k15 rv17)
+; env: (k14 to frm k16 return k15 rv17)
+; env: (k14 to frm k16 return k15 rv17)
+; regular: to
+; env: (k14 to frm k16 return k15 rv17)
+; env*: (k14 to frm k16 return k15 rv18 rv17)
+; env: (k14 to frm k16 return k15 rv18 rv17)
+; env: (k14 to frm k16 return k15 rv18 rv17)
+; env: (k14 to frm k16 return k15 rv18 rv17)
+; env: (k14 to frm k16 return k15 rv18 rv17)
+; regular: k16
+; env: (k14 to frm return k15)
+; regular: k15
+; env: (k14 to frm)
+; regular: k14
+; env: ()
+; env: ()
+; env*: (frm to using n k19)
+; env: (frm to using n k19)
+; env: (frm to using n k19)
+; env*: (f cc frm to using n k19)
+; env: (f cc frm to using n k19)
+; env: (f cc frm to using n k19)
+; regular: f
+; env: (f cc frm to using n k19)
+; env*: (f k cc frm to x using n k19)
+; env: (f k cc frm to x using n k19)
+; env: (f k cc frm to x using n k19)
+; regular: cc
+; env: (f k cc frm to x using n k19)
+; regular: x
+; env: (f cc frm to using n k19)
+; regular: cc
+; env: (frm to using n k19)
+; env*: (frm to return using n k20 k19)
+; env: (frm to return using n k20 k19)
+; env: (frm to return using n k20 k19)
+; env*: (frm to return using n k21 k20 k19)
+; env: (frm to return using n k21 k20 k19)
+; env: (frm to return using n k21 k20 k19)
+; env*: (frm to return using n k22 k21 k20 k19)
+; env: (frm to return using n k22 k21 k20 k19)
+; env: (frm to return using n k22 k21 k20 k19)
+; env: (frm to return using n k22 k21 k20 k19)
+; regular: n
+; env: (frm to return using n k22 k21 k20 k19)
+; env: (frm to return using n k22 k21 k20 k19)
+; env*: (frm to return using n k22 k21 k20 k19 rv28)
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; regular: rv28
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; regular: return
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; regular: k22
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; regular: k22
+; env: (frm to return using n k22 k21 k20 k19 rv28)
+; env: (frm to return using n k21 k20 k19)
+; env*: (frm to return using n k21 k20 k19 rv23)
+; env: (frm to return using n k21 k20 k19 rv23)
+; env: (frm to return using n k21 k20 k19 rv23)
+; env: (frm to return using n k21 k20 k19 rv23)
+; regular: n
+; env: (frm to return using n k21 k20 k19 rv23)
+; env: (frm to return using n k21 k20 k19 rv23)
+; env*: (frm to return using n k21 k20 k19 rv24 rv23)
+; env: (frm to return using n k21 k20 k19 rv24 rv23)
+; env: (frm to return using n k21 k20 k19 rv24 rv23)
+; env: (frm to return using n k21 k20 k19 rv24 rv23)
+; global: g$dohanoi
+; env: (frm to return using n k21 k20 k19 rv24 rv23)
+; regular: rv24
+; env: (frm to return using n k21 k20 k19 rv24 rv23)
+; regular: using
+; env: (frm to return using n k21 k20 k19 rv24 rv23)
+; regular: frm
+; env: (frm to return using n k21 k20 k19 rv24 rv23)
+; regular: to
+; env: (frm to return using n k21 k20 k19 rv24 rv23)
+; env*: (frm to return using n k21 k20 k19 rv25 rv24 rv23)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23)
+; global: g$moveit
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23)
+; regular: frm
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23)
+; regular: to
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23)
+; env*: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv26)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv26)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv26)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv26)
+; regular: n
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv26)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv26)
+; env*: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; global: g$dohanoi
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; regular: rv27
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; regular: to
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; regular: using
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; regular: frm
+; env: (frm to return using n k21 k20 k19 rv25 rv24 rv23 rv27 rv26)
+; regular: k21
+; env: (frm to return using n k20 k19)
+; regular: k20
+; env: (frm to using n k19)
+; regular: k19
+; env: ()
+; env: ()
+; env*: (k29)
+; env: (k29)
+; env: (k29)
+; env*: (f cc k29)
+; env: (f cc k29)
+; env: (f cc k29)
+; regular: f
+; env: (f cc k29)
+; env*: (f k cc x k29)
+; env: (f k cc x k29)
+; env: (f k cc x k29)
+; regular: cc
+; env: (f k cc x k29)
+; regular: x
+; env: (f cc k29)
+; regular: cc
+; env: (k29)
+; env*: (return k29 k30)
+; env: (return k29 k30)
+; env: (return k29 k30)
+; env*: (return k29 k30 k31)
+; env: (return k29 k30 k31)
+; env: (return k29 k30 k31)
+; env*: (return k29 k30 $old-handler k32 k31)
+; env: (return k29 k30 $old-handler k32 k31)
+; env: (return k29 k30 $old-handler k32 k31)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 k33)
+; env: (return k29 k30 $old-return $old-handler k32 k31 k33)
+; env: (return k29 k30 $old-return $old-handler k32 k31 k33)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-continue k34 k33)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-continue k34 k33)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-continue k34 k33)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env*: (f cc return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env: (f cc return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env: (f cc return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; regular: f
+; env: (f cc return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env*: (f k cc x return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env: (f k cc x return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env: (f k cc x return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; regular: cc
+; env: (f k cc x return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; regular: x
+; env: (f cc return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; regular: cc
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40)
+; regular: $old-handler
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 ex k41 $ex14 k40)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 ex k41 $ex14 k40)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 ex k41 $ex14 k40)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 ex k41 $ex14 k40 k42)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 ex k41 $ex14 k40 k42)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 ex k41 $ex14 k40 k42)
+; regular: k42
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 ex k41 $ex14 k40 k42)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 ex k41 $ex14 k40)
+; regular: k41
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40)
+; regular: $ex14
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40 rv43)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40 rv43)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40 rv43)
+; regular: $ec15
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40 rv43)
+; regular: rv43
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 $ex14 k40 rv43)
+; regular: k40
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; global: g$dohanoi
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 k45)
+; regular: k45
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46 rv k44)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46 rv k44)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46 rv k44)
+; regular: $old-handler
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46 rv k44)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46 rv k44)
+; regular: k44
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46 rv k44)
+; regular: rv
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46)
+; regular: rv46
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 $ec15 k39 break k38 rv46)
+; regular: k39
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 break k38)
+; regular: k38
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 k47)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 k47)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 k47)
+; regular: $old-handler
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 k47)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 k47)
+; regular: $old-break
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35 k47)
+; regular: k47
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 continue k37 k36 k35)
+; regular: k37
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35 k48)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35 k48)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35 k48)
+; regular: $old-handler
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35 k48)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35 k48)
+; regular: $old-continue
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35 k48)
+; regular: k48
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k36 k35)
+; regular: k36
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35)
+; env*: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35 rv k49)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35 rv k49)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35 rv k49)
+; regular: $old-handler
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35 rv k49)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35 rv k49)
+; regular: return
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35 rv k49)
+; regular: rv
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35 rv k49)
+; regular: k49
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-break $old-continue k34 k33 k35)
+; regular: k35
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-continue k34 k33)
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-continue k34 k33)
+; global: break
+; env: (return k29 k30 $old-return $old-handler k32 k31 $old-continue k34 k33)
+; regular: k34
+; env: (return k29 k30 $old-return $old-handler k32 k31 k33)
+; env: (return k29 k30 $old-return $old-handler k32 k31 k33)
+; global: continue
+; env: (return k29 k30 $old-return $old-handler k32 k31 k33)
+; regular: k33
+; env: (return k29 k30 $old-handler k32 k31)
+; regular: return
+; env: (return k29 k30 $old-handler k32 k31)
+; regular: k32
+; env: (return k29 k30 k31)
+; env: (return k29 k30 k31)
+; global: $current-handler
+; env: (return k29 k30 k31)
+; regular: k31
+; env: (return k29 k30)
+; regular: k30
+; env: (k29)
+; regular: k29
+; env: ()
+; env: ()
+; env: ()
+; global: g$main
+; env: ()
+; env: ()
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$main (void))
+ (define g$moveit (void))
+ (define g$dohanoi (void))
+ (set-then!
+  g$moveit
+  (lambda (frm to k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (k16)
+          ((cps py-print)
+           frm
+           (lambda (rv17)
+             ((cps py-print) to (lambda (rv18) ((cps py-print) "---" k16))))))
+        k15))
+     k14))
+  (set-then!
+   g$dohanoi
+   (lambda (n to frm using k19)
+     ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+      (lambda (return k20)
+        ((lambda (k21)
+           ((lambda (k22)
+              ((cps equal?)
+               n
+               0
+               (lambda (rv28) (if rv28 (return (py-list*) k22) (k22 (void))))))
+            (lambda (rv23)
+              ((cps -)
+               n
+               1
+               (lambda (rv24)
+                 (g$dohanoi
+                  rv24
+                  using
+                  frm
+                  to
+                  (lambda (rv25)
+                    (g$moveit
+                     frm
+                     to
+                     (lambda (rv26)
+                       ((cps -)
+                        n
+                        1
+                        (lambda (rv27)
+                          (g$dohanoi rv27 to using frm k21))))))))))))
+         k20))
+      k19))
+   (set-then!
+    g$main
+    (lambda (k29)
+      ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+       (lambda (return k30)
+         ((lambda (k31)
+            ((lambda ($old-handler k32)
+               ((lambda ($old-return k33)
+                  ((lambda ($old-continue k34)
+                     ((lambda ($old-break k35)
+                        ((lambda (return k36)
+                           ((lambda (continue k37)
+                              ((lambda (break k38)
+                                 ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                                  (lambda ($ec15 k39)
+                                    (set-then!
+                                     $current-handler
+                                     (lambda ($ex14 k40)
+                                       (set-then!
+                                        $current-handler
+                                        $old-handler
+                                        ((lambda (ex k41)
+                                           ((lambda (k42) (k42 (void))) k41))
+                                         $ex14
+                                         (lambda (rv43) ($ec15 rv43 k40)))))
+                                     ((lambda (k45) (g$dohanoi 2 3 1 2 k45))
+                                      (lambda (rv46)
+                                        ((lambda (rv k44)
+                                           (set-then!
+                                            $current-handler
+                                            $old-handler
+                                            (k44 rv)))
+                                         rv46
+                                         k39)))))
+                                  k38))
+                               (lambda (k47)
+                                 (set-then!
+                                  $current-handler
+                                  $old-handler
+                                  ($old-break k47)))
+                               k37))
+                            (lambda (k48)
+                              (set-then!
+                               $current-handler
+                               $old-handler
+                               ($old-continue k48)))
+                            k36))
+                         (lambda (rv k49)
+                           (set-then!
+                            $current-handler
+                            $old-handler
+                            (return rv k49)))
+                         k35))
+                      break
+                      k34))
+                   continue
+                   k33))
+                return
+                k32))
+             $current-handler
+             k31))
+          k30))
+       k29))
+    (g$main $halt)))))

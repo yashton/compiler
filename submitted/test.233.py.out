@@ -1,0 +1,5 @@
+(ID "s")
+(PUNCT "=")
+(ERROR "Illegal character '"This is the #comment\
+ string"
+' on line 1)

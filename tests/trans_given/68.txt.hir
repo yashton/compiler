@@ -1,0 +1,1 @@
+(program (define l (void)) (set-global! l (py-list* "spam" "ham" 314 23)))

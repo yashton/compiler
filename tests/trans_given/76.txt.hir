@@ -1,0 +1,19 @@
+(program
+ (define two_e (void))
+ (set-global!
+  two_e
+  (lambda (str)
+    (call/ec
+     (lambda (return)
+       (let ((count (void)) (ch (void)))
+         (set! count 0)
+         (for-each
+          i14
+          str
+          (begin
+            (set! ch i14)
+            (let ()
+              (cond ((equal? ch "e") (let () (set! count (+ count 1))))))))
+         (cond
+          ((equal? count 2) (let () (return #t)))
+          (else (let () (return #f))))))))))

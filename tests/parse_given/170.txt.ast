@@ -1,0 +1,11 @@
+(program
+ (= (x) 10)
+ (def
+  (f)
+  (suite
+   (= (x) 20)
+   (def (g) (suite (global x) (= (x) 30)))
+   (expr (indexed g (called)))))
+ (expr (indexed f (called)))
+ (expr (indexed print (called x))))
+

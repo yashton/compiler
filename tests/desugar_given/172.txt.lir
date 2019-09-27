@@ -1,0 +1,17 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$abs (void))
+ (begin
+   (set! g$abs
+     (lambda (x)
+       (call/ec
+        (lambda (return)
+          ((lambda ()
+             (begin
+               (if (< x 0)
+                 ((lambda () (begin (return (- x)))))
+                 ((lambda () (begin (return x))))))))))))
+   (py-print (g$abs (* (* (- 1) (- 1)) (- 1))))))

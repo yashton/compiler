@@ -1,0 +1,126 @@
+; mutable: g$d
+; mutable: g$c
+; mutable: g$b
+; mutable: g$a
+; mutable: g$g
+; mutable: g$f
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (rv14)
+; env: (rv14)
+; env: (rv14)
+; regular: rv14
+; env: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env*: (rv14 rv15)
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; regular: rv15
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; env*: (rv14 rv15 rv16)
+; env: (rv14 rv15 rv16)
+; env: (rv14 rv15 rv16)
+; regular: rv16
+; env: (rv14 rv15 rv16)
+; env: (rv14 rv15 rv16)
+; env: (rv14 rv15 rv16)
+; env: (rv14 rv15 rv16)
+; env: (rv14 rv15 rv16)
+; env*: (rv14 rv15 rv17 rv16)
+; env: (rv14 rv15 rv17 rv16)
+; env: (rv14 rv15 rv17 rv16)
+; regular: rv17
+; env: (rv14 rv15 rv17 rv16)
+; env: (rv14 rv15 rv17 rv16)
+; env: (rv14 rv15 rv17 rv16)
+; env: (rv14 rv15 rv17 rv16)
+; env: (rv14 rv15 rv17 rv16)
+; env*: (rv14 rv15 rv18 rv17 rv16)
+; env: (rv14 rv15 rv18 rv17 rv16)
+; env: (rv14 rv15 rv18 rv17 rv16)
+; regular: rv18
+; env: (rv14 rv15 rv18 rv17 rv16)
+; env: (rv14 rv15 rv18 rv17 rv16)
+; env: (rv14 rv15 rv18 rv17 rv16)
+; env: (rv14 rv15 rv18 rv17 rv16)
+; env: (rv14 rv15 rv18 rv17 rv16)
+; env*: (rv14 rv15 rv19 rv18 rv17 rv16)
+; env: (rv14 rv15 rv19 rv18 rv17 rv16)
+; env: (rv14 rv15 rv19 rv18 rv17 rv16)
+; regular: rv19
+; env: (rv14 rv15 rv19 rv18 rv17 rv16)
+; env: (rv14 rv15 rv19 rv18 rv17 rv16)
+; env: (rv14 rv15 rv19 rv18 rv17 rv16)
+; global: $halt
+; env: (rv14 rv15 rv19 rv18 rv17 rv16)
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$a (void))
+ (define g$b (void))
+ (define g$c (void))
+ (define g$d (void))
+ (define g$g (void))
+ (define g$f (void))
+ ((cps +)
+  1
+  1
+  (lambda (rv14)
+    (set-then!
+     g$a
+     rv14
+     ((cps modulo)
+      2
+      3
+      (lambda (rv15)
+        (set-then!
+         g$b
+         rv15
+         ((cps bitwise-xor)
+          1
+          1
+          (lambda (rv16)
+            (set-then!
+             g$c
+             rv16
+             ((cps -)
+              1
+              1
+              (lambda (rv17)
+                (set-then!
+                 g$d
+                 rv17
+                 ((cps *)
+                  1
+                  1
+                  (lambda (rv18)
+                    (set-then!
+                     g$f
+                     rv18
+                     ((cps /)
+                      1
+                      1
+                      (lambda (rv19)
+                        (set-then! g$g rv19 ($halt (void)))))))))))))))))))))

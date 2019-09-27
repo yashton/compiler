@@ -1,0 +1,19 @@
+(program
+ (define b (void))
+ (define a (void))
+ (set-global! a (dict (1 2) (3 4)))
+ (set-global! b (py-list* 0 1 2))
+ (let ((b15 (get-global a)))
+   (let ((i14 1))
+     (cond
+      ((tuple? b15) (error "Cannot delete from tuples!"))
+      ((py-list? b15) (py-list-remove! b15 i14))
+      ((dict? b15) (dict-remove! b15 i14)))))
+ (let ((b17 (get-global b)))
+   (let ((i16 2))
+     (cond
+      ((tuple? b17) (error "Cannot delete from tuples!"))
+      ((py-list? b17) (py-list-remove! b17 i16))
+      ((dict? b17) (dict-remove! b17 i16)))))
+ (py-print (get-global a))
+ (py-print (get-global b)))

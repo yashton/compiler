@@ -1,0 +1,24 @@
+(program
+ (def
+  (moveit frm to)
+  (suite
+   (expr (indexed print (called frm)))
+   (expr (indexed print (called to)))
+   (expr (indexed print (called "---")))))
+ (def
+  (dohanoi n to frm using)
+  (suite
+   (cond ((comparison n ("==" 0)) (return (list))))
+   (expr (indexed dohanoi (called (arith n ("-" 1)) using frm to)))
+   (expr (indexed moveit (called frm to)))
+   (expr (indexed dohanoi (called (arith n ("-" 1)) to using frm)))))
+ (def
+  (main)
+  (suite
+   (try
+    (suite (expr (indexed dohanoi (called 2 3 1 2))))
+    (((except) (suite (pass))))
+    #f
+    #f)))
+ (expr (indexed main (called))))
+

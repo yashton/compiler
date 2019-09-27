@@ -1,0 +1,5 @@
+(ID "s")
+(PUNCT "=")
+(LIT "he said ")
+(ID "ijsdf")
+(ERROR "Illegal character '"' on line 1)

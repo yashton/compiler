@@ -1,0 +1,1 @@
+(program (define a (void)) (set-global! a "hex HELLO!"))

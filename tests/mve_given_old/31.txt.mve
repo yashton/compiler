@@ -1,0 +1,137 @@
+; mutable: g$b
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k17)
+; env: (k17)
+; env: (k17)
+; env: (k17)
+; env: (k17)
+; global: g$a
+; env: (k17)
+; env: (k17)
+; global: g$b
+; env: (k17)
+; env*: (k17 rv20)
+; env: (k17 rv20)
+; env: (k17 rv20)
+; regular: rv20
+; env: (k17 rv20)
+; env: (k17 rv20)
+; env: (k17 rv20)
+; env: (k17 rv20)
+; global: g$b
+; env: (k17 rv20)
+; env: (k17 rv20)
+; global: g$c
+; env: (k17 rv20)
+; env*: (k17 rv20 rv21)
+; env: (k17 rv20 rv21)
+; env: (k17 rv20 rv21)
+; regular: rv21
+; env: (k17 rv20 rv21)
+; env: (k17 rv20 rv21)
+; env: (k17 rv20 rv21)
+; env: (k17 rv20 rv21)
+; global: g$c
+; env: (k17 rv20 rv21)
+; env: (k17 rv20 rv21)
+; global: g$d
+; env: (k17 rv20 rv21)
+; regular: k17
+; env: (k17 rv20 rv21)
+; env: (k17 rv20 rv21)
+; regular: k17
+; env: (k17 rv20 rv21)
+; env: (k17 rv20)
+; env: (k17 rv20)
+; regular: k17
+; env: (k17 rv20)
+; env: ()
+; env*: (rv18)
+; env: (rv18)
+; env: (rv18)
+; env*: (rv18 k14 t14)
+; env: (rv18 k14 t14)
+; env: (rv18 k14 t14)
+; regular: t14
+; env: (rv18 k14 t14)
+; env: (rv18 k14 t14)
+; regular: k14
+; env: (rv18 k14 t14)
+; regular: t14
+; env: (rv18 k14 t14)
+; env: (rv18 k14 t14)
+; env: (rv18 k14 t14)
+; env: (rv18 k14 t14)
+; global: g$z
+; env: (rv18 k14 t14)
+; env: (rv18 k14 t14)
+; global: g$f
+; env: (rv18 k14 t14)
+; env*: (rv18 k14 t14 rv16)
+; env: (rv18 k14 t14 rv16)
+; env: (rv18 k14 t14 rv16)
+; env*: (rv18 k14 t14 t15 k15 rv16)
+; env: (rv18 k14 t14 t15 k15 rv16)
+; env: (rv18 k14 t14 t15 k15 rv16)
+; regular: t15
+; env: (rv18 k14 t14 t15 k15 rv16)
+; env: (rv18 k14 t14 t15 k15 rv16)
+; regular: k15
+; env: (rv18 k14 t14 t15 k15 rv16)
+; regular: t15
+; env: (rv18 k14 t14 t15 k15 rv16)
+; env: (rv18 k14 t14 t15 k15 rv16)
+; regular: k15
+; env: (rv18 k14 t14 t15 k15 rv16)
+; env: (rv18 k14 t14 t15 k15 rv16)
+; global: g$a
+; env: (rv18 k14 t14 rv16)
+; regular: rv16
+; env: (rv18 k14 t14 rv16)
+; regular: k14
+; env: (rv18)
+; regular: rv18
+; env: (rv18)
+; env*: (rv18 rv19)
+; env: (rv18 rv19)
+; env: (rv18 rv19)
+; regular: rv19
+; env: (rv18 rv19)
+; env: (rv18 rv19)
+; env: (rv18 rv19)
+; global: $halt
+; env: (rv18 rv19)
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$b (void))
+ ((lambda (k17)
+    ((cps <)
+     g$a
+     g$b
+     (lambda (rv20)
+       (if rv20
+         ((cps <=)
+          g$b
+          g$c
+          (lambda (rv21) (if rv21 ((cps >) g$c g$d k17) (k17 #f))))
+         (k17 #f)))))
+  (lambda (rv18)
+    ((lambda (t14 k14)
+       (if t14
+         (k14 t14)
+         ((cps >=)
+          g$z
+          g$f
+          (lambda (rv16)
+            ((lambda (t15 k15) (if t15 (k15 t15) (k15 g$a))) rv16 k14)))))
+     rv18
+     (lambda (rv19) (set-then! g$b rv19 ($halt (void))))))))

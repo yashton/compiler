@@ -1,0 +1,88 @@
+
+<program> ::= (program <top-form>*)
+
+<top-form> ::= <vardef> | <exp>
+
+<vardef> ::= (define <var> <exp>)
+ 
+<exp> ::=  (void)
+       |   (error <exp>)
+
+       |   (lambda (<var>*) <exp>)
+       |   (call/ec (lambda (<var>) <exp>))      
+
+       |   <var>
+       |   <number>
+       |   <string>
+
+       |   integer?
+       |   string?
+       |   tuple?
+       |   dict?
+       |   py-list?
+       |   set?
+
+       |   (set <exp>*)
+       |   (dict (<exp> <exp>) ...)
+       |   (tuple <exp>*)
+       |   (py-list* <exp>*)
+
+       |   (let ((<var> <exp>)*) <exp>*)
+       |   (set! <var> <exp>)
+
+       |   (py-list-ref <exp> <exp>)
+       |   (py-list-set! <exp> <exp> <exp>)
+       |   (py-list-remove! <exp> <exp>)
+
+       |   (tuple-ref <exp> <exp>)
+       |   (tuple-set! <exp> <exp> <exp>)
+  
+       |   (dict-ref <exp> <exp>)
+       |   (dict-set! <exp> <exp> <exp>)
+       |   (dict-remove! <exp> <exp>)
+  
+       |   (get-field <exp> <var>)
+       |   (set-field! <exp> <var> <exp>)
+       |   (remove-field! <exp> <var>)
+
+       |   (get-global <var>)
+       |   (set-global! <var> <exp>)
+
+       |   (throw <exp>)
+       |   (try <exp> <exp>)
+
+       |   (assert <exp> [ <exp> ])
+       |   (cond (<exp> <exp>)* [ (else <exp>) ])
+
+       |   (if <exp> <exp> <exp>)
+       |   (and <exp>*)
+       |   (or <exp>*)
+       |   (not <exp>)
+       |   (cond (<exp> <exp>) ... [ (else <exp>) ])
+       |   (while <exp> <exp> [ <exp> ])
+       |   (for-each <var> <exp> <exp> [ <exp> ])
+       |   (break)
+       |   (continue)
+       |   (begin <exp> ...)
+
+       |   (<multop> <exp>*)
+       |   (<binop> <exp> <exp>)
+       |   (<unop> <exp>)
+
+       |   py-print | Exception | Object
+
+       |   None | Ellipsis | #t | #f
+
+
+<multop> ::= bitwise-and | bitwise-ior | bitwise-xor 
+
+<binop> ::= < | > | equal? | >= | <= | not-equal? | in? | not-in? | eq? | not-eq?
+         |  << | >>
+         |  + | - 
+         |  * | / | quotient | modulo
+         |  expt
+
+<unop> ::= bitwise-not | + | -
+
+
+

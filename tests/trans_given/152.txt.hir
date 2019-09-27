@@ -1,0 +1,45 @@
+(program
+ (define main (void))
+ (define HOST (void))
+ (define print_result (void))
+ (define get_result_from_server (void))
+ (set-global! HOST "http://matt.might.net/apps/pyparse/pyparse.php")
+ (set-global!
+  get_result_from_server
+  (lambda (file_contents)
+    (call/ec
+     (lambda (return)
+       (let ((params (void)) (result (void)))
+         (set! params (dict))
+         (let ((b15 params))
+           (let ((i14 "file"))
+             (cond
+              ((tuple? b15) (tuple-set! b15 i14 file_contents))
+              ((py-list? b15) (py-list-set! b15 i14 file_contents))
+              ((dict? b15) (dict-set! b15 i14 file_contents)))))
+         (let ((b17 params))
+           (let ((i16 "lex"))
+             (cond
+              ((tuple? b17) (tuple-set! b17 i16 1))
+              ((py-list? b17) (py-list-set! b17 i16 1))
+              ((dict? b17) (dict-set! b17 i16 1)))))
+         (set! params ((get-field (get-global urllib) urlencode) params))
+         (set! result
+           ((get-field (get-global urllib) urlopen) (get-global HOST) params))
+         (return result))))))
+ (set-global!
+  print_result
+  (lambda (sin)
+    (call/ec
+     (lambda (return)
+       (let ((code (void)))
+         (set! code ((get-field sin read)))
+         ((get-field (get-field (get-global sys) stdout) write)
+          ((get-field ((get-global get_result_from_server) code) read))))))))
+ (set-global!
+  main
+  (lambda (argv)
+    (call/ec (lambda (return) (let () ((get-global print_result) argv))))))
+ (cond
+  ((equal? (get-global __name__) "__main__")
+   (let () ((get-global main) (get-field (get-global sys) stdin))))))

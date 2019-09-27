@@ -1,0 +1,8 @@
+print(2 < 3)     
+print(2 or 3)
+print([] or 3)
+print([] or {})
+print(2 and 3) 
+print([] and {})
+print(3 and [])
+

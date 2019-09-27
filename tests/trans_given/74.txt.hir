@@ -1,0 +1,11 @@
+(program
+ (define a_bigger (void))
+ (set-global!
+  a_bigger
+  (lambda (a b)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond
+          ((and (> a b) (>= (- a b) 2)) (let () (return #t)))
+          (else (let () (return #f))))))))))

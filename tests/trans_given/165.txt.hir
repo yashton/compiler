@@ -1,0 +1,5 @@
+(program
+ (define x (void))
+ (set-global! x 30)
+ (set-global! x (+ (get-global x) 20))
+ (py-print (get-global x)))

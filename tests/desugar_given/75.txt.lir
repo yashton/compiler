@@ -1,0 +1,73 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$pair_13 (void))
+ (begin
+   (set! g$pair_13
+     (lambda (nums)
+       (call/ec
+        (lambda (return)
+          ((lambda (i)
+             (begin
+               (call/ec
+                (lambda (break)
+                  ((lambda ($seq14 $loop15)
+                     (begin
+                       (begin
+                         (if (set? $seq14)
+                           (for-set $seq14 $loop15)
+                           (if (tuple? $seq14)
+                             (for-tuple $seq14 $loop15)
+                             (if (py-list? $seq14)
+                               (for-py-list $seq14 $loop15)
+                               (if (dict? $seq14)
+                                 (for-dict $seq14 $loop15)
+                                 (void)))))
+                         (void))))
+                   (g$range (- (g$len nums) 1))
+                   (lambda (i14)
+                     (call/ec
+                      (lambda (continue)
+                        (begin
+                          (set! i i14)
+                          ((lambda ()
+                             (begin
+                               (if (if (equal?
+                                        ((lambda (e16)
+                                           (begin
+                                             ((lambda (i15)
+                                                (begin
+                                                  (if (py-list? e16)
+                                                    (py-list-ref e16 i15)
+                                                    (if (tuple? e16)
+                                                      (tuple-ref e16 i15)
+                                                      (if (dict? e16)
+                                                        (dict-ref e16 i15)
+                                                        (error
+                                                         "cannot index object"))))))
+                                              i)))
+                                         nums)
+                                        13)
+                                     (equal?
+                                      ((lambda (e18)
+                                         (begin
+                                           ((lambda (i17)
+                                              (begin
+                                                (if (py-list? e18)
+                                                  (py-list-ref e18 i17)
+                                                  (if (tuple? e18)
+                                                    (tuple-ref e18 i17)
+                                                    (if (dict? e18)
+                                                      (dict-ref e18 i17)
+                                                      (error
+                                                       "cannot index object"))))))
+                                            (+ i 1))))
+                                       nums)
+                                      13)
+                                     #f)
+                                 ((lambda () (begin (return #t))))
+                                 (void))))))))))))
+               (return #f)))
+           (void))))))))

@@ -1,0 +1,7 @@
+(ID "x")
+(PUNCT "=")
+(LIT 1)
+(NEWLINE)
+(ERROR "Illegal character '"unterminated string
+x = 2
+"terminated string"' on line 2)

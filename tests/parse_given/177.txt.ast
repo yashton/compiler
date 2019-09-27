@@ -1,0 +1,8 @@
+(program
+ (= (y) 0)
+ (for
+  x
+  (list 1 2 3)
+  (suite (expr (indexed print (called x))) (= (y) (arith x ("+" y)))))
+ (expr (indexed print (called y))))
+

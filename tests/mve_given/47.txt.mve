@@ -1,0 +1,130 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$geometricSeriesSum (void))
+ (set-then!
+  g$geometricSeriesSum
+  (lambda (x n k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (sum i prod j k16)
+          (set-then!
+           sum
+           (make-cell sum)
+           (set-then!
+            i
+            (make-cell i)
+            (set-then!
+             prod
+             (make-cell prod)
+             (set-then!
+              j
+              (make-cell j)
+              (set-cell!
+               sum
+               0
+               (set-cell!
+                i
+                0
+                ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                 (lambda (break k17)
+                   ((lambda (loop k18)
+                      (set-then!
+                       loop
+                       (make-cell loop)
+                       (set-cell!
+                        loop
+                        (lambda (k19)
+                          ((cps <=)
+                           (get-cell i)
+                           n
+                           (lambda (rv20)
+                             (if rv20
+                               ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                                (lambda (continue k21)
+                                  ((lambda (k22)
+                                     (set-cell!
+                                      prod
+                                      1
+                                      (set-cell!
+                                       j
+                                       0
+                                       ((lambda (f cc)
+                                          (f (lambda (x k) (cc x)) cc))
+                                        (lambda (break k23)
+                                          ((lambda (loop k24)
+                                             (set-then!
+                                              loop
+                                              (make-cell loop)
+                                              (set-cell!
+                                               loop
+                                               (lambda (k25)
+                                                 ((cps <)
+                                                  (get-cell j)
+                                                  (get-cell i)
+                                                  (lambda (rv26)
+                                                    (if rv26
+                                                      ((lambda (f cc)
+                                                         (f
+                                                          (lambda (x k) (cc x))
+                                                          cc))
+                                                       (lambda (continue k27)
+                                                         ((lambda (k28)
+                                                            ((cps *)
+                                                             (get-cell prod)
+                                                             x
+                                                             (lambda (rv29)
+                                                               (set-cell!
+                                                                prod
+                                                                rv29
+                                                                ((cps +)
+                                                                 (get-cell j)
+                                                                 1
+                                                                 (lambda (rv30)
+                                                                   (set-cell!
+                                                                    j
+                                                                    rv30
+                                                                    (k28
+                                                                     (void)))))))))
+                                                          k27))
+                                                       (lambda (rv31)
+                                                         ((get-cell loop)
+                                                          k25)))
+                                                      (k25 (void))))))
+                                               ((get-cell loop)
+                                                (lambda (rv32)
+                                                  (k24 (void)))))))
+                                           (void)
+                                           k23))
+                                        (lambda (rv33)
+                                          ((cps +)
+                                           (get-cell sum)
+                                           (get-cell prod)
+                                           (lambda (rv34)
+                                             (set-cell!
+                                              sum
+                                              rv34
+                                              ((cps +)
+                                               (get-cell i)
+                                               1
+                                               (lambda (rv35)
+                                                 (set-cell!
+                                                  i
+                                                  rv35
+                                                  (k22 (void)))))))))))))
+                                   k21))
+                                (lambda (rv36) ((get-cell loop) k19)))
+                               (k19 (void))))))
+                        ((get-cell loop) (lambda (rv37) (k18 (void)))))))
+                    (void)
+                    k17))
+                 (lambda (rv38) (return (get-cell sum) k16))))))))))
+        (void)
+        (void)
+        (void)
+        (void)
+        k15))
+     k14))
+  ($halt (void))))

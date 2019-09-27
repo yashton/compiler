@@ -1,0 +1,13 @@
+(program
+ (= (fred) (dict ("mike" 456) ("bill" 399) ("sarah" 521)))
+ (= (test) (list "zingo" "sarah" "bill" "wilma"))
+ (for
+  t
+  test
+  (suite
+   (expr (indexed print (called t)))
+   (cond
+    ((indexed fred (dot has_key) (called t))
+     (suite (expr (indexed print (called "=>" (indexed fred (subscript t)))))))
+    (else (suite (expr (indexed print (called "is not present.")))))))))
+

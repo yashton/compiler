@@ -1,0 +1,12 @@
+(program
+ (define doomed (void))
+ (set-global!
+  doomed
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ()
+         (try
+          (let () (py-print "try...\n"))
+          (lambda (ex) (let () (py-print "caught an index error!")))))))))
+ ((get-global doomed)))

@@ -1,0 +1,15 @@
+(program
+ (= (g) 200)
+ (def
+  (f)
+  (suite
+   (cond (False (suite (global g))))
+   (for g (list 1 2 3) (pass))
+   (= (x) 314)
+   (def (h) (suite (= (g) x) (expr (indexed print (called g)))))
+   (expr (indexed h (called)))
+   (expr (indexed print (called g)))
+   (return g)))
+ (expr (indexed print (called (indexed f (called)))))
+ (expr (indexed print (called g))))
+

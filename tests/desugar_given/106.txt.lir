@@ -1,0 +1,29 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$y (void))
+ (define g$x (void))
+ (begin
+   (call/ec
+    (lambda (break)
+      ((lambda ($seq14 $loop15)
+         (begin
+           (begin
+             (if (set? $seq14)
+               (for-set $seq14 $loop15)
+               (if (tuple? $seq14)
+                 (for-tuple $seq14 $loop15)
+                 (if (py-list? $seq14)
+                   (for-py-list $seq14 $loop15)
+                   (if (dict? $seq14) (for-dict $seq14 $loop15) (void)))))
+             (void))))
+       (py-list* 1 2 3)
+       (lambda (i14)
+         (call/ec
+          (lambda (continue)
+            (begin
+              (set! g$x i14)
+              ((lambda ()
+                 (begin (py-print g$x) (set! g$y (+ g$x g$y))))))))))))))

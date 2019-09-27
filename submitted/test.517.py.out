@@ -1,0 +1,2 @@
+(ERROR "Illegal character '"abc\
+d"' on line 1)

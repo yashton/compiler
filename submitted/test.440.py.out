@@ -1,0 +1,7 @@
+(ID "s")
+(PUNCT "=")
+(LIT "")
+(LIT "ab\nc\td")
+(LIT "")
+(NEWLINE)
+(ENDMARKER)

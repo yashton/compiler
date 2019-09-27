@@ -1,0 +1,34 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$b (void))
+ (define g$a (void))
+ (begin
+   (set! g$a (dict (1 2) (3 4)))
+   (set! g$b (py-list* 0 1 2))
+   ((lambda (b15)
+      (begin
+        ((lambda (i14)
+           (begin
+             (if (tuple? b15)
+               (error "Cannot delete from tuples!")
+               (if (py-list? b15)
+                 (py-list-remove! b15 i14)
+                 (if (dict? b15) (dict-remove! b15 i14) (void))))))
+         1)))
+    g$a)
+   ((lambda (b17)
+      (begin
+        ((lambda (i16)
+           (begin
+             (if (tuple? b17)
+               (error "Cannot delete from tuples!")
+               (if (py-list? b17)
+                 (py-list-remove! b17 i16)
+                 (if (dict? b17) (dict-remove! b17 i16) (void))))))
+         2)))
+    g$b)
+   (py-print g$a)
+   (py-print g$b)))

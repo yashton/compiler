@@ -1,0 +1,302 @@
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14)
+; env: (k14)
+; env: (k14)
+; env*: (k14 k17 cv14)
+; env: (k14 k17 cv14)
+; env: (k14 k17 cv14)
+; env: (k14 k17 cv14)
+; env: (k14 k17 cv14)
+; regular: cv14
+; env: (k14 k17 cv14)
+; env*: (rv18 k14 k17 cv14)
+; env: (rv18 k14 k17 cv14)
+; env: (rv18 k14 k17 cv14)
+; regular: rv18
+; env: (rv18 k14 k17 cv14)
+; env: (rv18 k14 k17 cv14)
+; env: (rv18 k14 k17 cv14)
+; regular: cv14
+; env: (rv18 k14 k17 cv14)
+; env: (rv18 k14 k17 cv14)
+; regular: k17
+; env: (rv18 k14 k17 cv14)
+; env: (rv18 k14 k17 cv14)
+; regular: k17
+; env: (rv18 k14 k17 cv14)
+; env: (k14)
+; env: (k14)
+; global: g$year
+; env: (k14)
+; env*: (k14 rv19)
+; env: (k14 rv19)
+; env: (k14 rv19)
+; regular: rv19
+; env: (k14 rv19)
+; env: (k14 rv19)
+; env*: (k14 rv19 k20 cv15)
+; env: (k14 rv19 k20 cv15)
+; env: (k14 rv19 k20 cv15)
+; env: (k14 rv19 k20 cv15)
+; env: (k14 rv19 k20 cv15)
+; regular: cv15
+; env: (k14 rv19 k20 cv15)
+; env*: (k14 rv19 k20 cv15 rv21)
+; env: (k14 rv19 k20 cv15 rv21)
+; env: (k14 rv19 k20 cv15 rv21)
+; regular: rv21
+; env: (k14 rv19 k20 cv15 rv21)
+; env: (k14 rv19 k20 cv15 rv21)
+; env: (k14 rv19 k20 cv15 rv21)
+; regular: cv15
+; env: (k14 rv19 k20 cv15 rv21)
+; env: (k14 rv19 k20 cv15 rv21)
+; regular: k20
+; env: (k14 rv19 k20 cv15 rv21)
+; env: (k14 rv19 k20 cv15 rv21)
+; regular: k20
+; env: (k14 rv19 k20 cv15 rv21)
+; env: (k14 rv19)
+; env: (k14 rv19)
+; global: g$month
+; env: (k14 rv19)
+; env*: (k14 rv19 rv22)
+; env: (k14 rv19 rv22)
+; env: (k14 rv19 rv22)
+; regular: rv22
+; env: (k14 rv19 rv22)
+; env: (k14 rv19 rv22)
+; env*: (k14 rv19 cv16 rv22 k23)
+; env: (k14 rv19 cv16 rv22 k23)
+; env: (k14 rv19 cv16 rv22 k23)
+; env: (k14 rv19 cv16 rv22 k23)
+; env: (k14 rv19 cv16 rv22 k23)
+; regular: cv16
+; env: (k14 rv19 cv16 rv22 k23)
+; env*: (k14 rv19 cv16 rv22 rv24 k23)
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; regular: rv24
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; regular: cv16
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; regular: k23
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; regular: k23
+; env: (k14 rv19 cv16 rv22 rv24 k23)
+; env: (k14 rv19 rv22)
+; env: (k14 rv19 rv22)
+; global: g$day
+; env: (k14 rv19 rv22)
+; env*: (k14 rv19 rv22 rv25)
+; env: (k14 rv19 rv22 rv25)
+; env: (k14 rv19 rv22 rv25)
+; regular: rv25
+; env: (k14 rv19 rv22 rv25)
+; env: (k14 rv19 rv22 rv25)
+; env*: (k14 rv19 rv22 rv25 cv17 k26)
+; env: (k14 rv19 rv22 rv25 cv17 k26)
+; env: (k14 rv19 rv22 rv25 cv17 k26)
+; env: (k14 rv19 rv22 rv25 cv17 k26)
+; env: (k14 rv19 rv22 rv25 cv17 k26)
+; regular: cv17
+; env: (k14 rv19 rv22 rv25 cv17 k26)
+; env*: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; regular: rv27
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; regular: cv17
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; regular: k26
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; regular: k26
+; env: (k14 rv19 rv22 rv25 rv27 cv17 k26)
+; env: (k14 rv19 rv22 rv25)
+; env: (k14 rv19 rv22 rv25)
+; global: g$hour
+; env: (k14 rv19 rv22 rv25)
+; env*: (k14 rv19 rv22 rv25 rv28)
+; env: (k14 rv19 rv22 rv25 rv28)
+; env: (k14 rv19 rv22 rv25 rv28)
+; regular: rv28
+; env: (k14 rv19 rv22 rv25 rv28)
+; env: (k14 rv19 rv22 rv25 rv28)
+; env*: (k14 rv19 rv22 rv25 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 cv18 k29 rv28)
+; regular: cv18
+; env: (k14 rv19 rv22 rv25 cv18 k29 rv28)
+; env*: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; regular: rv30
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; regular: cv18
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; regular: k29
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; regular: k29
+; env: (k14 rv19 rv22 rv25 rv30 cv18 k29 rv28)
+; env: (k14 rv19 rv22 rv25 rv28)
+; env: (k14 rv19 rv22 rv25 rv28)
+; global: g$minute
+; env: (k14 rv19 rv22 rv25 rv28)
+; env*: (k14 rv19 rv22 rv25 rv28 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; regular: rv31
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; env*: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31)
+; regular: cv19
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31)
+; env*: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; regular: rv33
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; regular: cv19
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; regular: k32
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; regular: k32
+; env: (k14 rv19 rv22 rv25 rv28 cv19 k32 rv31 rv33)
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; global: g$second
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; regular: k14
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; regular: k14
+; env: (k14 rv19 rv22 rv25 rv28 rv31)
+; env: (k14 rv19 rv22 rv25 rv28)
+; env: (k14 rv19 rv22 rv25 rv28)
+; regular: k14
+; env: (k14 rv19 rv22 rv25 rv28)
+; env: (k14 rv19 rv22 rv25)
+; env: (k14 rv19 rv22 rv25)
+; regular: k14
+; env: (k14 rv19 rv22 rv25)
+; env: (k14 rv19 rv22)
+; env: (k14 rv19 rv22)
+; regular: k14
+; env: (k14 rv19 rv22)
+; env: (k14 rv19)
+; env: (k14 rv19)
+; regular: k14
+; env: (k14 rv19)
+; env: ()
+; env*: (rv15)
+; env: (rv15)
+; env: (rv15)
+; regular: rv15
+; env: (rv15)
+; env: (rv15)
+; env*: (rv15 k16)
+; env: (rv15 k16)
+; env: (rv15 k16)
+; env: (rv15 k16)
+; global: return
+; env: (rv15 k16)
+; env: (rv15 k16)
+; regular: k16
+; env: (rv15)
+; env: (rv15)
+; global: $halt
+; env: (rv15)
+; env: (rv15)
+; env: (rv15)
+; global: $halt
+; env: (rv15)
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ ((lambda (k14)
+    ((lambda (cv14 k17)
+       ((cps <)
+        1900
+        cv14
+        (lambda (rv18) (if rv18 ((cps <) cv14 2100 k17) (k17 #f)))))
+     g$year
+     (lambda (rv19)
+       (if rv19
+         ((lambda (cv15 k20)
+            ((cps <=)
+             1
+             cv15
+             (lambda (rv21) (if rv21 ((cps <=) cv15 12 k20) (k20 #f)))))
+          g$month
+          (lambda (rv22)
+            (if rv22
+              ((lambda (cv16 k23)
+                 ((cps <=)
+                  1
+                  cv16
+                  (lambda (rv24) (if rv24 ((cps <=) cv16 31 k23) (k23 #f)))))
+               g$day
+               (lambda (rv25)
+                 (if rv25
+                   ((lambda (cv17 k26)
+                      ((cps <=)
+                       0
+                       cv17
+                       (lambda (rv27)
+                         (if rv27 ((cps <) cv17 24 k26) (k26 #f)))))
+                    g$hour
+                    (lambda (rv28)
+                      (if rv28
+                        ((lambda (cv18 k29)
+                           ((cps <=)
+                            0
+                            cv18
+                            (lambda (rv30)
+                              (if rv30 ((cps <) cv18 60 k29) (k29 #f)))))
+                         g$minute
+                         (lambda (rv31)
+                           (if rv31
+                             ((lambda (cv19 k32)
+                                ((cps <=)
+                                 0
+                                 cv19
+                                 (lambda (rv33)
+                                   (if rv33 ((cps <) cv19 60 k32) (k32 #f)))))
+                              g$second
+                              k14)
+                             (k14 #f))))
+                        (k14 #f))))
+                   (k14 #f))))
+              (k14 #f))))
+         (k14 #f)))))
+  (lambda (rv15)
+    (if rv15 ((lambda (k16) (return 1 k16)) $halt) ($halt (void))))))

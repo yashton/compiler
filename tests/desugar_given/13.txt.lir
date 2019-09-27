@@ -1,0 +1,22 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$fact (void))
+ (define g$s (void))
+ (begin
+   (set! g$fact
+     (lambda (x)
+       (call/ec
+        (lambda (return)
+          ((lambda ()
+             (begin
+               (if (equal? x (- 1))
+                 ((lambda () (begin (return 0+1.0i))))
+                 (if (equal? x 0)
+                   ((lambda () (begin (return 1))))
+                   ((lambda ()
+                      (begin (return (* x (g$fact (- x 1))))))))))))))))
+   (set! g$s "foo\\ \n'\"")
+   (g$fact 20)))

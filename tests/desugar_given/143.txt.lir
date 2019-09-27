@@ -1,0 +1,33 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$count (void))
+ (begin
+   (set! g$count 0)
+   (call/ec
+    (lambda (break)
+      ((lambda (loop)
+         (begin
+           (set! loop
+             (lambda ()
+               (if #t
+                 (begin
+                   (call/ec
+                    (lambda (continue)
+                      ((lambda ()
+                         (begin
+                           (set! g$count (+ g$count 1))
+                           (if (> g$count 10)
+                             ((lambda () (begin (break))))
+                             (void))
+                           (if (equal? g$count 5)
+                             ((lambda () (begin (continue))))
+                             (void))
+                           (py-print g$count))))))
+                   (loop))
+                 (void))))
+           (loop)
+           (void)))
+       (void))))))

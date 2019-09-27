@@ -1,0 +1,4 @@
+(program
+ (define f (void))
+ (set-global! f (lambda (x) (call/ec (lambda (return) (return x)))))
+ (py-print ((get-global f) 3)))

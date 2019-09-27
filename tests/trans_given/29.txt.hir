@@ -1,0 +1,5 @@
+(program
+ (define s (void))
+ (get-field (get-global a) f)
+ ((get-field (get-global b) fg))
+ (set-global! s (+ 1 0+2.0i)))

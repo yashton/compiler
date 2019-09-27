@@ -1,0 +1,13 @@
+(program
+ (define fact (void))
+ (set-global!
+  fact
+  (lambda (n)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond
+          ((< n 0) (let () (return #f)))
+          ((equal? n 0) (let () (return 1)))
+          (else (let () (return (* n ((get-global fact) (- n 1))))))))))))
+ (py-print ((get-global fact) 5)))

@@ -1,0 +1,7 @@
+(program
+ (define x (void))
+ (set-global! x 20)
+ (while
+  (> (get-global x) 0)
+  (let () (set-global! x (- (get-global x) 1)) (py-print (get-global x)))
+  (let () (py-print "didn't run\n"))))

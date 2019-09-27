@@ -1,0 +1,6 @@
+(ID "s")
+(PUNCT "=")
+(LIT "")
+(ERROR "Illegal character '"ab
+cd"""
+' on line 1)

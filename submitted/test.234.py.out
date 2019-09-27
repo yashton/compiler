@@ -1,0 +1,93 @@
+(KEYWORD if)
+(LIT 1900)
+(PUNCT "<")
+(ID "year")
+(PUNCT "<")
+(LIT 2100)
+(KEYWORD and)
+(LIT 1)
+(PUNCT "<")
+(PUNCT "=")
+(ID "month")
+(PUNCT "<")
+(PUNCT "=")
+(LIT 12)
+(KEYWORD and)
+(LIT 1)
+(PUNCT "<")
+(PUNCT "=")
+(ID "day")
+(PUNCT "<")
+(PUNCT "=")
+(LIT 31)
+(KEYWORD and)
+(LIT 0)
+(PUNCT "<")
+(PUNCT "=")
+(ID "hour")
+(PUNCT "<")
+(LIT 24)
+(KEYWORD and)
+(LIT 0)
+(PUNCT "<")
+(PUNCT "=")
+(ID "minute")
+(PUNCT "<")
+(LIT 60)
+(KEYWORD and)
+(LIT 0)
+(PUNCT "<")
+(PUNCT "=")
+(ID "second")
+(PUNCT "<")
+(LIT 60)
+(PUNCT ":")
+(NEWLINE)
+(INDENT)
+(KEYWORD return)
+(LIT 1)
+(NEWLINE)
+(DEDENT)
+(ID "a")
+(PUNCT "=")
+(ERROR "Illegal character '\ # Comments after explicit line feeds are no-nos
+ b
+
+\
+\
+\
+\
+
+ # don't allow whitespace after \
+d = \  
+    e
+
+s = "This is the #comment\
+ string"
+
+month_names = ['Januari', 'Februari', 'Maart',      # These are the
+               'April',   'Mei',      'Juni',       # Dutch names
+                 'Juli',    'Augustus', 'September',  # for the months
+             'Oktober', 'November', 'December']   # of the year
+
+def fact(  x, y\
+): # this function rocks
+
+  # blah blah
+  if x == -1:
+    return 1.j
+
+  elif x ==0:
+
+    return 1
+  else:
+
+        return x* fact(x
+
+   - \
+   1 \
+ )
+
+s = "foo\
+\\ \n\'\""
+' on line 6)

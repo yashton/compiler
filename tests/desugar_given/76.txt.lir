@@ -1,0 +1,45 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$two_e (void))
+ (begin
+   (set! g$two_e
+     (lambda (str)
+       (call/ec
+        (lambda (return)
+          ((lambda (count ch)
+             (begin
+               (set! count 0)
+               (call/ec
+                (lambda (break)
+                  ((lambda ($seq14 $loop15)
+                     (begin
+                       (begin
+                         (if (set? $seq14)
+                           (for-set $seq14 $loop15)
+                           (if (tuple? $seq14)
+                             (for-tuple $seq14 $loop15)
+                             (if (py-list? $seq14)
+                               (for-py-list $seq14 $loop15)
+                               (if (dict? $seq14)
+                                 (for-dict $seq14 $loop15)
+                                 (void)))))
+                         (void))))
+                   str
+                   (lambda (i14)
+                     (call/ec
+                      (lambda (continue)
+                        (begin
+                          (set! ch i14)
+                          ((lambda ()
+                             (begin
+                               (if (equal? ch "e")
+                                 ((lambda () (begin (set! count (+ count 1)))))
+                                 (void))))))))))))
+               (if (equal? count 2)
+                 ((lambda () (begin (return #t))))
+                 ((lambda () (begin (return #f)))))))
+           (void)
+           (void))))))))

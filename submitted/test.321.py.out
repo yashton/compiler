@@ -1,0 +1,3 @@
+(LIT "He is ")
+(ID "OK")
+(ERROR "Illegal character '"' on line 1)

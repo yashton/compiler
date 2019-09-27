@@ -1,0 +1,37 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$sum (void))
+ (begin
+   (set! g$sum
+     (lambda (n)
+       (call/ec
+        (lambda (return)
+          ((lambda (result i)
+             (begin
+               (set! result 0)
+               (set! i 1)
+               (call/ec
+                (lambda (break)
+                  ((lambda (loop)
+                     (begin
+                       (set! loop
+                         (lambda ()
+                           (if (<= i n)
+                             (begin
+                               (call/ec
+                                (lambda (continue)
+                                  ((lambda ()
+                                     (begin
+                                       (set! result (+ result i))
+                                       (set! i (+ i 1)))))))
+                               (loop))
+                             (void))))
+                       (loop)
+                       (void)))
+                   (void))))
+               (return result)))
+           (void)
+           (void))))))))

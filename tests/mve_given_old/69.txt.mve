@@ -1,0 +1,220 @@
+; mutable: g$s
+; mutable: g$m
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 t14)
+; env: (k14 t14)
+; env: (k14 t14)
+; env*: (t14 k14 k15 e16)
+; env: (t14 k14 k15 e16)
+; env: (t14 k14 k15 e16)
+; env*: (t14 k14 i15 k16 k15 e16)
+; env: (t14 k14 i15 k16 k15 e16)
+; env: (t14 k14 i15 k16 k15 e16)
+; env: (t14 k14 i15 k16 k15 e16)
+; regular: e16
+; env: (t14 k14 i15 k16 k15 e16)
+; env*: (t14 k14 i15 k16 k15 e16 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; regular: rv17
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; regular: e16
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; regular: i15
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; regular: k16
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; regular: e16
+; env: (t14 k14 i15 k16 k15 e16 rv17)
+; env*: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; regular: rv18
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; regular: e16
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; regular: i15
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; regular: k16
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; regular: e16
+; env: (t14 k14 i15 k16 k15 e16 rv18 rv17)
+; env*: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; regular: rv19
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; regular: e16
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; regular: i15
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; regular: k16
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; env: (t14 k14 i15 k16 k15 e16 rv19 rv18 rv17)
+; regular: k16
+; env: (t14 k14 k15 e16)
+; env: (t14 k14 k15 e16)
+; regular: k15
+; env: (k14 t14)
+; regular: t14
+; env: (k14 t14)
+; env*: (k14 t14 rv20)
+; env: (k14 t14 rv20)
+; env: (k14 t14 rv20)
+; regular: rv20
+; env: (k14 t14 rv20)
+; env: (k14 t14 rv20)
+; env*: (k14 t14 rv20 e18 k21)
+; env: (k14 t14 rv20 e18 k21)
+; env: (k14 t14 rv20 e18 k21)
+; env*: (k14 t14 rv20 i17 k22 e18 k21)
+; env: (k14 t14 rv20 i17 k22 e18 k21)
+; env: (k14 t14 rv20 i17 k22 e18 k21)
+; env: (k14 t14 rv20 i17 k22 e18 k21)
+; regular: e18
+; env: (k14 t14 rv20 i17 k22 e18 k21)
+; env*: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; regular: rv23
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; regular: e18
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; regular: i17
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; regular: k22
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; regular: e18
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv23)
+; env*: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; regular: rv24
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; regular: e18
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; regular: i17
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; regular: k22
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; regular: e18
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv24 rv23)
+; env*: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; regular: rv25
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; regular: e18
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; regular: i17
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; regular: k22
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; env: (k14 t14 rv20 i17 k22 e18 k21 rv25 rv24 rv23)
+; regular: k22
+; env: (k14 t14 rv20 e18 k21)
+; env: (k14 t14 rv20 e18 k21)
+; regular: k21
+; env: (k14 t14 rv20)
+; regular: t14
+; env: (k14 t14 rv20)
+; env*: (k14 t14 rv20 rv26)
+; env: (k14 t14 rv20 rv26)
+; env: (k14 t14 rv20 rv26)
+; regular: rv26
+; env: (k14 t14 rv20 rv26)
+; env: (k14 t14 rv20 rv26)
+; regular: k14
+; env: (k14 t14 rv20 rv26)
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$m (void))
+ (define g$s (void))
+ ((lambda (t14 k14)
+    ((lambda (e16 k15)
+       ((lambda (i15 k16)
+          ((cps py-list?)
+           e16
+           (lambda (rv17)
+             (if rv17
+               ((cps py-list-ref) e16 i15 k16)
+               ((cps tuple?)
+                e16
+                (lambda (rv18)
+                  (if rv18
+                    ((cps tuple-ref) e16 i15 k16)
+                    ((cps dict?)
+                     e16
+                     (lambda (rv19)
+                       (if rv19
+                         ((cps dict-ref) e16 i15 k16)
+                         (error "cannot index object" k16)))))))))))
+        0
+        k15))
+     t14
+     (lambda (rv20)
+       (set-then!
+        g$m
+        rv20
+        ((lambda (e18 k21)
+           ((lambda (i17 k22)
+              ((cps py-list?)
+               e18
+               (lambda (rv23)
+                 (if rv23
+                   ((cps py-list-ref) e18 i17 k22)
+                   ((cps tuple?)
+                    e18
+                    (lambda (rv24)
+                      (if rv24
+                        ((cps tuple-ref) e18 i17 k22)
+                        ((cps dict?)
+                         e18
+                         (lambda (rv25)
+                           (if rv25
+                             ((cps dict-ref) e18 i17 k22)
+                             (error "cannot index object" k22)))))))))))
+            1
+            k21))
+         t14
+         (lambda (rv26) (set-then! g$s rv26 (k14 (void)))))))))
+  (tuple "monkey" "spam")
+  $halt))

@@ -1,0 +1,55 @@
+Ashton Snelgrove
+u0662114
+snelgrov@eng.utah.edu
+
+Files:
+Makefile - see below or run `make help` for info
+ply/ - the PLY lexer/parser modules
+pylex.py - source code implementing the lexer rules and execution
+pyparse.rkt - racket source for derp parsing
+python-ast.grm.sx - derp parsing productions
+pytrans.rkt - HIR translator
+pydesugar.rkt - LIR translator
+pycps.rkt - CPS converter
+readme - this file
+tests/ - directory of test cases
+
+Makefile options:
+test - Run all test cases directly from Python source to cps
+test/% - Translate tests/input/%.txt into cps
+test-{lex, parse, trans, desugar, cps} - Run all cases for given conversion
+test-{lex, parse, trans, desugar, cps}/% - Run specific case for conversion
+diff/{lex, parse, trans, desugar, cps} diff all tests for conversion
+test-rebuild - rebuild all test cases from files in tests/input
+test-rebuild/{lex, parse, trans, desugar, cps} - rebuild for given conversion
+test-create/% - create all tests for tests/input/%.txt
+exec-{hir, lir, cps} - execute file on stdio
+exec-{hir, lir, cps}/% - execute numbered test case
+submit - create a compilers.tar.gz file for submission
+
+The lexer is written for python 3.1.2, and was tested on a 64-bit Linux box. Should run fine on any machine running python 3. The lexer requires the PLY lexing module, which is included and referenced locally. Information about the PLY modules is at
+http://www.dabeaz.com/ply/
+
+Parser uses the derp tool, and the production matching is implemented in the python-ast.grm.sx file.
+
+Translation is implemented in Racket and requires only the pytrans.rkt file.
+Desugaring and CPS conversion also in Racket and only require their respective .rkt files.
+
+Working:
+Lexer has been updated to pass 90% of test cases.
+Parser passes 100% of test cases.
+
+Translator works for all test cases like the reference implementation except in two cases.
+
+1. Assignment of indexed expressions, I include the right hand side in another let production, reducing the size of the final expression.
+
+2. Global and local values are sometimes referenced in (define) and (let) statements out of order of occurrence. This is a side effect of the Racket (set) data type (see my post to the mailing list).
+
+Desugar passes 100% of test cases.
+In the reference implementation of (or ...) and (and ...) constructs, one desugars into a let form, while the other desugars in an if form. I've chosen to match the reference for ease of testing. Both transforms are implemented in the file and only need to be uncommented to use. (line 211)
+
+CPS passes 100% of test cases.
+
+Ashton Snelgrove
+u0662114
+snelgrov@eng.utah.edu

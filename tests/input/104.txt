@@ -1,0 +1,14 @@
+try:
+ 3
+except e1 as a:
+ 4
+except e2:
+ 5
+except:
+ 6
+else: 
+ 7
+finally:
+ 8
+
+

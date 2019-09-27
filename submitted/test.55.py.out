@@ -1,0 +1,5 @@
+(LIT "")
+(LIT "long string' with quote char")
+(LIT "")
+(NEWLINE)
+(ENDMARKER)

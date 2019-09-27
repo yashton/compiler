@@ -1,0 +1,27 @@
+(program
+ (= (HOST) "http://matt.might.net/apps/pyparse/pyparse.php")
+ (def
+  (get_result_from_server file_contents)
+  (suite
+   (= (params) (dict))
+   (= ((indexed params (subscript "file"))) file_contents)
+   (= ((indexed params (subscript "lex"))) 1)
+   (= (params) (indexed urllib (dot urlencode) (called params)))
+   (= (result) (indexed urllib (dot urlopen) (called HOST params)))
+   (return result)))
+ (def
+  (print_result sin)
+  (suite
+   (= (code) (indexed sin (dot read) (called)))
+   (expr
+    (indexed
+     sys
+     (dot stdout)
+     (dot write)
+     (called
+      (indexed get_result_from_server (called code) (dot read) (called)))))))
+ (def (main argv) (suite (expr (indexed print_result (called argv)))))
+ (cond
+  ((comparison __name__ ("==" "__main__"))
+   (suite (expr (indexed main (called (indexed sys (dot stdin)))))))))
+

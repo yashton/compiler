@@ -1,0 +1,404 @@
+; mutable: i
+; mutable: sum
+; mutable: loop
+; mutable: g$geometricSeriesSum
+; mutable: j
+; mutable: prod
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (n x k14)
+; env: (n x k14)
+; env: (n x k14)
+; env*: (f n x cc k14)
+; env: (f n x cc k14)
+; env: (f n x cc k14)
+; regular: f
+; env: (f n x cc k14)
+; env*: (f k x n cc k14)
+; env: (f k x n cc k14)
+; env: (f k x n cc k14)
+; regular: cc
+; env: (f k x n cc k14)
+; regular: x
+; env: (f n x cc k14)
+; regular: cc
+; env: (n x k14)
+; env*: (n x return k15 k14)
+; env: (n x return k15 k14)
+; env: (n x return k15 k14)
+; env*: (i sum x n j prod k14 k15 return k16)
+; env: (i sum x n j prod k14 k15 return k16)
+; env: (i sum x n j prod k14 k15 return k16)
+; env: (i sum x n j prod k14 k15 return k16)
+; env: (i sum x n j prod k14 k15 return k16)
+; env: (i sum x n j prod k14 k15 return k16)
+; env: (i sum x n j prod k14 k15 return k16)
+; env*: (f i sum x n j prod cc k14 k15 return k16)
+; env: (f i sum x n j prod cc k14 k15 return k16)
+; env: (f i sum x n j prod cc k14 k15 return k16)
+; regular: f
+; env: (f i sum x n j prod cc k14 k15 return k16)
+; env*: (f k i sum x n j prod cc k14 k15 return k16)
+; env: (f k i sum x n j prod cc k14 k15 return k16)
+; env: (f k i sum x n j prod cc k14 k15 return k16)
+; regular: cc
+; env: (f k i sum x n j prod cc k14 k15 return k16)
+; regular: x
+; env: (f i sum x n j prod cc k14 k15 return k16)
+; regular: cc
+; env: (i sum x n j prod k14 k15 return k16)
+; env*: (i sum x n j prod k14 k15 return break k17 k16)
+; env: (i sum x n j prod k14 k15 return break k17 k16)
+; env: (i sum x n j prod k14 k15 return break k17 k16)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 k19)
+; mutable: i
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 k19)
+; regular: n
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 k19)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; regular: rv20
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; env*: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; regular: f
+; env: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; env*: (f k loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (f k loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (f k loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; regular: cc
+; env: (f k loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; regular: x
+; env: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 rv20 k19)
+; regular: cc
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env*: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; regular: f
+; env: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env*: (f k loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (f k loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env: (f k loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; regular: cc
+; env: (f k loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; regular: x
+; env: (f loop i sum x n j prod cc k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; regular: cc
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k23 k22)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22)
+; mutable: j
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22)
+; mutable: i
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; regular: rv26
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env*: (f loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (f loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (f loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; regular: f
+; env: (f loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env*: (f k loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (f k loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (f k loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; regular: cc
+; env: (f k loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; regular: x
+; env: (f loop i sum x n j prod cc k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; regular: cc
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k27)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k28 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k28 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k28 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k28 k27)
+; mutable: prod
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k28 k27)
+; regular: x
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k28 k27)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27)
+; regular: rv29
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27)
+; mutable: j
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27 rv30)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27 rv30)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27 rv30)
+; regular: rv30
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27 rv30)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27 rv30)
+; regular: k28
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv29 k28 k27 rv30)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 k27)
+; regular: k27
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv31)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv31)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv31)
+; mutable: loop
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26 rv31)
+; regular: k25
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; regular: k25
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k25 k24 k23 k22 rv26)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22)
+; mutable: loop
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22)
+; env*: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22 rv32)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22 rv32)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22 rv32)
+; regular: k24
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k24 k23 k22 rv32)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k23 k22)
+; env: (loop i sum x n j prod k14 k15 return break k18 k17 k16 continue k21 rv20 k19 k23 k22)
+; regular: k23
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv33)
+; mutable: sum
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv33)
+; mutable: prod
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv33)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv34 rv33)
+; regular: rv34
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv34 rv33)
+; mutable: i
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv34 rv33)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv35 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv35 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv35 rv34 rv33)
+; regular: rv35
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv35 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv35 rv34 rv33)
+; regular: k22
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19 k22 rv35 rv34 rv33)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 continue k21 rv20 k19)
+; regular: k21
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19 rv36)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19 rv36)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19 rv36)
+; mutable: loop
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19 rv36)
+; regular: k19
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; regular: k19
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv20 k19)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16)
+; mutable: loop
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16)
+; env*: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv37)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv37)
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv37)
+; regular: k18
+; env: (loop i sum x n j prod k14 k15 return k18 break k17 k16 rv37)
+; env: (i sum x n j prod k14 k15 return break k17 k16)
+; env: (i sum x n j prod k14 k15 return break k17 k16)
+; regular: k17
+; env: (i sum x n j prod k14 k15 return k16)
+; env*: (i sum x n j prod k14 k15 return k16 rv38)
+; env: (i sum x n j prod k14 k15 return k16 rv38)
+; env: (i sum x n j prod k14 k15 return k16 rv38)
+; regular: return
+; env: (i sum x n j prod k14 k15 return k16 rv38)
+; mutable: sum
+; env: (i sum x n j prod k14 k15 return k16 rv38)
+; regular: k16
+; env: (n x return k15 k14)
+; env: (n x return k15 k14)
+; env: (n x return k15 k14)
+; env: (n x return k15 k14)
+; env: (n x return k15 k14)
+; regular: k15
+; env: (n x k14)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; global: $halt
+; env: ()
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$geometricSeriesSum (void))
+ (set-then!
+  g$geometricSeriesSum
+  (lambda (x n k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (sum i prod j k16)
+          (set-then!
+           sum
+           (make-cell sum)
+           (set-then!
+            i
+            (make-cell i)
+            (set-then!
+             prod
+             (make-cell prod)
+             (set-then!
+              j
+              (make-cell j)
+              (set-cell!
+               sum
+               0
+               (set-cell!
+                i
+                0
+                ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                 (lambda (break k17)
+                   ((lambda (loop k18)
+                      (set-then!
+                       loop
+                       (make-cell loop)
+                       (set-cell!
+                        loop
+                        (lambda (k19)
+                          ((cps <=)
+                           (get-cell i)
+                           n
+                           (lambda (rv20)
+                             (if rv20
+                               ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                                (lambda (continue k21)
+                                  ((lambda (k22)
+                                     (set-cell!
+                                      prod
+                                      1
+                                      (set-cell!
+                                       j
+                                       0
+                                       ((lambda (f cc)
+                                          (f (lambda (x k) (cc x)) cc))
+                                        (lambda (break k23)
+                                          ((lambda (loop k24)
+                                             (set-then!
+                                              loop
+                                              (make-cell loop)
+                                              (set-cell!
+                                               loop
+                                               (lambda (k25)
+                                                 ((cps <)
+                                                  (get-cell j)
+                                                  (get-cell i)
+                                                  (lambda (rv26)
+                                                    (if rv26
+                                                      ((lambda (f cc)
+                                                         (f
+                                                          (lambda (x k) (cc x))
+                                                          cc))
+                                                       (lambda (continue k27)
+                                                         ((lambda (k28)
+                                                            ((cps *)
+                                                             (get-cell prod)
+                                                             x
+                                                             (lambda (rv29)
+                                                               (set-cell!
+                                                                prod
+                                                                rv29
+                                                                ((cps +)
+                                                                 (get-cell j)
+                                                                 1
+                                                                 (lambda (rv30)
+                                                                   (set-cell!
+                                                                    j
+                                                                    rv30
+                                                                    (k28
+                                                                     (void)))))))))
+                                                          k27))
+                                                       (lambda (rv31)
+                                                         ((get-cell loop)
+                                                          k25)))
+                                                      (k25 (void))))))
+                                               ((get-cell loop)
+                                                (lambda (rv32)
+                                                  (k24 (void)))))))
+                                           (void)
+                                           k23))
+                                        (lambda (rv33)
+                                          ((cps +)
+                                           (get-cell sum)
+                                           (get-cell prod)
+                                           (lambda (rv34)
+                                             (set-cell!
+                                              sum
+                                              rv34
+                                              ((cps +)
+                                               (get-cell i)
+                                               1
+                                               (lambda (rv35)
+                                                 (set-cell!
+                                                  i
+                                                  rv35
+                                                  (k22 (void)))))))))))))
+                                   k21))
+                                (lambda (rv36) ((get-cell loop) k19)))
+                               (k19 (void))))))
+                        ((get-cell loop) (lambda (rv37) (k18 (void)))))))
+                    (void)
+                    k17))
+                 (lambda (rv38) (return (get-cell sum) k16))))))))))
+        (void)
+        (void)
+        (void)
+        (void)
+        k15))
+     k14))
+  ($halt (void))))

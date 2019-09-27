@@ -1,0 +1,8 @@
+(program
+ (expr (indexed print (called (indexed range (called 7)))))
+ (=
+  ((tuple MONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY SUNDAY))
+  (indexed range (called 7)))
+ (= (v) (tuple "a" "b" "e"))
+ (= ((tuple x y z)) v))
+

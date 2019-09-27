@@ -1,0 +1,552 @@
+; mutable: i
+; mutable: g$pair_13
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 nums)
+; env: (k14 nums)
+; env: (k14 nums)
+; env*: (f nums k14 cc)
+; env: (f nums k14 cc)
+; env: (f nums k14 cc)
+; regular: f
+; env: (f nums k14 cc)
+; env*: (f k nums k14 x cc)
+; env: (f k nums k14 x cc)
+; env: (f k nums k14 x cc)
+; regular: cc
+; env: (f k nums k14 x cc)
+; regular: x
+; env: (f nums k14 cc)
+; regular: cc
+; env: (k14 nums)
+; env*: (nums k14 k15 return)
+; env: (nums k14 k15 return)
+; env: (nums k14 k15 return)
+; env*: (i nums k14 k15 return k16)
+; env: (i nums k14 k15 return k16)
+; env: (i nums k14 k15 return k16)
+; env*: (f i nums k14 cc k15 return k16)
+; env: (f i nums k14 cc k15 return k16)
+; env: (f i nums k14 cc k15 return k16)
+; regular: f
+; env: (f i nums k14 cc k15 return k16)
+; env*: (f k i nums k14 x cc k15 return k16)
+; env: (f k i nums k14 x cc k15 return k16)
+; env: (f k i nums k14 x cc k15 return k16)
+; regular: cc
+; env: (f k i nums k14 x cc k15 return k16)
+; regular: x
+; env: (f i nums k14 cc k15 return k16)
+; regular: cc
+; env: (i nums k14 k15 return k16)
+; env*: (i nums k14 k15 return break k17 k16)
+; env: (i nums k14 k15 return break k17 k16)
+; env: (i nums k14 k15 return break k17 k16)
+; env: (i nums k14 k15 return break k17 k16)
+; global: g$len
+; env: (i nums k14 k15 return break k17 k16)
+; regular: nums
+; env: (i nums k14 k15 return break k17 k16)
+; env*: (i nums k14 k15 return break k17 k16 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv25)
+; regular: rv25
+; env: (i nums k14 k15 return break k17 k16 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv25)
+; env*: (i nums k14 k15 return break k17 k16 rv26 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv26 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv26 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv26 rv25)
+; global: g$range
+; env: (i nums k14 k15 return break k17 k16 rv26 rv25)
+; regular: rv26
+; env: (i nums k14 k15 return break k17 k16 rv26 rv25)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 $seq14 $loop15 k18)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 $seq14 $loop15 k18)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 $seq14 $loop15 k18)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18)
+; regular: $seq14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; regular: rv21
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; global: for-set-k
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; regular: $seq14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; regular: $loop15
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; regular: k19
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; regular: $seq14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv21)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; regular: rv22
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; global: for-tuple-k
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; regular: $seq14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; regular: $loop15
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; regular: k19
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; regular: $seq14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; regular: rv23
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; global: for-py-list-k
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; regular: $seq14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; regular: $loop15
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; regular: k19
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; regular: $seq14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv23)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; regular: rv24
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; global: for-dict-k
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; regular: $seq14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; regular: $loop15
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; regular: k19
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; regular: k19
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 k19 $seq14 $loop15 k18 rv22 rv21 rv24 rv23)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 $seq14 $loop15 k18)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 $seq14 $loop15 k18 rv20)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 $seq14 $loop15 k18 rv20)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 $seq14 $loop15 k18 rv20)
+; regular: k18
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 $seq14 $loop15 k18 rv20)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25)
+; regular: rv27
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env*: (f i nums k14 cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env: (f i nums k14 cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env: (f i nums k14 cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; regular: f
+; env: (f i nums k14 cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env*: (f k i nums k14 x cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env: (f k i nums k14 x cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env: (f k i nums k14 x cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; regular: cc
+; env: (f k i nums k14 x cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; regular: x
+; env: (f i nums k14 cc k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; regular: cc
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k29)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k29)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k29)
+; regular: i14
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k29)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k29)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 k34)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 i15 k35 k34)
+; regular: e16
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 i15 k35 k34)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; regular: rv36
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; regular: e16
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; regular: i15
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; regular: k35
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; regular: e16
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; regular: rv37
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; regular: e16
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; regular: i15
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; regular: k35
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; regular: e16
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv37)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; regular: rv38
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; regular: e16
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; regular: i15
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; regular: k35
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 rv36 i15 k35 k34 rv38 rv37)
+; regular: k35
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 k34)
+; mutable: i
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 e16 k31 k30 k29 k34)
+; regular: k34
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29)
+; regular: nums
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv39)
+; regular: rv39
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv39)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; regular: rv40
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 e18 k41)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 e18 k41)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 e18 k41)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 e18 k41)
+; mutable: i
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 e18 k41)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 e18 k41)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv46 e18 k41)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv46 e18 k41)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv46 e18 k41)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 k42)
+; regular: e18
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 k42)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; regular: rv43
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; regular: e18
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; regular: i17
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; regular: k42
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; regular: e18
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv43 k42)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; regular: rv44
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; regular: e18
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; regular: i17
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; regular: k42
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; regular: e18
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; regular: rv45
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; regular: e18
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; regular: i17
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; regular: k42
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 i17 rv46 e18 k41 rv44 rv43 k42 rv45)
+; regular: k42
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv46 e18 k41)
+; regular: rv46
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv46 e18 k41)
+; regular: k41
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; regular: nums
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv47)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv47)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv47)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv47)
+; regular: rv47
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv47)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39 rv47)
+; regular: k31
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; regular: k31
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k31 k30 k29 rv40 rv39)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; regular: rv32
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; env*: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 k33 rv32)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 k33 rv32)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 k33 rv32)
+; regular: return
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 k33 rv32)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 k33 rv32)
+; regular: k33
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; regular: k30
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; regular: k30
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k30 k29 rv32)
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 continue i14 k28 k29)
+; regular: k29
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25 i14 k28)
+; regular: k28
+; env: (i nums k14 k15 return break k17 k16 rv27 rv26 rv25)
+; regular: k17
+; env: (i nums k14 k15 return k16)
+; env*: (i nums k14 k15 return k16 rv48)
+; env: (i nums k14 k15 return k16 rv48)
+; env: (i nums k14 k15 return k16 rv48)
+; regular: return
+; env: (i nums k14 k15 return k16 rv48)
+; env: (i nums k14 k15 return k16 rv48)
+; regular: k16
+; env: (nums k14 k15 return)
+; env: (nums k14 k15 return)
+; regular: k15
+; env: (k14 nums)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; global: $halt
+; env: ()
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$pair_13 (void))
+ (set-then!
+  g$pair_13
+  (lambda (nums k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (i k16)
+          (set-then!
+           i
+           (make-cell i)
+           ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+            (lambda (break k17)
+              (g$len
+               nums
+               (lambda (rv25)
+                 ((cps -)
+                  rv25
+                  1
+                  (lambda (rv26)
+                    (g$range
+                     rv26
+                     (lambda (rv27)
+                       ((lambda ($seq14 $loop15 k18)
+                          ((lambda (k19)
+                             ((cps set?)
+                              $seq14
+                              (lambda (rv21)
+                                (if rv21
+                                  (for-set-k $seq14 $loop15 k19)
+                                  ((cps tuple?)
+                                   $seq14
+                                   (lambda (rv22)
+                                     (if rv22
+                                       (for-tuple-k $seq14 $loop15 k19)
+                                       ((cps py-list?)
+                                        $seq14
+                                        (lambda (rv23)
+                                          (if rv23
+                                            (for-py-list-k $seq14 $loop15 k19)
+                                            ((cps dict?)
+                                             $seq14
+                                             (lambda (rv24)
+                                               (if rv24
+                                                 (for-dict-k
+                                                  $seq14
+                                                  $loop15
+                                                  k19)
+                                                 (k19 (void)))))))))))))))
+                           (lambda (rv20) (k18 (void)))))
+                        rv27
+                        (lambda (i14 k28)
+                          ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                           (lambda (continue k29)
+                             (set-cell!
+                              i
+                              i14
+                              ((lambda (k30)
+                                 ((lambda (k31)
+                                    ((lambda (e16 k34)
+                                       ((lambda (i15 k35)
+                                          ((cps py-list?)
+                                           e16
+                                           (lambda (rv36)
+                                             (if rv36
+                                               ((cps py-list-ref) e16 i15 k35)
+                                               ((cps tuple?)
+                                                e16
+                                                (lambda (rv37)
+                                                  (if rv37
+                                                    ((cps tuple-ref)
+                                                     e16
+                                                     i15
+                                                     k35)
+                                                    ((cps dict?)
+                                                     e16
+                                                     (lambda (rv38)
+                                                       (if rv38
+                                                         ((cps dict-ref)
+                                                          e16
+                                                          i15
+                                                          k35)
+                                                         (error
+                                                          "cannot index object"
+                                                          k35)))))))))))
+                                        (get-cell i)
+                                        k34))
+                                     nums
+                                     (lambda (rv39)
+                                       ((cps equal?)
+                                        rv39
+                                        13
+                                        (lambda (rv40)
+                                          (if rv40
+                                            ((lambda (e18 k41)
+                                               ((cps +)
+                                                (get-cell i)
+                                                1
+                                                (lambda (rv46)
+                                                  ((lambda (i17 k42)
+                                                     ((cps py-list?)
+                                                      e18
+                                                      (lambda (rv43)
+                                                        (if rv43
+                                                          ((cps py-list-ref)
+                                                           e18
+                                                           i17
+                                                           k42)
+                                                          ((cps tuple?)
+                                                           e18
+                                                           (lambda (rv44)
+                                                             (if rv44
+                                                               ((cps tuple-ref)
+                                                                e18
+                                                                i17
+                                                                k42)
+                                                               ((cps dict?)
+                                                                e18
+                                                                (lambda (rv45)
+                                                                  (if rv45
+                                                                    ((cps
+                                                                      dict-ref)
+                                                                     e18
+                                                                     i17
+                                                                     k42)
+                                                                    (error
+                                                                     "cannot index object"
+                                                                     k42)))))))))))
+                                                   rv46
+                                                   k41))))
+                                             nums
+                                             (lambda (rv47)
+                                               ((cps equal?) rv47 13 k31)))
+                                            (k31 #f)))))))
+                                  (lambda (rv32)
+                                    (if rv32
+                                      ((lambda (k33) (return #t k33)) k30)
+                                      (k30 (void))))))
+                               k29)))
+                           k28))
+                        k17))))))))
+            (lambda (rv48) (return #f k16)))))
+        (void)
+        k15))
+     k14))
+  ($halt (void))))

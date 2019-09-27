@@ -1,0 +1,26 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$f (void))
+ (define g$x (void))
+ (begin
+   (set! g$x 10)
+   (set! g$f
+     (lambda ()
+       (call/ec
+        (lambda (return)
+          ((lambda (x g)
+             (begin
+               (set! x 20)
+               (set! g
+                 (lambda ()
+                   (call/ec
+                    (lambda (return)
+                      ((lambda () (begin (void) (set! g$x 30))))))))
+               (g)))
+           (void)
+           (void))))))
+   (g$f)
+   (py-print g$x)))

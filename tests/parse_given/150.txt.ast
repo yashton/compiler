@@ -1,0 +1,31 @@
+(program
+ (def
+  (BubbleSort lst)
+  (suite
+   (= (lst) (indexed list (called lst)))
+   (for
+    passesLeft
+    (indexed
+     range
+     (called (arith (indexed len (called lst)) ("-" 1)) 0 ("-" 1)))
+    (suite
+     (for
+      i
+      (indexed range (called passesLeft))
+      (suite
+       (cond
+        ((comparison
+          (indexed lst (subscript i))
+          ("<" (indexed lst (subscript (arith i ("+" 1))))))
+         (suite
+          (=
+           ((indexed lst (subscript i))
+            (indexed lst (subscript (arith i ("+" 1)))))
+           (tuple
+            (indexed lst (subscript (arith i ("+" 1))))
+            (indexed lst (subscript i)))))))))))
+   (return lst)))
+ (= (unsort) (list 30 2 1 4 5 20 3 11 9 31 100 31 3 4 9 10))
+ (= (result) (indexed BubbleSort (called unsort)))
+ (expr (indexed print (called result))))
+

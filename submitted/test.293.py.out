@@ -1,0 +1,7 @@
+(ID "but")
+(ID "this")
+(ID "string")
+(NEWLINE)
+(INDENT)
+(DEDENT)
+(ENDMARKER)

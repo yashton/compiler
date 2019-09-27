@@ -1,0 +1,20 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$fact (void))
+ (begin
+   (set! g$fact
+     (lambda (n)
+       (call/ec
+        (lambda (return)
+          ((lambda ()
+             (begin
+               (if (< n 0)
+                 ((lambda () (begin (return #f))))
+                 (if (equal? n 0)
+                   ((lambda () (begin (return 1))))
+                   ((lambda ()
+                      (begin (return (* n (g$fact (- n 1))))))))))))))))
+   (py-print (g$fact 5))))

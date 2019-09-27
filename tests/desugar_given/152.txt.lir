@@ -1,0 +1,64 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$main (void))
+ (define g$HOST (void))
+ (define g$print_result (void))
+ (define g$get_result_from_server (void))
+ (begin
+   (set! g$HOST "http://matt.might.net/apps/pyparse/pyparse.php")
+   (set! g$get_result_from_server
+     (lambda (file_contents)
+       (call/ec
+        (lambda (return)
+          ((lambda (params result)
+             (begin
+               (set! params (dict))
+               ((lambda (b15)
+                  (begin
+                    ((lambda (i14)
+                       (begin
+                         (if (tuple? b15)
+                           (tuple-set! b15 i14 file_contents)
+                           (if (py-list? b15)
+                             (py-list-set! b15 i14 file_contents)
+                             (if (dict? b15)
+                               (dict-set! b15 i14 file_contents)
+                               (void))))))
+                     "file")))
+                params)
+               ((lambda (b17)
+                  (begin
+                    ((lambda (i16)
+                       (begin
+                         (if (tuple? b17)
+                           (tuple-set! b17 i16 1)
+                           (if (py-list? b17)
+                             (py-list-set! b17 i16 1)
+                             (if (dict? b17) (dict-set! b17 i16 1) (void))))))
+                     "lex")))
+                params)
+               (set! params ((get-field g$urllib urlencode) params))
+               (set! result ((get-field g$urllib urlopen) g$HOST params))
+               (return result)))
+           (void)
+           (void))))))
+   (set! g$print_result
+     (lambda (sin)
+       (call/ec
+        (lambda (return)
+          ((lambda (code)
+             (begin
+               (set! code ((get-field sin read)))
+               ((get-field (get-field g$sys stdout) write)
+                ((get-field (g$get_result_from_server code) read)))))
+           (void))))))
+   (set! g$main
+     (lambda (argv)
+       (call/ec
+        (lambda (return) ((lambda () (begin (g$print_result argv))))))))
+   (if (equal? g$__name__ "__main__")
+     ((lambda () (begin (g$main (get-field g$sys stdin)))))
+     (void))))

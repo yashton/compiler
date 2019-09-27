@@ -1,0 +1,16 @@
+(program
+ (define Fibonacci (void))
+ (set-global!
+  Fibonacci
+  (lambda (n)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond
+          ((or (equal? n 0) (equal? n 1)) (let () (return n)))
+          (else
+           (let ()
+             (return
+              (+
+               ((get-global Fibonacci) (- n 1))
+               ((get-global Fibonacci) (- n 2)))))))))))))

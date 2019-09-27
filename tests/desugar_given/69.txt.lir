@@ -1,0 +1,39 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$m (void))
+ (define g$s (void))
+ (begin
+   ((lambda (t14)
+      (begin
+        (set! g$m
+          ((lambda (e16)
+             (begin
+               ((lambda (i15)
+                  (begin
+                    (if (py-list? e16)
+                      (py-list-ref e16 i15)
+                      (if (tuple? e16)
+                        (tuple-ref e16 i15)
+                        (if (dict? e16)
+                          (dict-ref e16 i15)
+                          (error "cannot index object"))))))
+                0)))
+           t14))
+        (set! g$s
+          ((lambda (e18)
+             (begin
+               ((lambda (i17)
+                  (begin
+                    (if (py-list? e18)
+                      (py-list-ref e18 i17)
+                      (if (tuple? e18)
+                        (tuple-ref e18 i17)
+                        (if (dict? e18)
+                          (dict-ref e18 i17)
+                          (error "cannot index object"))))))
+                1)))
+           t14))))
+    (tuple "monkey" "spam"))))

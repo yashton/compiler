@@ -1,0 +1,20 @@
+(KEYWORD def)
+(ID "foo")
+(PUNCT "(")
+(PUNCT ")")
+(PUNCT ":")
+(NEWLINE)
+(ERROR "Illegal character '	return 2
+
+def bar(x):
+	if x == 0:
+		return 1
+	else:
+		return 0
+
+def foobar():
+  		if x == 1:
+		  y = 2
+                else:
+		  y = 3
+' on line 2)

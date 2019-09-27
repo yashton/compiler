@@ -1,0 +1,6 @@
+(LIT b"\")
+(ID "should")
+(ID "be")
+(KEYWORD in)
+(ID "teresting")
+(ERROR "Illegal character '"' on line 1)

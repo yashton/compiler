@@ -1,0 +1,9 @@
+(program
+ (def
+  (f a b)
+  (suite
+   (expr (indexed print (called a)))
+   (= (a) 3)
+   (expr (indexed print (called a)))))
+ (expr (indexed f (called 1 2))))
+

@@ -1,0 +1,385 @@
+; mutable: g$t
+; mutable: g$test
+; mutable: g$fred
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (f cc)
+; env: (f cc)
+; env: (f cc)
+; regular: f
+; env: (f cc)
+; env*: (f k cc x)
+; env: (f k cc x)
+; env: (f k cc x)
+; regular: cc
+; env: (f k cc x)
+; regular: x
+; env: (f cc)
+; regular: cc
+; env: ()
+; env*: (k14 break)
+; env: (k14 break)
+; env: (k14 break)
+; env*: (break k14 $seq14 k15 $loop15)
+; env: (break k14 $seq14 k15 $loop15)
+; env: (break k14 $seq14 k15 $loop15)
+; env*: (break k14 $seq14 k16 k15 $loop15)
+; env: (break k14 $seq14 k16 k15 $loop15)
+; env: (break k14 $seq14 k16 k15 $loop15)
+; env: (break k14 $seq14 k16 k15 $loop15)
+; regular: $seq14
+; env: (break k14 $seq14 k16 k15 $loop15)
+; env*: (break k14 $seq14 rv18 k16 k15 $loop15)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; regular: rv18
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; global: for-set-k
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; regular: $seq14
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; regular: $loop15
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; regular: k16
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; regular: $seq14
+; env: (break k14 $seq14 rv18 k16 k15 $loop15)
+; env*: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; regular: rv19
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; global: for-tuple-k
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; regular: $seq14
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; regular: $loop15
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; regular: k16
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; regular: $seq14
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv19)
+; env*: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; regular: rv20
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; global: for-py-list-k
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; regular: $seq14
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; regular: $loop15
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; regular: k16
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; regular: $seq14
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19)
+; env*: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; regular: rv21
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; global: for-dict-k
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; regular: $seq14
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; regular: $loop15
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; regular: k16
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; regular: k16
+; env: (break k14 $seq14 rv18 k16 k15 $loop15 rv20 rv19 rv21)
+; env: (break k14 $seq14 k15 $loop15)
+; env*: (break k14 $seq14 k15 $loop15 rv17)
+; env: (break k14 $seq14 k15 $loop15 rv17)
+; env: (break k14 $seq14 k15 $loop15 rv17)
+; regular: k15
+; env: (break k14 $seq14 k15 $loop15 rv17)
+; env: (k14 break)
+; env: (k14 break)
+; global: g$test
+; env: (k14 break)
+; env*: (break k14 k22 i14)
+; env: (break k14 k22 i14)
+; env: (break k14 k22 i14)
+; env*: (f cc break k14 k22 i14)
+; env: (f cc break k14 k22 i14)
+; env: (f cc break k14 k22 i14)
+; regular: f
+; env: (f cc break k14 k22 i14)
+; env*: (f k cc x break k14 k22 i14)
+; env: (f k cc x break k14 k22 i14)
+; env: (f k cc x break k14 k22 i14)
+; regular: cc
+; env: (f k cc x break k14 k22 i14)
+; regular: x
+; env: (f cc break k14 k22 i14)
+; regular: cc
+; env: (break k14 k22 i14)
+; env*: (break k14 continue k23 k22 i14)
+; env: (break k14 continue k23 k22 i14)
+; env: (break k14 continue k23 k22 i14)
+; regular: i14
+; env: (break k14 continue k23 k22 i14)
+; env: (break k14 continue k23 k22 i14)
+; env*: (break k14 continue k23 k22 i14 k24)
+; env: (break k14 continue k23 k22 i14 k24)
+; env: (break k14 continue k23 k22 i14 k24)
+; env: (break k14 continue k23 k22 i14 k24)
+; env: (break k14 continue k23 k22 i14 k24)
+; global: g$t
+; env: (break k14 continue k23 k22 i14 k24)
+; env*: (break k14 continue k23 k22 i14 rv25 k24)
+; env: (break k14 continue k23 k22 i14 rv25 k24)
+; env: (break k14 continue k23 k22 i14 rv25 k24)
+; env: (break k14 continue k23 k22 i14 rv25 k24)
+; global: get-field
+; env: (break k14 continue k23 k22 i14 rv25 k24)
+; env: (break k14 continue k23 k22 i14 rv25 k24)
+; global: g$fred
+; env: (break k14 continue k23 k22 i14 rv25 k24)
+; env: (break k14 continue k23 k22 i14 rv25 k24)
+; global: has_key
+; env: (break k14 continue k23 k22 i14 rv25 k24)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24)
+; regular: rv26
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24)
+; global: g$t
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; regular: rv27
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 i15 k30)
+; regular: e16
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 i15 k30)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; regular: rv31
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; regular: e16
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; regular: i15
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; regular: k30
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; regular: e16
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv31 i15 k30)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; regular: rv32
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; regular: e16
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; regular: i15
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; regular: k30
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; regular: e16
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; regular: rv33
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; regular: e16
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; regular: i15
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; regular: k30
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27 rv32 rv31 i15 k30 rv33)
+; regular: k30
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27)
+; global: g$t
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 e16 k29 k28 rv27)
+; regular: k29
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27)
+; global: g$fred
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27 rv34)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27 rv34)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27 rv34)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27 rv34)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27 rv34)
+; regular: rv34
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 k28 rv27 rv34)
+; regular: k28
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; regular: k24
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; env*: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27 k35)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27 k35)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27 k35)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27 k35)
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27 k35)
+; regular: k35
+; env: (break k14 continue k23 k22 i14 rv26 rv25 k24 rv27)
+; regular: k24
+; env: (break k14 continue k23 k22 i14)
+; regular: k23
+; env: (break k14 k22 i14)
+; regular: k22
+; env: (k14 break)
+; regular: k14
+; env: ()
+; env: ()
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$fred (void))
+ (define g$test (void))
+ (define g$t (void))
+ (set-then!
+  g$fred
+  (dict ("mike" 456) ("bill" 399) ("sarah" 521))
+  (set-then!
+   g$test
+   (py-list* "zingo" "sarah" "bill" "wilma")
+   ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+    (lambda (break k14)
+      ((lambda ($seq14 $loop15 k15)
+         ((lambda (k16)
+            ((cps set?)
+             $seq14
+             (lambda (rv18)
+               (if rv18
+                 (for-set-k $seq14 $loop15 k16)
+                 ((cps tuple?)
+                  $seq14
+                  (lambda (rv19)
+                    (if rv19
+                      (for-tuple-k $seq14 $loop15 k16)
+                      ((cps py-list?)
+                       $seq14
+                       (lambda (rv20)
+                         (if rv20
+                           (for-py-list-k $seq14 $loop15 k16)
+                           ((cps dict?)
+                            $seq14
+                            (lambda (rv21)
+                              (if rv21
+                                (for-dict-k $seq14 $loop15 k16)
+                                (k16 (void)))))))))))))))
+          (lambda (rv17) (k15 (void)))))
+       g$test
+       (lambda (i14 k22)
+         ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+          (lambda (continue k23)
+            (set-then!
+             g$t
+             i14
+             ((lambda (k24)
+                ((cps py-print)
+                 g$t
+                 (lambda (rv25)
+                   (get-field
+                    g$fred
+                    has_key
+                    (lambda (rv26)
+                      (rv26
+                       g$t
+                       (lambda (rv27)
+                         (if rv27
+                           ((lambda (k28)
+                              ((lambda (e16 k29)
+                                 ((lambda (i15 k30)
+                                    ((cps py-list?)
+                                     e16
+                                     (lambda (rv31)
+                                       (if rv31
+                                         ((cps py-list-ref) e16 i15 k30)
+                                         ((cps tuple?)
+                                          e16
+                                          (lambda (rv32)
+                                            (if rv32
+                                              ((cps tuple-ref) e16 i15 k30)
+                                              ((cps dict?)
+                                               e16
+                                               (lambda (rv33)
+                                                 (if rv33
+                                                   ((cps dict-ref) e16 i15 k30)
+                                                   (error
+                                                    "cannot index object"
+                                                    k30)))))))))))
+                                  g$t
+                                  k29))
+                               g$fred
+                               (lambda (rv34) ((cps py-print) "=>" rv34 k28))))
+                            k24)
+                           ((lambda (k35)
+                              ((cps py-print) "is not present." k35))
+                            k24)))))))))
+              k23)))
+          k22))
+       k14))
+    $halt))))

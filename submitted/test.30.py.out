@@ -1,0 +1,5 @@
+(ID "x")
+(PUNCT "=")
+(LIT 1)
+(NEWLINE)
+(ERROR "Illegal character ''This string is being terminated with the wrong character"' on line 2)

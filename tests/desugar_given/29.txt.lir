@@ -1,0 +1,7 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$s (void))
+ (begin (get-field g$a f) ((get-field g$b fg)) (set! g$s (+ 1 0+2.0i))))

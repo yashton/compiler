@@ -1,0 +1,8 @@
+(KEYWORD nonlocal)
+(ID "monkey")
+(PUNCT ",")
+(ID "orangutan")
+(PUNCT ",")
+(ID "gorilla")
+(NEWLINE)
+(ENDMARKER)

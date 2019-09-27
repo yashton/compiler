@@ -1,0 +1,8 @@
+(KEYWORD global)
+(ID "foo")
+(PUNCT ",")
+(ID "bar")
+(PUNCT ",")
+(ID "baz")
+(NEWLINE)
+(ENDMARKER)

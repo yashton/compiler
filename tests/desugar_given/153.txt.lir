@@ -1,0 +1,53 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$fred (void))
+ (define g$test (void))
+ (define g$t (void))
+ (begin
+   (set! g$fred (dict ("mike" 456) ("bill" 399) ("sarah" 521)))
+   (set! g$test (py-list* "zingo" "sarah" "bill" "wilma"))
+   (call/ec
+    (lambda (break)
+      ((lambda ($seq14 $loop15)
+         (begin
+           (begin
+             (if (set? $seq14)
+               (for-set $seq14 $loop15)
+               (if (tuple? $seq14)
+                 (for-tuple $seq14 $loop15)
+                 (if (py-list? $seq14)
+                   (for-py-list $seq14 $loop15)
+                   (if (dict? $seq14) (for-dict $seq14 $loop15) (void)))))
+             (void))))
+       g$test
+       (lambda (i14)
+         (call/ec
+          (lambda (continue)
+            (begin
+              (set! g$t i14)
+              ((lambda ()
+                 (begin
+                   (py-print g$t)
+                   (if ((get-field g$fred has_key) g$t)
+                     ((lambda ()
+                        (begin
+                          (py-print
+                           "=>"
+                           ((lambda (e16)
+                              (begin
+                                ((lambda (i15)
+                                   (begin
+                                     (if (py-list? e16)
+                                       (py-list-ref e16 i15)
+                                       (if (tuple? e16)
+                                         (tuple-ref e16 i15)
+                                         (if (dict? e16)
+                                           (dict-ref e16 i15)
+                                           (error "cannot index object"))))))
+                                 g$t)))
+                            g$fred)))))
+                     ((lambda ()
+                        (begin (py-print "is not present.")))))))))))))))))

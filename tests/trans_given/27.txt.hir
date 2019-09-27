@@ -1,0 +1,25 @@
+(program
+ (define index (void))
+ (define myList (void))
+ (set-global! myList (py-list* 1 2 3 4))
+ (for-each
+  i14
+  ((get-global range) ((get-global len) (get-global myList)))
+  (begin
+    (set-global! index i14)
+    (let ()
+      (let ((b16 (get-global myList)))
+        (let ((i15 (get-global index)))
+          (let ((v17
+                 (let ((e19 b16))
+                   (let ((i18 i15))
+                     (cond
+                      ((py-list? e19) (py-list-ref e19 i18))
+                      ((tuple? e19) (tuple-ref e19 i18))
+                      ((dict? e19) (dict-ref e19 i18))
+                      (else (error "cannot index object")))))))
+            (cond
+             ((tuple? b16) (tuple-set! b16 i15 (+ v17 1)))
+             ((py-list? b16) (py-list-set! b16 i15 (+ v17 1)))
+             ((dict? b16) (dict-set! b16 i15 (+ v17 1))))))))))
+ (py-print (get-global myList)))

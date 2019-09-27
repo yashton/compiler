@@ -1,0 +1,21 @@
+(program
+ (define fred (void))
+ (define test (void))
+ (define t (void))
+ (set-global! fred (dict ("mike" 456) ("bill" 399) ("sarah" 521)))
+ (set-global! test (py-list* "mike" "sarah" "bill"))
+ (for-each
+  i14
+  (get-global test)
+  (begin
+    (set-global! t i14)
+    (let ()
+      (py-print (get-global t))
+      (py-print
+       (let ((e16 (get-global fred)))
+         (let ((i15 (get-global t)))
+           (cond
+            ((py-list? e16) (py-list-ref e16 i15))
+            ((tuple? e16) (tuple-ref e16 i15))
+            ((dict? e16) (dict-ref e16 i15))
+            (else (error "cannot index object"))))))))))

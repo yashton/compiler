@@ -1,0 +1,5 @@
+(program
+ (define a (void))
+ (define b (void))
+ (set-global! b 5)
+ (set-global! a (< 6 (get-global b))))

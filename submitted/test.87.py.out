@@ -1,0 +1,4 @@
+(ID "fact")
+(PUNCT "(")
+(ERROR "Illegal character '"hello #comment
+)' on line 1)

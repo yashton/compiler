@@ -1,0 +1,22 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$Fibonacci (void))
+ (begin
+   (set! g$Fibonacci
+     (lambda (n)
+       (call/ec
+        (lambda (return)
+          ((lambda ()
+             (begin
+               (if ((lambda (t14) (begin (if t14 t14 (equal? n 1))))
+                    (equal? n 0))
+                 ((lambda () (begin (return n))))
+                 ((lambda ()
+                    (begin
+                      (return
+                       (+
+                        (g$Fibonacci (- n 1))
+                        (g$Fibonacci (- n 2)))))))))))))))))

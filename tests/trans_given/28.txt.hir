@@ -1,0 +1,25 @@
+(program
+ (define length (void))
+ (define shape (void))
+ (define width (void))
+ (set-global! shape ((get-global int) ((get-global input) (get-global menu))))
+ (while
+  (not-equal? (get-global shape) 4)
+  (let ()
+    (cond
+     ((equal? (get-global shape) 1)
+      (let ()
+        (set-global!
+         length
+         ((get-global float) ((get-global input) "Length: ")))
+        (py-print "Area of square = " (expt (get-global length) 2))))
+     ((equal? (get-global shape) 2)
+      (let ()
+        (set-global!
+         length
+         ((get-global float) ((get-global input) "Length: ")))
+        (set-global! width ((get-global float) ((get-global input) "Width: ")))
+        (py-print
+         "Area of rectangle = "
+         (* (get-global length) (get-global width)))))
+     (else (let () (py-print " Not a valid shape. try again")))))))

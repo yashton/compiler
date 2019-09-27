@@ -1,0 +1,10 @@
+(program
+ (= (count) 0)
+ (while
+  True
+  (suite
+   ("+=" (count) 1)
+   (cond ((comparison count (">" 10)) (suite (break))))
+   (cond ((comparison count ("==" 5)) (suite (continue))))
+   (expr (indexed print (called count))))))
+

@@ -1,0 +1,11 @@
+(program
+ (define y (void))
+ (define x (void))
+ (for-each
+  i14
+  (py-list* 1 2 3)
+  (begin
+    (set-global! x i14)
+    (let ()
+      (py-print (get-global x))
+      (set-global! y (+ (get-global x) (get-global y)))))))

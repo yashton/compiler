@@ -1,0 +1,10 @@
+(program
+ (define count (void))
+ (set-global! count 0)
+ (while
+  #t
+  (let ()
+    (set-global! count (+ (get-global count) 1))
+    (cond ((> (get-global count) 10) (let () (break))))
+    (cond ((equal? (get-global count) 5) (let () (continue))))
+    (py-print (get-global count)))))

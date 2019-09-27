@@ -1,0 +1,12 @@
+def BubbleSort(lst):  
+    lst = list(lst) #copy collection to list   
+    for passesLeft in range(len(lst)-1, 0, -1):  
+        for i in range(passesLeft):  
+            if lst[i] < lst[i + 1]:  
+               lst[i], lst[i + 1] = lst[i + 1], lst[i]  
+    return lst  
+
+unsort = [30,2,1,4,5,20,3,11,9,31,100,31,3,4,9,10]
+result = BubbleSort(unsort)
+print(result)
+

@@ -1,0 +1,46 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$outfunc2 (void))
+ (define g$called (void))
+ (define g$outfunc (void))
+ (begin
+   (set! g$outfunc
+     (lambda ()
+       (call/ec
+        (lambda (return)
+          ((lambda (called func)
+             (begin
+               (set! called 0)
+               (set! func
+                 (lambda ()
+                   (call/ec
+                    (lambda (return)
+                      ((lambda ()
+                         (begin (void) (set! called (+ called 1)))))))))
+               (func)
+               (func)
+               (py-print called)))
+           (void)
+           (void))))))
+   (set! g$called 0)
+   (set! g$outfunc2
+     (lambda ()
+       (call/ec
+        (lambda (return)
+          ((lambda (func)
+             (begin
+               (set! func
+                 (lambda ()
+                   (call/ec
+                    (lambda (return)
+                      ((lambda ()
+                         (begin (void) (set! g$called (+ g$called 1)))))))))
+               (func)
+               (func)))
+           (void))))))
+   (g$outfunc)
+   (g$outfunc2)
+   (py-print g$called)))

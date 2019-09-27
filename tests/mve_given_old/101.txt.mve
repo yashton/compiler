@@ -1,0 +1,224 @@
+; mutable: g$abs
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 x)
+; env: (k14 x)
+; env: (k14 x)
+; env*: (f x k14 cc)
+; env: (f x k14 cc)
+; env: (f x k14 cc)
+; regular: f
+; env: (f x k14 cc)
+; env*: (f k x k14 cc)
+; env: (f k x k14 cc)
+; env: (f k x k14 cc)
+; regular: cc
+; env: (f k x k14 cc)
+; regular: x
+; env: (f x k14 cc)
+; regular: cc
+; env: (k14 x)
+; env*: (x k14 k15 return)
+; env: (x k14 k15 return)
+; env: (x k14 k15 return)
+; env*: (x k14 k16 k15 return)
+; env: (x k14 k16 k15 return)
+; env: (x k14 k16 k15 return)
+; env: (x k14 k16 k15 return)
+; regular: x
+; env: (x k14 k16 k15 return)
+; env: (x k14 k16 k15 return)
+; env*: (x k14 rv17 k16 k15 return)
+; env: (x k14 rv17 k16 k15 return)
+; env: (x k14 rv17 k16 k15 return)
+; regular: rv17
+; env: (x k14 rv17 k16 k15 return)
+; env: (x k14 rv17 k16 k15 return)
+; env*: (x k14 rv17 k16 k15 return k18)
+; env: (x k14 rv17 k16 k15 return k18)
+; env: (x k14 rv17 k16 k15 return k18)
+; env: (x k14 rv17 k16 k15 return k18)
+; regular: x
+; env: (x k14 rv17 k16 k15 return k18)
+; env*: (x k14 rv17 k16 k15 return rv19 k18)
+; env: (x k14 rv17 k16 k15 return rv19 k18)
+; env: (x k14 rv17 k16 k15 return rv19 k18)
+; regular: return
+; env: (x k14 rv17 k16 k15 return rv19 k18)
+; regular: rv19
+; env: (x k14 rv17 k16 k15 return rv19 k18)
+; regular: k18
+; env: (x k14 rv17 k16 k15 return)
+; regular: k16
+; env: (x k14 rv17 k16 k15 return)
+; env: (x k14 rv17 k16 k15 return)
+; env*: (x k14 rv17 k16 k15 return k20)
+; env: (x k14 rv17 k16 k15 return k20)
+; env: (x k14 rv17 k16 k15 return k20)
+; regular: return
+; env: (x k14 rv17 k16 k15 return k20)
+; regular: x
+; env: (x k14 rv17 k16 k15 return k20)
+; regular: k20
+; env: (x k14 rv17 k16 k15 return)
+; regular: k16
+; env: (x k14 k15 return)
+; regular: k15
+; env: (k14 x)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (rv21)
+; env: (rv21)
+; env: (rv21)
+; env: (rv21)
+; env: (rv21)
+; env*: (rv21 rv22)
+; env: (rv21 rv22)
+; env: (rv21 rv22)
+; env: (rv21 rv22)
+; regular: rv21
+; env: (rv21 rv22)
+; regular: rv22
+; env: (rv21 rv22)
+; env*: (rv21 rv23 rv22)
+; env: (rv21 rv23 rv22)
+; env: (rv21 rv23 rv22)
+; env: (rv21 rv23 rv22)
+; env: (rv21 rv23 rv22)
+; env*: (rv21 rv24 rv23 rv22)
+; env: (rv21 rv24 rv23 rv22)
+; env: (rv21 rv24 rv23 rv22)
+; env: (rv21 rv24 rv23 rv22)
+; regular: rv23
+; env: (rv21 rv24 rv23 rv22)
+; regular: rv24
+; env: (rv21 rv24 rv23 rv22)
+; env*: (rv21 rv25 rv24 rv23 rv22)
+; env: (rv21 rv25 rv24 rv23 rv22)
+; env: (rv21 rv25 rv24 rv23 rv22)
+; env: (rv21 rv25 rv24 rv23 rv22)
+; env: (rv21 rv25 rv24 rv23 rv22)
+; env*: (rv21 rv25 rv24 rv23 rv22 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv26)
+; regular: rv25
+; env: (rv21 rv25 rv24 rv23 rv22 rv26)
+; regular: rv26
+; env: (rv21 rv25 rv24 rv23 rv22 rv26)
+; env*: (rv21 rv25 rv24 rv23 rv22 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv27 rv26)
+; env*: (rv21 rv25 rv24 rv23 rv22 rv28 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv28 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv28 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv28 rv27 rv26)
+; regular: rv27
+; env: (rv21 rv25 rv24 rv23 rv22 rv28 rv27 rv26)
+; regular: rv28
+; env: (rv21 rv25 rv24 rv23 rv22 rv28 rv27 rv26)
+; env*: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26)
+; env*: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv30)
+; regular: rv29
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv30)
+; regular: rv30
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv30)
+; env*: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv31 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv31 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv31 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv31 rv30)
+; global: g$abs
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv31 rv30)
+; regular: rv31
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv31 rv30)
+; env*: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv32 rv31 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv32 rv31 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv32 rv31 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv32 rv31 rv30)
+; regular: rv32
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv32 rv31 rv30)
+; env: (rv21 rv25 rv24 rv23 rv22 rv29 rv28 rv27 rv26 rv32 rv31 rv30)
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$abs (void))
+ (set-then!
+  g$abs
+  (lambda (x k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (k16)
+          ((cps <)
+           x
+           0
+           (lambda (rv17)
+             (if rv17
+               ((lambda (k18) ((cps -) x (lambda (rv19) (return rv19 k18))))
+                k16)
+               ((lambda (k20) (return x k20)) k16)))))
+        k15))
+     k14))
+  ((cps -)
+   1
+   (lambda (rv21)
+     ((cps -)
+      2
+      (lambda (rv22)
+        ((cps *)
+         rv21
+         rv22
+         (lambda (rv23)
+           ((cps -)
+            3
+            (lambda (rv24)
+              ((cps *)
+               rv23
+               rv24
+               (lambda (rv25)
+                 ((cps -)
+                  4
+                  (lambda (rv26)
+                    ((cps *)
+                     rv25
+                     rv26
+                     (lambda (rv27)
+                       ((cps -)
+                        5
+                        (lambda (rv28)
+                          ((cps *)
+                           rv27
+                           rv28
+                           (lambda (rv29)
+                             ((cps -)
+                              6
+                              (lambda (rv30)
+                                ((cps *)
+                                 rv29
+                                 rv30
+                                 (lambda (rv31)
+                                   (g$abs
+                                    rv31
+                                    (lambda (rv32)
+                                      ((cps py-print)
+                                       rv32
+                                       $halt)))))))))))))))))))))))))))

@@ -1,0 +1,225 @@
+; mutable: i
+; mutable: result
+; mutable: loop
+; mutable: g$sum
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (k14 n)
+; env: (k14 n)
+; env: (k14 n)
+; env*: (f n k14 cc)
+; env: (f n k14 cc)
+; env: (f n k14 cc)
+; regular: f
+; env: (f n k14 cc)
+; env*: (f k x n k14 cc)
+; env: (f k x n k14 cc)
+; env: (f k x n k14 cc)
+; regular: cc
+; env: (f k x n k14 cc)
+; regular: x
+; env: (f n k14 cc)
+; regular: cc
+; env: (k14 n)
+; env*: (n k14 k15 return)
+; env: (n k14 k15 return)
+; env: (n k14 k15 return)
+; env*: (result i n k14 k16 k15 return)
+; env: (result i n k14 k16 k15 return)
+; env: (result i n k14 k16 k15 return)
+; env: (result i n k14 k16 k15 return)
+; env: (result i n k14 k16 k15 return)
+; env: (result i n k14 k16 k15 return)
+; env: (result i n k14 k16 k15 return)
+; env*: (f result i cc n k14 k16 k15 return)
+; env: (f result i cc n k14 k16 k15 return)
+; env: (f result i cc n k14 k16 k15 return)
+; regular: f
+; env: (f result i cc n k14 k16 k15 return)
+; env*: (f k result i x cc n k14 k16 k15 return)
+; env: (f k result i x cc n k14 k16 k15 return)
+; env: (f k result i x cc n k14 k16 k15 return)
+; regular: cc
+; env: (f k result i x cc n k14 k16 k15 return)
+; regular: x
+; env: (f result i cc n k14 k16 k15 return)
+; regular: cc
+; env: (result i n k14 k16 k15 return)
+; env*: (result i n k14 break k16 k15 return k17)
+; env: (result i n k14 break k16 k15 return k17)
+; env: (result i n k14 break k16 k15 return k17)
+; env*: (loop result i n k14 break k16 k15 return k18 k17)
+; env: (loop result i n k14 break k16 k15 return k18 k17)
+; env: (loop result i n k14 break k16 k15 return k18 k17)
+; env*: (loop result i n k14 break k16 k15 return k19 k18 k17)
+; env: (loop result i n k14 break k16 k15 return k19 k18 k17)
+; env: (loop result i n k14 break k16 k15 return k19 k18 k17)
+; env: (loop result i n k14 break k16 k15 return k19 k18 k17)
+; mutable: i
+; env: (loop result i n k14 break k16 k15 return k19 k18 k17)
+; regular: n
+; env: (loop result i n k14 break k16 k15 return k19 k18 k17)
+; env*: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; regular: rv20
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; env*: (f loop result i cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (f loop result i cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (f loop result i cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; regular: f
+; env: (f loop result i cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; env*: (f k loop result i x cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (f k loop result i x cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (f k loop result i x cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; regular: cc
+; env: (f k loop result i x cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; regular: x
+; env: (f loop result i cc n k14 break k16 k15 return rv20 k19 k18 k17)
+; regular: cc
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; env*: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 continue k21)
+; env*: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 k22 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 k22 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 k22 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 k22 continue k21)
+; mutable: result
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 k22 continue k21)
+; mutable: i
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 k22 continue k21)
+; env*: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21)
+; regular: rv23
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21)
+; mutable: i
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21)
+; env*: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21 rv24)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21 rv24)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21 rv24)
+; regular: rv24
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21 rv24)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21 rv24)
+; regular: k22
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv23 k22 continue k21 rv24)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 continue k21)
+; regular: k21
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; env*: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv25)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv25)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv25)
+; mutable: loop
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17 rv25)
+; regular: k19
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; regular: k19
+; env: (loop result i n k14 break k16 k15 return rv20 k19 k18 k17)
+; env: (loop result i n k14 break k16 k15 return k18 k17)
+; env: (loop result i n k14 break k16 k15 return k18 k17)
+; mutable: loop
+; env: (loop result i n k14 break k16 k15 return k18 k17)
+; env*: (loop result i n k14 break k16 k15 return k18 k17 rv26)
+; env: (loop result i n k14 break k16 k15 return k18 k17 rv26)
+; env: (loop result i n k14 break k16 k15 return k18 k17 rv26)
+; regular: k18
+; env: (loop result i n k14 break k16 k15 return k18 k17 rv26)
+; env: (result i n k14 break k16 k15 return k17)
+; env: (result i n k14 break k16 k15 return k17)
+; regular: k17
+; env: (result i n k14 k16 k15 return)
+; env*: (result i n k14 k16 k15 return rv27)
+; env: (result i n k14 k16 k15 return rv27)
+; env: (result i n k14 k16 k15 return rv27)
+; regular: return
+; env: (result i n k14 k16 k15 return rv27)
+; mutable: result
+; env: (result i n k14 k16 k15 return rv27)
+; regular: k16
+; env: (n k14 k15 return)
+; env: (n k14 k15 return)
+; env: (n k14 k15 return)
+; regular: k15
+; env: (k14 n)
+; regular: k14
+; env: ()
+; env: ()
+; env: ()
+; global: $halt
+; env: ()
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$sum (void))
+ (set-then!
+  g$sum
+  (lambda (n k14)
+    ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+     (lambda (return k15)
+       ((lambda (result i k16)
+          (set-then!
+           result
+           (make-cell result)
+           (set-then!
+            i
+            (make-cell i)
+            (set-cell!
+             result
+             0
+             (set-cell!
+              i
+              1
+              ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+               (lambda (break k17)
+                 ((lambda (loop k18)
+                    (set-then!
+                     loop
+                     (make-cell loop)
+                     (set-cell!
+                      loop
+                      (lambda (k19)
+                        ((cps <=)
+                         (get-cell i)
+                         n
+                         (lambda (rv20)
+                           (if rv20
+                             ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                              (lambda (continue k21)
+                                ((lambda (k22)
+                                   ((cps +)
+                                    (get-cell result)
+                                    (get-cell i)
+                                    (lambda (rv23)
+                                      (set-cell!
+                                       result
+                                       rv23
+                                       ((cps +)
+                                        (get-cell i)
+                                        1
+                                        (lambda (rv24)
+                                          (set-cell! i rv24 (k22 (void)))))))))
+                                 k21))
+                              (lambda (rv25) ((get-cell loop) k19)))
+                             (k19 (void))))))
+                      ((get-cell loop) (lambda (rv26) (k18 (void)))))))
+                  (void)
+                  k17))
+               (lambda (rv27) (return (get-cell result) k16))))))))
+        (void)
+        (void)
+        k15))
+     k14))
+  ($halt (void))))

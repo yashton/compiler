@@ -1,0 +1,1 @@
+(program (define str5 (void)) (set-global! str5 "string'string"))

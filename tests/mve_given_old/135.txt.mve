@@ -1,0 +1,155 @@
+; mutable: g$x
+; mutable: loop
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env*: (f cc)
+; env: (f cc)
+; env: (f cc)
+; regular: f
+; env: (f cc)
+; env*: (f k cc x)
+; env: (f k cc x)
+; env: (f k cc x)
+; regular: cc
+; env: (f k cc x)
+; regular: x
+; env: (f cc)
+; regular: cc
+; env: ()
+; env*: (k14 break)
+; env: (k14 break)
+; env: (k14 break)
+; env*: (loop break k14 k15)
+; env: (loop break k14 k15)
+; env: (loop break k14 k15)
+; env*: (loop k16 break k14 k15)
+; env: (loop k16 break k14 k15)
+; env: (loop k16 break k14 k15)
+; env: (loop k16 break k14 k15)
+; env: (loop k16 break k14 k15)
+; global: g$x
+; env: (loop k16 break k14 k15)
+; env: (loop k16 break k14 k15)
+; env*: (loop k16 break k14 k15 rv17)
+; env: (loop k16 break k14 k15 rv17)
+; env: (loop k16 break k14 k15 rv17)
+; regular: rv17
+; env: (loop k16 break k14 k15 rv17)
+; env: (loop k16 break k14 k15 rv17)
+; env*: (f cc loop k16 break k14 k15 rv17)
+; env: (f cc loop k16 break k14 k15 rv17)
+; env: (f cc loop k16 break k14 k15 rv17)
+; regular: f
+; env: (f cc loop k16 break k14 k15 rv17)
+; env*: (f k x cc loop k16 break k14 k15 rv17)
+; env: (f k x cc loop k16 break k14 k15 rv17)
+; env: (f k x cc loop k16 break k14 k15 rv17)
+; regular: cc
+; env: (f k x cc loop k16 break k14 k15 rv17)
+; regular: x
+; env: (f cc loop k16 break k14 k15 rv17)
+; regular: cc
+; env: (loop k16 break k14 k15 rv17)
+; env*: (loop k16 break k14 k15 continue k18 rv17)
+; env: (loop k16 break k14 k15 continue k18 rv17)
+; env: (loop k16 break k14 k15 continue k18 rv17)
+; env*: (loop k16 break k14 k15 k19 continue k18 rv17)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17)
+; global: g$x
+; env: (loop k16 break k14 k15 k19 continue k18 rv17)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17)
+; env*: (loop k16 break k14 k15 k19 continue k18 rv17 rv20)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17 rv20)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17 rv20)
+; regular: rv20
+; env: (loop k16 break k14 k15 k19 continue k18 rv17 rv20)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17 rv20)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17 rv20)
+; env: (loop k16 break k14 k15 k19 continue k18 rv17 rv20)
+; global: g$x
+; env: (loop k16 break k14 k15 k19 continue k18 rv17 rv20)
+; regular: k19
+; env: (loop k16 break k14 k15 continue k18 rv17)
+; regular: k18
+; env: (loop k16 break k14 k15 rv17)
+; env*: (loop k16 break k14 k15 rv17 rv21)
+; env: (loop k16 break k14 k15 rv17 rv21)
+; env: (loop k16 break k14 k15 rv17 rv21)
+; mutable: loop
+; env: (loop k16 break k14 k15 rv17 rv21)
+; regular: k16
+; env: (loop k16 break k14 k15 rv17)
+; env: (loop k16 break k14 k15 rv17)
+; regular: k16
+; env: (loop k16 break k14 k15 rv17)
+; env: (loop break k14 k15)
+; env: (loop break k14 k15)
+; mutable: loop
+; env: (loop break k14 k15)
+; env*: (loop break k14 k15 rv22)
+; env: (loop break k14 k15 rv22)
+; env: (loop break k14 k15 rv22)
+; env*: (loop break k14 k15 k23 rv22)
+; env: (loop break k14 k15 k23 rv22)
+; env: (loop break k14 k15 k23 rv22)
+; env: (loop break k14 k15 k23 rv22)
+; env: (loop break k14 k15 k23 rv22)
+; regular: k23
+; env: (loop break k14 k15 rv22)
+; regular: k15
+; env: (k14 break)
+; env: (k14 break)
+; regular: k14
+; env: ()
+; env: ()
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$x (void))
+ (set-then!
+  g$x
+  20
+  ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+   (lambda (break k14)
+     ((lambda (loop k15)
+        (set-then!
+         loop
+         (make-cell loop)
+         (set-cell!
+          loop
+          (lambda (k16)
+            ((cps >)
+             g$x
+             0
+             (lambda (rv17)
+               (if rv17
+                 ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                  (lambda (continue k18)
+                    ((lambda (k19)
+                       ((cps -)
+                        g$x
+                        1
+                        (lambda (rv20)
+                          (set-then! g$x rv20 ((cps py-print) g$x k19)))))
+                     k18))
+                  (lambda (rv21) ((get-cell loop) k16)))
+                 (k16 (void))))))
+          ((get-cell loop)
+           (lambda (rv22)
+             ((lambda (k23) ((cps py-print) "didn't run\n" k23)) k15))))))
+      (void)
+      k14))
+   $halt)))

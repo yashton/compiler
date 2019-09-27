@@ -1,0 +1,344 @@
+; mutable: g$width
+; mutable: g$length
+; mutable: loop
+; mutable: g$shape
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; env: ()
+; global: g$input
+; env: ()
+; env: ()
+; global: g$menu
+; env: ()
+; env*: (rv14)
+; env: (rv14)
+; env: (rv14)
+; env: (rv14)
+; global: g$int
+; env: (rv14)
+; regular: rv14
+; env: (rv14)
+; env*: (rv14 rv15)
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; regular: rv15
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; env*: (f rv14 rv15 cc)
+; env: (f rv14 rv15 cc)
+; env: (f rv14 rv15 cc)
+; regular: f
+; env: (f rv14 rv15 cc)
+; env*: (f k rv14 x rv15 cc)
+; env: (f k rv14 x rv15 cc)
+; env: (f k rv14 x rv15 cc)
+; regular: cc
+; env: (f k rv14 x rv15 cc)
+; regular: x
+; env: (f rv14 rv15 cc)
+; regular: cc
+; env: (rv14 rv15)
+; env*: (rv14 rv15 break k16)
+; env: (rv14 rv15 break k16)
+; env: (rv14 rv15 break k16)
+; env*: (loop rv14 rv15 break k17 k16)
+; env: (loop rv14 rv15 break k17 k16)
+; env: (loop rv14 rv15 break k17 k16)
+; env*: (loop rv14 rv15 break k18 k17 k16)
+; env: (loop rv14 rv15 break k18 k17 k16)
+; env: (loop rv14 rv15 break k18 k17 k16)
+; env: (loop rv14 rv15 break k18 k17 k16)
+; env: (loop rv14 rv15 break k18 k17 k16)
+; global: g$shape
+; env: (loop rv14 rv15 break k18 k17 k16)
+; env: (loop rv14 rv15 break k18 k17 k16)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; regular: rv19
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; env*: (f loop rv14 cc rv15 break rv19 k18 k17 k16)
+; env: (f loop rv14 cc rv15 break rv19 k18 k17 k16)
+; env: (f loop rv14 cc rv15 break rv19 k18 k17 k16)
+; regular: f
+; env: (f loop rv14 cc rv15 break rv19 k18 k17 k16)
+; env*: (f k loop rv14 x cc rv15 break rv19 k18 k17 k16)
+; env: (f k loop rv14 x cc rv15 break rv19 k18 k17 k16)
+; env: (f k loop rv14 x cc rv15 break rv19 k18 k17 k16)
+; regular: cc
+; env: (f k loop rv14 x cc rv15 break rv19 k18 k17 k16)
+; regular: x
+; env: (f loop rv14 cc rv15 break rv19 k18 k17 k16)
+; regular: cc
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 continue k20)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 k21 continue k20)
+; global: g$shape
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 k21 continue k20)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; regular: rv22
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k23)
+; global: g$input
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k23)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv24 k23)
+; global: g$float
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv24 k23)
+; regular: rv24
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv24 k23)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; regular: rv25
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; global: g$length
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23 rv26)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23 rv26)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23 rv26)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23 rv26)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23 rv26)
+; regular: rv26
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv25 rv24 k23 rv26)
+; regular: k23
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; regular: k21
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; global: g$shape
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; regular: rv27
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k28 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k28 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k28 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k28 rv27)
+; global: g$input
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k28 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 k28 rv27)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27)
+; global: g$float
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27)
+; regular: rv29
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv30)
+; regular: rv30
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv30)
+; global: g$input
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv30)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv31 rv30)
+; global: g$float
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv31 rv30)
+; regular: rv31
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv31 rv30)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; regular: rv32
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; global: g$length
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; global: g$width
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv32 rv31 rv30)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv33 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv33 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv33 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv33 rv32 rv31 rv30)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv33 rv32 rv31 rv30)
+; regular: rv33
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv29 k28 rv27 rv33 rv32 rv31 rv30)
+; regular: k28
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; regular: k21
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27 k34)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27 k34)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27 k34)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27 k34)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27 k34)
+; regular: k34
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv22 k21 continue k20 rv27)
+; regular: k21
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 continue k20)
+; regular: k20
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; env*: (loop rv14 rv15 break rv19 k18 k17 k16 rv35)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv35)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv35)
+; mutable: loop
+; env: (loop rv14 rv15 break rv19 k18 k17 k16 rv35)
+; regular: k18
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; regular: k18
+; env: (loop rv14 rv15 break rv19 k18 k17 k16)
+; env: (loop rv14 rv15 break k17 k16)
+; env: (loop rv14 rv15 break k17 k16)
+; mutable: loop
+; env: (loop rv14 rv15 break k17 k16)
+; env*: (loop rv14 rv15 break k17 k16 rv36)
+; env: (loop rv14 rv15 break k17 k16 rv36)
+; env: (loop rv14 rv15 break k17 k16 rv36)
+; regular: k17
+; env: (loop rv14 rv15 break k17 k16 rv36)
+; env: (rv14 rv15 break k16)
+; env: (rv14 rv15 break k16)
+; regular: k16
+; env: (rv14 rv15)
+; env: (rv14 rv15)
+; global: $halt
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (define g$length (void))
+ (define g$shape (void))
+ (define g$width (void))
+ (g$input
+  g$menu
+  (lambda (rv14)
+    (g$int
+     rv14
+     (lambda (rv15)
+       (set-then!
+        g$shape
+        rv15
+        ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+         (lambda (break k16)
+           ((lambda (loop k17)
+              (set-then!
+               loop
+               (make-cell loop)
+               (set-cell!
+                loop
+                (lambda (k18)
+                  ((cps not-equal?)
+                   g$shape
+                   4
+                   (lambda (rv19)
+                     (if rv19
+                       ((lambda (f cc) (f (lambda (x k) (cc x)) cc))
+                        (lambda (continue k20)
+                          ((lambda (k21)
+                             ((cps equal?)
+                              g$shape
+                              1
+                              (lambda (rv22)
+                                (if rv22
+                                  ((lambda (k23)
+                                     (g$input
+                                      "Length: "
+                                      (lambda (rv24)
+                                        (g$float
+                                         rv24
+                                         (lambda (rv25)
+                                           (set-then!
+                                            g$length
+                                            rv25
+                                            ((cps expt)
+                                             g$length
+                                             2
+                                             (lambda (rv26)
+                                               ((cps py-print)
+                                                "Area of square = "
+                                                rv26
+                                                k23)))))))))
+                                   k21)
+                                  ((cps equal?)
+                                   g$shape
+                                   2
+                                   (lambda (rv27)
+                                     (if rv27
+                                       ((lambda (k28)
+                                          (g$input
+                                           "Length: "
+                                           (lambda (rv29)
+                                             (g$float
+                                              rv29
+                                              (lambda (rv30)
+                                                (set-then!
+                                                 g$length
+                                                 rv30
+                                                 (g$input
+                                                  "Width: "
+                                                  (lambda (rv31)
+                                                    (g$float
+                                                     rv31
+                                                     (lambda (rv32)
+                                                       (set-then!
+                                                        g$width
+                                                        rv32
+                                                        ((cps *)
+                                                         g$length
+                                                         g$width
+                                                         (lambda (rv33)
+                                                           ((cps py-print)
+                                                            "Area of rectangle = "
+                                                            rv33
+                                                            k28))))))))))))))
+                                        k21)
+                                       ((lambda (k34)
+                                          ((cps py-print)
+                                           " Not a valid shape. try again"
+                                           k34))
+                                        k21))))))))
+                           k20))
+                        (lambda (rv35) ((get-cell loop) k18)))
+                       (k18 (void))))))
+                ((get-cell loop) (lambda (rv36) (k17 (void)))))))
+            (void)
+            k16))
+         $halt)))))))

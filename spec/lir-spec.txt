@@ -1,0 +1,69 @@
+
+<program> ::= (program <vardef>* <exp>)
+
+<vardef> ::= (define <var> <aexp>)
+
+<aexp> ::= (void)
+        |  <var>
+        |  <number>
+        |  <string>
+        |  (lambda (<var>*) <exp>)
+        |  None
+        |  Ellipsis
+        |  #t
+        |  #f
+
+<exp> ::=  <aexp>
+       |   (error <exp>)
+
+       |   (call/ec <exp>) 
+       |   (if <exp> <exp> <exp>)
+       |   (set! <var> <exp>)
+       |   (begin <exp>+)
+       |   (<exp> <exp>*)
+
+       |   (set <exp>*)
+       |   (dict (<exp> <exp>)*)
+       |   (tuple <exp>*)
+       |   (py-list* <exp>*)
+
+       |   (<triop> <exp> <exp> <exp>)
+       |   (<binop> <exp> <exp>)
+       |   (<unop> <exp>)
+
+
+<triop> ::= py-list-set! 
+         |  dict-set!
+
+<binop> ::= < | > | equal? | >= | <= | not-equal? | in? | not-in? | eq? | not-eq?
+         |  << | >>
+         |  + | - 
+         |  * | / | quotient | modulo
+         |  expt
+         |  assert2
+         |  for-set
+         |  for-py-list
+         |  for-tuple
+         |  for-dict
+         |  bitwise-and | bitwise-or | bitwise-xor 
+         |  py-list-ref 
+         |  py-list-remove!
+         |  tuple-ref
+         |  tuple-set!
+         |  dict-ref
+         |  dict-set!
+
+<unop> ::= bitwise-not | + | -
+        |  integer?
+        |  string?
+        |  tuple?
+        |  dict?
+        |  py-list?
+        |  set?
+        |  assert1
+        |  py-print
+
+   
+
+
+

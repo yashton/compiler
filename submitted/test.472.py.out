@@ -1,0 +1,7 @@
+(ID "x")
+(PUNCT "=")
+(ERROR "Illegal character '"asdf\
+asdf\
+asdf\
+asdf\
+asdf\' on line 1)

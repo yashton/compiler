@@ -1,0 +1,9 @@
+(program
+ (define b (void))
+ (set-global!
+  b
+  (or (and (< (get-global a) (get-global b))
+           (<= (get-global b) (get-global c))
+           (> (get-global c) (get-global d)))
+      (>= (get-global z) (get-global f))
+      (get-global a))))

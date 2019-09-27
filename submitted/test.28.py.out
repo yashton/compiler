@@ -1,0 +1,2 @@
+(ERROR "Illegal character '"This string should cause trouble
+"This string should NOT cause trouble"' on line 1)

@@ -1,0 +1,2 @@
+(program
+ (try (let () (throw "boo")) (lambda (ex) (let () (py-print "excepted!")))))

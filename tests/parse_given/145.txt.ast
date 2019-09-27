@@ -1,0 +1,9 @@
+(program
+ (expr (indexed print (called (comparison 2 ("<" 3)) (comparison 3 ("<" 2)))))
+ (expr (indexed print (called (or 2 3) (or 3 2))))
+ (expr (indexed print (called (or (list) 3))))
+ (expr (indexed print (called (or (list) (dict)))))
+ (expr (indexed print (called (and 2 3) (and 3 2))))
+ (expr (indexed print (called (and (list) (dict)))))
+ (expr (indexed print (called (and 3 (list))))))
+

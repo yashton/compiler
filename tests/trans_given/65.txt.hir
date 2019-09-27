@@ -1,0 +1,9 @@
+(program
+ (define sum (void))
+ (define i (void))
+ (for-each
+  i14
+  ((get-global range) 10)
+  (begin
+    (set-global! i i14)
+    (let () (set-global! sum (+ (get-global sum) 1))))))

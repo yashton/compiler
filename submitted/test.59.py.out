@@ -1,0 +1,6 @@
+(ID "s")
+(PUNCT "=")
+(ERROR "Illegal character '"foo\
+\\ \n'\""
+
+fact(20)' on line 1)

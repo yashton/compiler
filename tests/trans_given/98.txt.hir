@@ -1,0 +1,7 @@
+(program
+ (define a (void))
+ (define b (void))
+ (define c (void))
+ (set-global! a 1)
+ (set-global! b 2)
+ (set-global! c 3))

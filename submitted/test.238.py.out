@@ -1,0 +1,2 @@
+(ERROR "Illegal character '"foo\
+\\ \n\\""' on line 1)

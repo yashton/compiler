@@ -1,0 +1,6 @@
+(program
+ (define break (void))
+ (define return (void))
+ (define continue (void))
+ (define $current-handler (void))
+ (begin 0+3.14i 0+10.0i 0+10i 0+0.001i 0+1e+100i 0+3.14e-10i))

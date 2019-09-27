@@ -1,0 +1,13 @@
+(program
+ (= (x) 0)
+ (= (sum) 0)
+ (while
+  (comparison x ("<=" 20))
+  (suite
+   (cond
+    ((comparison (term x ("%" 2)) ("==" 0)) (suite ("+=" (sum) x)))
+    (else (suite (= (x) (arith x ("+" 1))) (continue))))
+   (= (x) (arith x ("+" 1))))
+  (suite (expr (indexed print (called "didn't run\n")))))
+ (expr (indexed print (called sum))))
+

@@ -1,0 +1,12 @@
+(program
+ (define abs (void))
+ (set-global!
+  abs
+  (lambda (x)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond
+          ((< x 0) (let () (return (- x))))
+          (else (let () (return x)))))))))
+ (py-print ((get-global abs) (* (* (- 1) (- 1)) (- 1)))))

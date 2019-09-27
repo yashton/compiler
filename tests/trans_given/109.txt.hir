@@ -1,0 +1,1 @@
+(program (define x (void)) (set-global! x (+ (get-global x) 20)))

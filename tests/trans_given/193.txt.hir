@@ -1,0 +1,30 @@
+(program
+ (define main (void))
+ (define moveit (void))
+ (define dohanoi (void))
+ (set-global!
+  moveit
+  (lambda (frm to)
+    (call/ec
+     (lambda (return)
+       (let () (py-print frm) (py-print to) (py-print "---"))))))
+ (set-global!
+  dohanoi
+  (lambda (n to frm using)
+    (call/ec
+     (lambda (return)
+       (let ()
+         (cond ((equal? n 0) (return (py-list*))))
+         ((get-global dohanoi) (- n 1) using frm to)
+         ((get-global moveit) frm to)
+         ((get-global dohanoi) (- n 1) to using frm))))))
+ (set-global!
+  main
+  (lambda ()
+    (call/ec
+     (lambda (return)
+       (let ()
+         (try
+          (let () ((get-global dohanoi) 2 3 1 2))
+          (lambda (ex) (let () (void)))))))))
+ ((get-global main)))

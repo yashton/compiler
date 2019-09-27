@@ -1,0 +1,18 @@
+def moveit(frm, to):
+  print(frm)
+  print(to)
+  print("---")
+
+def dohanoi(n, to, frm, using):
+  if n == 0: return []
+  dohanoi(n-1, using, frm, to);
+  moveit(frm, to);
+  dohanoi(n-1, to, using, frm);
+
+def main():
+  try:
+    dohanoi(2, 3, 1, 2)
+  except:
+    pass
+
+main()

@@ -1,0 +1,8 @@
+(program
+ (py-print (< 2 3) (< 3 2))
+ (py-print (or 2 3) (or 3 2))
+ (py-print (or (py-list*) 3))
+ (py-print (or (py-list*) (dict)))
+ (py-print (and 2 3) (and 3 2))
+ (py-print (and (py-list*) (dict)))
+ (py-print (and 3 (py-list*))))
